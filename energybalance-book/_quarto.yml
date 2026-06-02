@@ -4,7 +4,7 @@ project:
 
 book:
   title: "Energy Balances"
-  author: "Marshall eChem Lab"
+  author: "Professor Aaron Marshall"
   date: today
   chapters:
     - index.qmd
