@@ -8,7 +8,7 @@ book:
   date: today
   chapters:
     - index.qmd
-    - chapters/01-ebal-intro.qmd.qmd
+    - chapters/01-ebal-intro.qmd
     - chapters/02-ebal-states-phaserule.qmd
 
 format:
