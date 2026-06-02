@@ -1,0 +1,18 @@
+project:
+  type: website
+  output-dir: ../_site/energybalance-slides
+
+website:
+  title: "Energy Balances — Slides"
+  navbar:
+    left:
+      - text: "Lecture 1: Introduction"
+        href: 01-introduction.qmd
+      - text: "Lecture 2: First Law"
+        href: 02-first-law.qmd
+
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    toc: false
