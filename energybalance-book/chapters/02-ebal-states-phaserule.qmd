@@ -1,0 +1,23 @@
+---
+title: "The First Law of Thermodynamics"
+---
+
+## Statement of the First Law
+
+Placeholder text. Energy cannot be created or destroyed, only converted between forms.
+
+## Internal Energy
+
+Placeholder text. Internal energy $U$ represents the total microscopic energy of a system.
+
+## Enthalpy
+
+Placeholder text. Enthalpy $H = U + PV$ is a convenient state function for open systems and constant-pressure processes.
+
+## Energy Balance for a Closed System
+
+Placeholder text. For a closed system:
+
+$$\Delta U = Q - W$$
+
+where $Q$ is heat added to the system and $W$ is work done by the system.

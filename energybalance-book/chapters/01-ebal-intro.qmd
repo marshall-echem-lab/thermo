@@ -1,0 +1,15 @@
+---
+title: "Introduction to Energy Balances"
+---
+
+## What is an Energy Balance?
+
+Placeholder text. An energy balance is an accounting of all energy entering and leaving a system.
+
+## System and Surroundings
+
+Placeholder text. We define a system boundary and track energy flows across it.
+
+## Types of Systems
+
+Placeholder text. Systems may be open, closed, or isolated depending on whether mass and energy can cross the boundary.

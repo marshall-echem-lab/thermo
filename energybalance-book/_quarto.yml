@@ -1,0 +1,17 @@
+project:
+  type: book
+  output-dir: ../_site/energybalance-book
+
+book:
+  title: "Energy Balances"
+  author: "Marshall eChem Lab"
+  date: today
+  chapters:
+    - index.qmd
+    - chapters/01-ebal-intro.qmd.qmd
+    - chapters/02-ebal-states-phaserule.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true

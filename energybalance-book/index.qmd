@@ -1,0 +1,6 @@
+---
+title: "Energy Balances"
+---
+
+These notes cover energy balances for chemical engineering systems.
+Topics include the first law of thermodynamics, enthalpy, and steady-state energy balances for open and closed systems.
