@@ -27,9 +27,9 @@ jobs:
       - name: Render energybalance-book
         run: quarto render energybalance-book
 
-      # Uncomment as you add more sub-projects:
-      # - name: Render energybalance-slides
-      #   run: quarto render energybalance-slides
+      - name: Render energybalance-slides
+        run: quarto render energybalance-slides
+      
       # - name: Render thermodynamics-book
       #   run: quarto render thermodynamics-book
       # - name: Render thermodynamics-slides
