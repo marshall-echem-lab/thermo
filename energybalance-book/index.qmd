@@ -1,5 +1,6 @@
 ---
 title: "Energy Balances"
+numbered: false
 ---
 
 These notes cover energy balances for chemical engineering systems.
