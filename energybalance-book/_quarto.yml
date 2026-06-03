@@ -1,5 +1,6 @@
 project:
   type: book
+  pre-render: python ../scripts/generate-key-terms.py energybalance-book
   output-dir: ../_site/energybalance-book
 
 book:
@@ -10,6 +11,8 @@ book:
     - index.qmd
     - 01-ebal-intro.qmd
     - 02-ebal-states-phaserule.qmd
+    - useful-info.qmd
+    - key-terms.qmd
 
 format:
   html:

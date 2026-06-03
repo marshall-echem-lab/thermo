@@ -1,0 +1,3 @@
+# Useful Information {.unnumbered}
+
+A bunch of useful information for the course, including links to software, data sources, and other resources.
