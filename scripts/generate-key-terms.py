@@ -1,37 +1,61 @@
 import re
+import sys
 from pathlib import Path
 
-CALLOUT_PATTERN = re.compile(
-    r":::\s*\{\.callout-note\}.*?\n\s*##\s*Key Term?\s*\n(.*?):::",
-    re.DOTALL | re.IGNORECASE
-)
-
-TERM_PATTERN = re.compile(
-    r"\*\*(.+?)\*\*"
-    r"(?:\s*\((.+?)\))?"
-    r"\s*[—–-]\s*"
-    r"([^\n*]+)",        # definition stops at newline (not greedy across lines)
+TERM_LINE = re.compile(
+    r'^\s*\*\*(.+?)\*\*'        # **Term**
+    r'(?:\s*(\([^)]*\)))?'      # optional ($symbol$)
+    r'\s*(?:—|--)\s*(.*)',       # — definition
 )
 
 def extract_key_terms(path: Path) -> list[dict]:
-    text = path.read_text(encoding="utf-8")
-
-    # Debug: show all callout matches
-    for i, m in enumerate(CALLOUT_PATTERN.finditer(text)):
-        print(f"  Callout {i+1}: {repr(m.group(0)[:80])}")
-        
-
+    lines = path.read_text(encoding="utf-8").splitlines()
     terms = []
-    for callout_match in CALLOUT_PATTERN.finditer(text):
-        content = callout_match.group(1).strip()
-        for term_match in TERM_PATTERN.finditer(content):   # finditer not match
-            terms.append({
-                "name":       term_match.group(1).strip(),
-                "symbol":     term_match.group(2).strip() if term_match.group(2) else None,
-                "definition": term_match.group(3).strip(),
-            })
-        if not TERM_PATTERN.search(content):
-            print(f"  Warning: couldn't parse term in {path.name}: {repr(content[:80])}")
+    i = 0
+
+    while i < len(lines):
+        line = lines[i].strip()
+
+        # Look for opening of a .callout-note block
+        if re.match(r'^:::\s*\{', line) and ".callout-note" in line:
+            inner = []
+            i += 1
+            depth = 1
+            # Collect all lines until the closing :::
+            while i < len(lines) and depth > 0:
+                s = lines[i].strip()
+                if s == ":::":
+                    depth -= 1
+                elif re.match(r'^:::', s) and len(s) > 3:
+                    depth += 1
+                    inner.append(lines[i])
+                else:
+                    inner.append(lines[i])
+                i += 1
+
+            # Check heading contains Key Term(s)
+            heading = next((l for l in inner if l.strip()), "")
+            if not re.search(r'Key Terms?', heading, re.IGNORECASE):
+                continue
+
+            # Extract terms from inner lines
+            for l in inner:
+                if not l.strip() or l.strip().startswith("#"):
+                    continue
+                m = TERM_LINE.match(l)
+                if m:
+                    symbol = m.group(2).strip() if m.group(2) else None
+                    # Strip outer parens from symbol e.g. ($G$) → $G$
+                    if symbol and symbol.startswith("(") and symbol.endswith(")"):
+                        symbol = symbol[1:-1]
+                    terms.append({
+                        "name":       m.group(1).strip(),
+                        "symbol":     symbol,
+                        "definition": m.group(3).strip(),
+                    })
+        else:
+            i += 1
+
     return terms
 
 book_dir = Path(".")
