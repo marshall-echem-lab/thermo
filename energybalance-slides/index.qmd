@@ -1,4 +1,4 @@
-### Energy Balances - Lecture Slides {.smaller}
+## Energy Balances - Lecture Slides {.scrollable}
 
 [Lecture 1](01-introduction.qmd) Introduction to Energy Balances
 
