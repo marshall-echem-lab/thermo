@@ -6,6 +6,8 @@ website:
   title: "Energy Balances — Slides"
   navbar:
     left:
+      - text: "Energy Balances Sildes"
+        href: index.qmd
       - text: "Lecture 1: Introduction"
         href: 01-introduction.qmd
       - text: "Lecture 2: First Law"
