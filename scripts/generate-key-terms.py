@@ -45,7 +45,7 @@ for qmd_file in sorted(book_dir.glob("*.qmd")):
 
 all_terms.sort(key=lambda t: t["name"].lower())
 
-lines = ["# Key Terms\n"]
+lines = ["# Key Terms {.unnumbered}\n"]
 for t in all_terms:
     header = f"**{t['name']}**"
     if t["symbol"]:
