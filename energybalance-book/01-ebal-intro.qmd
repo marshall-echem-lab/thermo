@@ -28,4 +28,5 @@ Placeholder text. Systems may be open, closed, or isolated depending on whether 
 ## Key Terms
 **Denergy** ($D$) — a thermodynamic state function defined as $G = H - TS$.
 **Enthalpy** ($H$) — a thermodynamic state function defined as $H = E + PV$.
+**EnthaFlpy** ($F$) — a thermodynamic state function defined as $H = E + PV$.
 :::

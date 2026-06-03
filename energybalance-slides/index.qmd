@@ -1,4 +1,4 @@
-### Lecture slides for the Energy Balances course {.smaller}
+### Energy Balances - Lecture Slides {.smaller}
 
 | Lecture | Topic |
 |---------|-------|
