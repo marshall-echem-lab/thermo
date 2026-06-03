@@ -10,8 +10,7 @@ TERM_PATTERN = re.compile(
     r"\*\*(.+?)\*\*"
     r"(?:\s*\((.+?)\))?"
     r"\s*[—–-]\s*"
-    r"(.+)",
-    re.DOTALL
+    r"([^\n*]+)",        # definition stops at newline (not greedy across lines)
 )
 
 def extract_key_terms(path: Path) -> list[dict]:
@@ -19,14 +18,13 @@ def extract_key_terms(path: Path) -> list[dict]:
     terms = []
     for callout_match in CALLOUT_PATTERN.finditer(text):
         content = callout_match.group(1).strip()
-        term_match = TERM_PATTERN.match(content)
-        if term_match:
+        for term_match in TERM_PATTERN.finditer(content):   # finditer not match
             terms.append({
                 "name":       term_match.group(1).strip(),
                 "symbol":     term_match.group(2).strip() if term_match.group(2) else None,
                 "definition": term_match.group(3).strip(),
             })
-        else:
+        if not TERM_PATTERN.search(content):
             print(f"  Warning: couldn't parse term in {path.name}: {repr(content[:80])}")
     return terms
 
@@ -44,7 +42,7 @@ for qmd_file in sorted(book_dir.glob("*.qmd")):
 
 all_terms.sort(key=lambda t: t["name"].lower())
 
-lines = ["# Key Terms\n"]
+lines = ["# Key Terms {.unnumbered}\n"]
 for t in all_terms:
     header = f"**{t['name']}**"
     if t["symbol"]:

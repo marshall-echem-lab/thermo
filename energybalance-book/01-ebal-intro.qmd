@@ -18,3 +18,14 @@ Placeholder text. Systems may be open, closed, or isolated depending on whether 
 ## Key Term
 **Gibbs Energy** ($G$) — a thermodynamic state function defined as $G = H - TS$.
 :::
+
+::: {.callout-note}
+## Key Term
+**Energy** ($E$) — a thermodynamic state function defined as $G = H - TS$.
+:::
+
+::: {.callout-note}
+## Key Terms
+**Denergy** ($D$) — a thermodynamic state function defined as $G = H - TS$.
+**Enthalpy** ($H$) — a thermodynamic state function defined as $H = E + PV$.
+:::
