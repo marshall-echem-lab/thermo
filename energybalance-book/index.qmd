@@ -1,3 +1,7 @@
+---
+title: "Energy Balances"
+---
+
 These notes cover energy balances for chemical engineering systems.
 Topics include the first law of thermodynamics, enthalpy, and energy balances involving sensible heat changes, latent heat changes, and chemical reactions.
 
