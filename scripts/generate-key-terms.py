@@ -1,13 +1,9 @@
 import re
-import sys
 from pathlib import Path
 
-# Get book folder from argument, e.g. "energybalance-book"
-book_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(".")
-
 CALLOUT_PATTERN = re.compile(
-    r"::: \{\.callout-note\}\s*\n## Key Term\s*\n(.*?)\n:::",
-    re.DOTALL
+    r":::\s*\{\.callout-note\}.*?\n\s*##\s*Key Term\s*\n(.*?):::",
+    re.DOTALL | re.IGNORECASE
 )
 
 TERM_PATTERN = re.compile(
@@ -31,13 +27,16 @@ def extract_key_terms(path: Path) -> list[dict]:
                 "definition": term_match.group(3).strip(),
             })
         else:
-            print(f"  Warning: couldn't parse term in {path.name}: {content[:60]}")
+            print(f"  Warning: couldn't parse term in {path.name}: {repr(content[:80])}")
     return terms
+
+book_dir = Path(".")
 
 all_terms = []
 for qmd_file in sorted(book_dir.glob("*.qmd")):
     if qmd_file.name == "key-terms.qmd":
         continue
+    print(f"  Scanning {qmd_file.name}...")
     found = extract_key_terms(qmd_file)
     if found:
         print(f"  Found {len(found)} term(s) in {qmd_file.name}")
@@ -45,7 +44,7 @@ for qmd_file in sorted(book_dir.glob("*.qmd")):
 
 all_terms.sort(key=lambda t: t["name"].lower())
 
-lines = ["# Key Terms {.unnumbered}\n"]
+lines = ["# Key Terms\n"]
 for t in all_terms:
     header = f"**{t['name']}**"
     if t["symbol"]:
@@ -54,4 +53,4 @@ for t in all_terms:
 
 output = Path("key-terms.qmd")
 output.write_text("\n".join(lines), encoding="utf-8")
-print(f"Generated {output} with {len(all_terms)} term(s).")
+print(f"Generated key-terms.qmd with {len(all_terms)} term(s).")
