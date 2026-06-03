@@ -52,6 +52,6 @@ for t in all_terms:
         header += f" ({t['symbol']})"
     lines.append(f"{header}\n:   {t['definition']}\n")
 
-output = book_dir / "key-terms.qmd"
+output = Path("key-terms.qmd")
 output.write_text("\n".join(lines), encoding="utf-8")
 print(f"Generated {output} with {len(all_terms)} term(s).")
