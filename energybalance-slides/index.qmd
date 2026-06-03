@@ -1,8 +1,4 @@
----
-title: "Energy Balances — Lecture Slides"
----
-
-Lecture slides for the Energy Balances course.
+# Lecture slides for the Energy Balances course.
 
 | Lecture | Topic |
 |---------|-------|
