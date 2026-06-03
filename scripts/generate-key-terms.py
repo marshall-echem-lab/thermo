@@ -2,7 +2,7 @@ import re
 from pathlib import Path
 
 CALLOUT_PATTERN = re.compile(
-    r":::\s*\{\.callout-note\}.*?\n\s*##\s*Key Term\s*\n(.*?):::",
+    r":::\s*\{\.callout-note\}.*?\n\s*##\s*Key Term?\s*\n(.*?):::",
     re.DOTALL | re.IGNORECASE
 )
 
