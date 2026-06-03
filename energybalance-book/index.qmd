@@ -1,10 +1,9 @@
----
-title: "Energy Balances"
-number-sections: false
----
+# {.unnumbered}
 
 These notes cover energy balances for chemical engineering systems.
 Topics include the first law of thermodynamics, enthalpy, and energy balances involving sensible heat changes, latent heat changes, and chemical reactions.
+
+This book also contains examples, practice problems, and useful information including python based thermodynamic property calculators.
 
 Useful slides are also available here: [Energy Balance Slides](https://marshall-echem-lab.github.io/thermo/energybalance-slides/)
 
