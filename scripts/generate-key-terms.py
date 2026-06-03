@@ -15,6 +15,12 @@ TERM_PATTERN = re.compile(
 
 def extract_key_terms(path: Path) -> list[dict]:
     text = path.read_text(encoding="utf-8")
+
+    # Debug: show all callout matches
+    for i, m in enumerate(CALLOUT_PATTERN.finditer(text)):
+        print(f"  Callout {i+1}: {repr(m.group(0)[:80])}")
+        
+
     terms = []
     for callout_match in CALLOUT_PATTERN.finditer(text):
         content = callout_match.group(1).strip()
