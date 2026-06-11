@@ -58,6 +58,6 @@ For an energy balance, we track energy entering / leaving the system.
 - **Open** — both mass and energy cross the boundary
 - **Isolated** — neither mass nor energy cross the boundary
 
-### State Functions
+## State Functions
 
 ![no strect](figures/U_statefunction_diagram.png){.nostretch width=20% fig-align="center" #fig-H_statefunction_diagram}
