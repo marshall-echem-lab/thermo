@@ -30,6 +30,30 @@ An energy balance accounts for:
 - Not all energy is useful (2nd Law of Thermodynamics) .
 :::
 
+## Figures
+
+![width = 70%](figures/U_statefunction_diagram.png){width=70% fig-align="center" #fig-1}
+
+## Figures
+
+![width = 20%](figures/U_statefunction_diagram.png){width=20% fig-align="center" #fig-2}
+
+## Figures
+
+![out-width = 70%](figures/U_statefunction_diagram.png){out-width=70% fig-align="center" #fig-3}
+
+## Figures
+
+![out-width = 20%](figures/U_statefunction_diagram.png){out-width=20% fig-align="center" #fig-4}
+
+## Figures
+
+![no stretch width=70%](figures/U_statefunction_diagram.png){.nostretch width=70% fig-align="center" #fig-5}
+
+## Figures
+
+![no stretch width=20%](figures/U_statefunction_diagram.png){.nostretch width=20% fig-align="center" #fig-6}
+
 ## System and Surroundings
 
 For a mass balance, we track mass entering / leaving the system.
