@@ -5,15 +5,33 @@ format: revealjs
 
 ## What is an Energy Balance?
 
-Placeholder text. An energy balance accounts for all energy entering and leaving a system.
+An energy balance accounts for:
+::: {.incremental}
+- energy entering and leaving a system.
+- energy released or accumulated within the system.
+- energy contained within mass entering or leaving the system.
+:::
 
----
+## Why do we care about energy balances?
+::: {.incremental}
+- To understand and predict system behavior.
+- To design and optimize processes.
+- To maximize efficiency.
+- To ensure safety.
+:::
+
+## Basic Principles
+**Conservation of Energy** = **First Law of Thermodynamics**
+::: {.incremental}
+- Energy cannot be created or destroyed, only transformed.
+- All forms of energy are equal in value.
+- Not all energy is useful (2nd Law of Thermodynamics) .
+:::
 
 ## System and Surroundings
 
-Placeholder text. We define a system boundary and track energy flows across it.
-
----
+We define a system boundary and track energy flows across it.
+ß
 
 ## Types of Systems
 
