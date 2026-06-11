@@ -24,6 +24,11 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Copy figures into project folders
+        run: |
+          cp -r figures energybalance-book/figures
+          cp -r figures energybalance-slides/figures
+
       - name: Render energybalance-book
         run: quarto render energybalance-book
 
