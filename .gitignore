@@ -15,6 +15,9 @@ __pycache__/
 *.pyc
 .venv/
 
+# pptx figures
+*.pptx
+
 # Jupyter
 .ipynb_checkpoints/
 /.quarto/
