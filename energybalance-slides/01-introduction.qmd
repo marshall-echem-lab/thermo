@@ -42,7 +42,7 @@ For energy balance, we do the same thing.
 
 ![A simple energy balance diagram](figures/energy_balance_simple_diagram.svg){.nostretch width=70% fig-align="center" #fig-simple_energy_balance_diagram}
 
-### System and Surroundings
+## System and Surroundings
 Defining the system boundary is critical for both mass and energy balances.
 
 ::: {.callout-note}
@@ -51,7 +51,7 @@ Defining the system boundary is critical for both mass and energy balances.
 **Surroundings** — everything outside the system boundary.
 :::
 
-### Types of Systems
+## Types of Systems
 
 smaller title?
 
