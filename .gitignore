@@ -18,8 +18,13 @@ __pycache__/
 # pptx figures
 *.pptx
 
+# the copied figures from the slides and book
 energybalance-book/figures/
 energybalance-slides/figures/
+
+# draw.io files
+*.drawio
+*.bkp
 
 # Jupyter
 .ipynb_checkpoints/
