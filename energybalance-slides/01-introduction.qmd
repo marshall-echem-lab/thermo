@@ -32,9 +32,15 @@ An energy balance accounts for:
 
 ## System and Surroundings
 
-We define a system boundary and track energy flows across it.
+For a mass balance, we track mass entering and leaving the system.
 
-![Basic energy balance diagram](figures/massbalance_basic_diagram.svg){width="80%" fig-align="center"}
+![Basic mass balance diagram](figures/massbalance_basic_diagram.svg){width="60%" fig-align="center"}
+
+## System and Surroundings
+
+For an energy balance, we track energy entering and leaving the system.
+
+![Basic energy balance diagram](figures/energybalance_verybasic_diagram.svg){width="60%" fig-align="center"}
 
 ## Types of Systems
 
