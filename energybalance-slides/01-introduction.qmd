@@ -31,7 +31,7 @@ An energy balance accounts for:
 ## System and Surroundings
 
 We define a system boundary and track energy flows across it.
-ß
+
 
 ## Types of Systems
 
