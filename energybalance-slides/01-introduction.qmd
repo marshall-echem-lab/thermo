@@ -34,6 +34,7 @@ An energy balance accounts for:
 
 We define a system boundary and track energy flows across it.
 
+![Basic energy balance diagram](../figures/energybalance_basic_diagram.svg){width="80%" fig-align="center"}
 
 ## Types of Systems
 
