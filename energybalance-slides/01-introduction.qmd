@@ -42,17 +42,20 @@ For energy balance, we do the same thing.
 
 ![A simple energy balance diagram](figures/energy_balance_simple_diagram.svg){.nostretch width=70% fig-align="center" #fig-simple_energy_balance_diagram}
 
+### System and Surroundings
+Defining the system boundary is critical for both mass and energy balances.
+
+::: {.callout-note}
+## Key Terms
+**System** — a specified region of space or matter that is under consideration.
+**Surroundings** — everything outside the system boundary.
+:::
+
 ### Types of Systems
 
-![$U$ is a state function so we can measure or calculate the difference between two states](figures/U_statefunction_diagram.png){width=70% fig-align="center" #fig-H_statefunction_diagram}
-
-- **Closed** — energy crosses the boundary, mass does not
-- **Open** — both mass and energy cross the boundary
-- **Isolated** — neither mass nor energy cross the boundary
+smaller title?
 
 ## Types of Systems
-
-![out width](figures/U_statefunction_diagram.png){out-width=20% fig-align="center" #fig-H_statefunction_diagram}
 
 - **Closed** — energy crosses the boundary, mass does not
 - **Open** — both mass and energy cross the boundary

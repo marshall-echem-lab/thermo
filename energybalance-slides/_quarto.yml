@@ -18,3 +18,4 @@ format:
     theme: default
     slide-number: true
     toc: false
+    css: slide_styles.css
