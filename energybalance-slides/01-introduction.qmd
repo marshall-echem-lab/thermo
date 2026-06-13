@@ -22,12 +22,12 @@ An energy balance accounts for:
 :::
 
 ## Basic Principles
-**Conservation of Energy** = **First Law of Thermodynamics**
+Conservation of Energy = First Law of Thermodynamics
 
 ::: {.incremental}
 - Energy cannot be created or destroyed, only transformed.
 - All forms of energy are equal in value.
-- Not all energy is useful (2nd Law of Thermodynamics) .
+- Not all energy is useful (2nd Law of Thermodynamics).
 :::
 
 ## System and Surroundings
