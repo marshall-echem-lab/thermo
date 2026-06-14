@@ -18,4 +18,5 @@ format:
     theme: default
     slide-number: true
     toc: false
+    auto-stretch: false
     css: slide_styles.css
