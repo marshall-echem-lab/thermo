@@ -34,13 +34,13 @@ Conservation of Energy = First Law of Thermodynamics
 
 For a mass balance, we track mass entering / leaving the system and accumulation within the system.
 
-![A simple mass balance diagram](figures/mass_balance_simple_diagram.svg){.nostretch width=70% fig-align="center" #fig-simple_mass_balance_diagram}
+![A simple mass balance diagram](figures/mass_balance_simple_diagram.svg){width=70% fig-align="center" #fig-simple_mass_balance_diagram}
 
 ## System and Surroundings
 
 For energy balance, we do the same thing.
 
-![A simple energy balance diagram](figures/energy_balance_simple_diagram.svg){.nostretch width=70% fig-align="center" #fig-simple_energy_balance_diagram}
+![A simple energy balance diagram](figures/energy_balance_simple_diagram.svg){width=70% fig-align="center" #fig-simple_energy_balance_diagram}
 
 ## System and Surroundings
 Defining the system boundary is critical for both mass and energy balances.
