@@ -31,13 +31,11 @@ Conservation of Energy = First Law of Thermodynamics
 :::
 
 ## System and Surroundings
-
 For a mass balance, we track mass entering / leaving the system and accumulation within the system.
 
 ![A simple mass balance diagram](figures/mass_balance_simple_diagram.svg){width=70% fig-align="center" #fig-simple_mass_balance_diagram}
 
 ## System and Surroundings
-
 For energy balance, we do the same thing.
 
 ![A simple energy balance diagram](figures/energy_balance_simple_diagram.svg){width=70% fig-align="center" #fig-simple_energy_balance_diagram}
@@ -51,9 +49,9 @@ Defining the system boundary is critical for both mass and energy balances.
 **Surroundings** — everything outside the system boundary.
 :::
 
-## Types of Systems
+## Differences vs Absolute Values
 
-smaller title?
+![Enthalpy vs Temperature](figures/H_T_base_graph.svg){width=70% fig-align="center" #fig-h_t_base_graph}
 
 ## Types of Systems
 
