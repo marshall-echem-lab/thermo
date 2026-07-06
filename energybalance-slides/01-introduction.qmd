@@ -182,7 +182,7 @@ State changes can be caused by:
 
 ::: {.callout-important}
 ## Important
-The path between the initial and final states does not matter for energy balances. Only the initial and final states matter.
+The path between the initial and final states does not alter the change in energy between the states. Only the initial and final states matter.
 :::
 
 . . . 
@@ -195,7 +195,13 @@ The energy associated with a state change is always the same[^1], regardless of 
 
 We can choose a path that is convenient for our calculations.
 
-## Differences vs Absolute Values
+. . . 
+
+e.g. consider the energy change when water is heated from 20°C to 80°C.
+
+## Example 1.1
+
+A 20g cube of ice is dropped from a height of 10m onto the ground. Describe the energy changes that occur in the ice cube as it falls and hits the ground. Assume that the ice cube does not melt.
 
 <!-- 
 

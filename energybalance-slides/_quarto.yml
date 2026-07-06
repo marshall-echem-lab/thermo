@@ -6,7 +6,7 @@ website:
   title: "Energy Balances — Slides"
   navbar:
     left:
-      - text: "Energy Balances Sildes"
+      - text: "Energy Balances Slides"
         href: index.qmd
       - text: "Lecture 1: Storing and Transferring Energy"
         href: 01-introduction.qmd
