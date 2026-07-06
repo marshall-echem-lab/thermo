@@ -8,7 +8,7 @@ website:
     left:
       - text: "Energy Balances Sildes"
         href: index.qmd
-      - text: "Lecture 1: Introduction"
+      - text: "Lecture 1: Storing and Transferring Energy"
         href: 01-introduction.qmd
       - text: "Lecture 2: First Law"
         href: 02-first-law.qmd

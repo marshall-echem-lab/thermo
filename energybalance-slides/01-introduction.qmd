@@ -127,30 +127,44 @@ where:
 For a single component system with 2 phases (e.g. water and ice), we have:
 
 $$F = C - \pi + 2$$
+
+...
+
 $$F = 1 - 2 + 2 = 1$$
 
+...
+
 We need to specify one intensive property (e.g. temperature or pressure) to fully define the state of the system.
+
+...
 
 We cannot specify both temperature and pressure. This would over specify the system.
 
 ## Gibbs Phase Rule - example 2
-For a single component system with 1 phase (e.g. water), we have:
+For a single component system with 1 phase (e.g. liquid water), we have:
 $$F = C - \pi + 2$$
+
+...
+
 $$F = 1 - 1 + 2 = 2$$
+
+...
 
 We need to specify two intensive properties (e.g. temperature and pressure) to fully define the state of the system.
 
 ## Gibbs Phase Rule - example 3
-
+For a two component system with 1 phase (e.g. water and ethanol), we have:
 $$F = C - \pi + 2$$
 
-For a two component system with 1 phase
-
-e.g. water and ethanol, we have:
+...
 
 $$F = 2 - 1 + 2 = 3$$
 
+...
+
 We need to specify three intensive properties (e.g. temperature, pressure, and composition) to fully define the state of the system.
+
+...
 
 Any three intensive properties will do, but we often choose temperature, pressure, and composition.
 ## State changes
