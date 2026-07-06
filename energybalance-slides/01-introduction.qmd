@@ -173,11 +173,12 @@ State changes are important for energy balances.
 . . . 
 
 State changes can be caused by:
+
 - Temperature changes
 - Pressure changes
 - Composition changes
 
----
+## State changes and energy
 
 ::: {.callout-important}
 ## Important
@@ -186,7 +187,13 @@ The path between the initial and final states does not matter for energy balance
 
 . . . 
 
-Any path to get from the initial state to the final state. We can choose a path that is convenient for our calculations.
+The energy associated with a state change is always the same[^1], regardless of the path taken.
+
+[^1]: between the same initial and final states
+
+. . .
+
+We can choose a path that is convenient for our calculations.
 
 ## Differences vs Absolute Values
 
