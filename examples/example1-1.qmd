@@ -1,0 +1,20 @@
+## Example 1.1: Mixing two streams
+
+Two liquid streams are combined in a mixer at steady state with no reaction.
+Stream 1 is 100 kg/h of a 20 wt% ethanol-in-water solution; Stream 2 is
+50 kg/h of a 60 wt% ethanol solution. Find the outlet flow rate and its
+ethanol mass fraction.
+
+**Solution**
+
+A total mass balance at steady state (no accumulation, no reaction):
+
+$$\dot{m}_\text{out} = \dot{m}_1 + \dot{m}_2 = 100 + 50 = 150\ \text{kg/h}.$$
+
+An ethanol balance:
+
+$$\dot{m}_{\text{EtOH}} = (0.20)(100) + (0.60)(50) = 50\ \text{kg/h}.$$
+
+So the outlet ethanol mass fraction is
+
+$$x_\text{EtOH} = \frac{50}{150} = 0.333 = 33.3\ \text{wt\%}.$$

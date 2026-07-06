@@ -1,0 +1,20 @@
+## Problem 1.1: Heating a water stream
+
+A process heater raises 500 kg/h of liquid water from 20 °C to 80 °C at
+constant pressure. Taking the specific heat capacity of water as
+$c_p = 4.18\ \text{kJ}\,\text{kg}^{-1}\,\text{K}^{-1}$, determine the heat
+duty in kW.
+
+::: {.content-visible when-meta="show-solutions"}
+**Solution**
+
+With no phase change and constant $c_p$, the steady-state energy balance
+reduces to a sensible-heat term:
+
+$$\dot{Q} = \dot{m}\,c_p\,\Delta T
+= (500)(4.18)(80 - 20) = 125{,}400\ \text{kJ/h}.$$
+
+Converting to kW:
+
+$$\dot{Q} = \frac{125{,}400\ \text{kJ/h}}{3600\ \text{s/h}} \approx 34.8\ \text{kW}.$$
+:::

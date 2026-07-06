@@ -22,6 +22,13 @@ __pycache__/
 energybalance-book/figures/
 energybalance-slides/figures/
 
+# CI-staged copies of shared folders (root sources stay tracked)
+*/examples/
+*/problems/
+
+# generated chapter (disposable, produced at pre-render)
+*/problems-solutions.qmd
+
 # draw.io files
 *.drawio
 *.bkp

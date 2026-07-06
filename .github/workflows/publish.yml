@@ -24,10 +24,16 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Copy figures into project folders
+      - name: Stage shared assets into each sub-project
+        env:
+          COURSE: energybalance
         run: |
-          cp -r figures energybalance-book/figures
-          cp -r figures energybalance-slides/figures
+          for proj in "$COURSE"-book "$COURSE"-slides; do
+            for asset in figures examples problems; do
+              rm -rf "$proj/$asset"
+              cp -r  "$asset" "$proj/$asset"
+            done
+          done
 
       - name: Render energybalance-book
         run: quarto render energybalance-book

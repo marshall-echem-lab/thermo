@@ -10,6 +10,10 @@ Placeholder text. An energy balance is an accounting of all energy entering and 
 
 Placeholder text. We define a system boundary and track energy flows across it.
 
+{{< include examples/example1-1.qmd >}}
+
+{{< include problems/problem1-1.qmd >}}
+
 ## Types of Systems
 
 Placeholder text. Systems may be open, closed, or isolated depending on whether mass and energy can cross the boundary.
