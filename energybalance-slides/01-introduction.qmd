@@ -97,7 +97,7 @@ Intensive properties do not depend on the size of the system (e.g. temperature, 
 
 Extensive properties do depend on the size of the system (e.g. mass, volume, energy).
 
----
+## State Property examples
 State properties include:
 - density (or specific volume or molar volume), $\rho$ (or $v$)
 - pressure, $P$
@@ -117,6 +117,7 @@ where:
 - $\pi$ = number of phases
 
 ---
+
 $$F = C - \pi + 2$$
 
 e.g. For a single component system with 2 phases (e.g. water and ice), we have:
@@ -126,6 +127,7 @@ $$F = 1 - 2 + 2 = 1$$
 This means we need to specify one intensive property (like temperature or pressure) to fully define the state of the system.
 
 ---
+
 $$F = C - \pi + 2$$
 
 e.g. For a single component system with 1 phase (e.g. water), we have:
@@ -135,6 +137,7 @@ $$F = 1 - 1 + 2 = 2$$
 This means we need to specify two intensive properties (like temperature and pressure) to fully define the state of the system.
 
 ---
+
 $$F = C - \pi + 2$$
 
 e.g. For a two component system with 1 phases (e.g. water and ethanol), we have:
