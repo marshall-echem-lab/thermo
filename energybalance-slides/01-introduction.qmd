@@ -1,23 +1,25 @@
 ---
-title: "Lecture 1: Introduction to Energy Balances"
+title: "Lecture 1: Storing and transferring Energy"
 format: revealjs
 ---
 
 ## What is an Energy Balance?
-An energy balance accounts for:
+The energy balance:
 
 ::: {.incremental}
-- energy entering and leaving a system.
-- energy released or accumulated within the system.
-- energy contained within mass entering or leaving the system.
+- is just like a mass balance.
+- is based on the 1st Law of Thermodynamics.
+- accounts for energy stored in a system.
+- accounts for energy transferred in/out of the system.
+- is based on a single equation.
 :::
 
 ## Why do we care about energy balances?
 
 ::: {.incremental}
 - To understand and predict system behavior.
-- To design and optimize processes.
-- To maximize efficiency.
+- To design and optimise processes.
+- To maximise efficiency.
 - To ensure safety.
 :::
 
@@ -28,6 +30,33 @@ Conservation of Energy = First Law of Thermodynamics
 - Energy cannot be created or destroyed, only transformed.
 - All forms of energy are equal in value.
 - Not all energy is useful (2nd Law of Thermodynamics).
+:::
+
+## Storing energy
+Energy is stored at two levels:
+
+Macroscopic 
+::: {.incremental}
+- Kinetic energy 
+- Potential energy
+:::
+
+Microscopic
+::: {.incremental}
+- Internal energy 
+:::
+
+## Differences vs Absolute Values
+Absolute energy are not normally measured
+
+We normally only need to know differences in energy:
+::: {.incremental}
+- does the energy change over time?
+- does the energy change when the system undergoes some change
+    - the temperature changes
+    - a phase change occurs
+    - a reaction occurs 
+    - a solution is formed
 :::
 
 ## System and Surroundings
@@ -51,6 +80,8 @@ Defining the system boundary is critical for both mass and energy balances.
 
 ## Differences vs Absolute Values
 
+<!-- 
+
 ![Enthalpy vs Temperature](figures/H_T_base_graph.svg){width=70% fig-align="center" #fig-h_t_base_graph}
 
 ## Types of Systems
@@ -58,4 +89,6 @@ Defining the system boundary is critical for both mass and energy balances.
 - **Closed** — energy crosses the boundary, mass does not
 - **Open** — both mass and energy cross the boundary
 - **Isolated** — neither mass nor energy cross the boundary
+
+-->
 
