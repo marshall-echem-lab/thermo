@@ -1,6 +1,6 @@
 ## Energy Balances - Lecture Slides {.smaller}
 
-[Lecture 1](01-introduction.qmd) Storing and transferring Energy
+[Lecture 1](01-storing-transferring-energy.qmd) Storing and transferring Energy
 
 [Lecture 2](02-first-law.qmd) The First Law of Thermodynamics
 
