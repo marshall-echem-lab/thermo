@@ -35,14 +35,14 @@ Conservation of Energy = First Law of Thermodynamics
 ## Storing energy
 Energy is stored at two levels:
 
-Macroscopic 
+*Macroscopic*
 
 ::: {.incremental}
 - Kinetic energy 
 - Potential energy
 :::
 
-Microscopic
+*Microscopic*
 
 ::: {.incremental}
 - Internal energy 
@@ -169,6 +169,25 @@ We need to specify three intensive properties (e.g. temperature, pressure, and c
 Any three intensive properties will do, but we often choose temperature, pressure, and composition.
 
 ## State changes
+State changes are important for energy balances.
+
+. . . 
+
+State changes can be caused by:
+- Temperature changes
+- Pressure changes
+- Composition changes
+
+---
+
+::: {.callout--important}
+## Important
+The path between the initial and final states does not matter for energy balances. Only the initial and final states matter.
+:::
+
+. . . 
+
+Any path to get from the initial state to the final state. We can choose a path that is convenient for our calculations.
 
 ## Differences vs Absolute Values
 
