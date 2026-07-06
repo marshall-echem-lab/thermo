@@ -36,12 +36,14 @@ Conservation of Energy = First Law of Thermodynamics
 Energy is stored at two levels:
 
 Macroscopic 
+
 ::: {.incremental}
 - Kinetic energy 
 - Potential energy
 :::
 
 Microscopic
+
 ::: {.incremental}
 - Internal energy 
 :::
@@ -50,6 +52,7 @@ Microscopic
 Absolute energy are not normally measured
 
 We normally only need to know differences in energy:
+
 ::: {.incremental}
 - does the energy change over time?
 - does the energy change when the system undergoes some change
