@@ -83,9 +83,8 @@ Defining the system boundary is critical for both mass and energy balances.
 The state of a system is an important thermodynamic concept.
 
 ::: {.incremental}
-- The “state” of a system describes everything about it
-    - e.g. density, temperature, pressure, energy, entropy
-- We fully define the “state” if we know or choose enough “state properties”
+- The “state” of a system describes everything about it.
+- We fully define the “state” if we know or choose enough “state properties”.
 - The Gibbs phase rule can tell us how much of these state properties we need to know.
     - We can’t over specify!!! Sometimes called the degrees of freedom.
 :::
@@ -180,7 +179,7 @@ State changes can be caused by:
 
 ---
 
-::: {.callout--important}
+::: {.callout-important}
 ## Important
 The path between the initial and final states does not matter for energy balances. Only the initial and final states matter.
 :::
