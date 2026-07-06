@@ -93,12 +93,18 @@ The state of a system is an important thermodynamic concept.
 ## State Properties
 State properties are either intensive or extensive.
 
-Intensive properties do not depend on the size of the system (e.g. temperature, pressure, density).
-
-Extensive properties do depend on the size of the system (e.g. mass, volume, energy).
+::: {.incremental}
+- Extensive properties
+    - do depend on the size of the system.
+    - e.g. mass, volume, energy.
+- Intensive properties
+    - do not depend on the size of the system.
+    - e.g. temperature, pressure, density.
+:::
 
 ## State Property examples
 State properties include:
+
 - density (or specific volume or molar volume), $\rho$ (or $v$)
 - pressure, $P$
 - temperature, $T$
@@ -112,40 +118,41 @@ Gibbs phase rule:
 $$F = C - \pi + 2$$
 
 where:
+
 - F = degrees of freedom
 - C = number of components
 - $\pi$ = number of phases
 
----
+## Gibbs Phase Rule - example 1
+For a single component system with 2 phases (e.g. water and ice), we have:
 
 $$F = C - \pi + 2$$
-
-e.g. For a single component system with 2 phases (e.g. water and ice), we have:
-
 $$F = 1 - 2 + 2 = 1$$
 
-This means we need to specify one intensive property (like temperature or pressure) to fully define the state of the system.
+We need to specify one intensive property (e.g. temperature or pressure) to fully define the state of the system.
 
----
+We cannot specify both temperature and pressure. This would over specify the system.
 
+## Gibbs Phase Rule - example 2
+For a single component system with 1 phase (e.g. water), we have:
 $$F = C - \pi + 2$$
-
-e.g. For a single component system with 1 phase (e.g. water), we have:
-
 $$F = 1 - 1 + 2 = 2$$
 
-This means we need to specify two intensive properties (like temperature and pressure) to fully define the state of the system.
+We need to specify two intensive properties (e.g. temperature and pressure) to fully define the state of the system.
 
----
+## Gibbs Phase Rule - example 3
 
 $$F = C - \pi + 2$$
 
-e.g. For a two component system with 1 phases (e.g. water and ethanol), we have:
+For a two component system with 1 phase
+
+e.g. water and ethanol, we have:
 
 $$F = 2 - 1 + 2 = 3$$
 
-This means we need to specify three intensive properties (like temperature, pressure, and composition) to fully define the state of the system.
+We need to specify three intensive properties (e.g. temperature, pressure, and composition) to fully define the state of the system.
 
+Any three intensive properties will do, but we often choose temperature, pressure, and composition.
 ## State changes
 
 ## Differences vs Absolute Values
