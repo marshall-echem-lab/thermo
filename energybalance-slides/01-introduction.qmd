@@ -88,6 +88,7 @@ The state of a system is an important thermodynamic concept.
 - We fully define the “state” if we know or choose enough “state properties”
 - The Gibbs phase rule can tell us how much of these state properties we need to know.
     - We can’t over specify!!! Sometimes called the degrees of freedom.
+:::
 
 ## State Properties
 State properties are either intensive or extensive.
