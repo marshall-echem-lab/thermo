@@ -1,4 +1,4 @@
-## Problem 1.1: Heating a water stream
+## Problem 1.1: Heating a water stream {.unnumbered}
 
 A process heater raises 500 kg/h of liquid water from 20 °C to 80 °C at
 constant pressure. Taking the specific heat capacity of water as

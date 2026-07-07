@@ -1,4 +1,4 @@
-## Example 1.1: Mixing two streams
+## Example 1.1: Mixing two streams {.unnumbered}
 
 Two liquid streams are combined in a mixer at steady state with no reaction.
 Stream 1 is 100 kg/h of a 20 wt% ethanol-in-water solution; Stream 2 is

@@ -1,4 +1,4 @@
-## Problem 1.2: Cooling an air stream
+## Problem 1.2: Cooling an air stream {.unnumbered}
 
 A stream of 200 kg/h of air is cooled from 150 °C to 40 °C at constant
 pressure with no phase change. Taking the specific heat capacity of air as
