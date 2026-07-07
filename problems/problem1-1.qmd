@@ -9,9 +9,10 @@ The power required by the pump is equal to the rate of energy transfer to the wa
 
 Assuming the water is incompressible and neglecting any frictional losses, the power required by the pump can be calculated using the following equation:
 
-$$$\dot{W} = \dot{m}gz + \frac{1}{2}\dot{m}\mathbf{v}^2$$
+$$\dot{W} = \dot{m}\cdot g \cdot z + \frac{1}{2} \cdot \dot{m} \cdot\mathbf{v}^2$$
 
 where:
+
 - \(\dot{W}\) is the power required by the pump (W)
 - \(\dot{m}\) is the mass flow rate of water (kg/s)
 - \(g\) is the acceleration due to gravity (9.81 m/s²)
@@ -22,21 +23,25 @@ Note: Power is the rate of energy transfer, and the first term represents the ch
 
 The mass flow rate of water can be calculated from the volumetric flow rate and the density of water:
 
-$$$\dot{m} = \rho\dot{V} = 1000\ \text{kg/m³} \cdot 2\ \text{L/s} \cdot \frac{1\ \text{m³}}{1000\ \text{L}} = 2\ \text{kg/s}$$
+$$\dot{m} = \rho \cdot\dot{V} = 1000\ \text{kg/m³} \cdot 2\ \text{L/s} \cdot \frac{1\ \text{m³}}{1000\ \text{L}} = 2\ \text{kg/s}$$
 
 where:
+
 - \(\rho\) is the density of water (kg/m³)
 - \(\dot{V}\) is the volumetric flow rate of water (m³/s)
 
 The velocity of water at the nozzle exit can be calculated from the volumetric flow rate and the nozzle exit area:
 
-$$$\mathbf{v} = \frac{\dot{V}}{A} = \frac{2\ \text{L/s} \cdot \frac{1\ \text{m³}}{1000\ \text{L}}}{0.01\ \text{m²}} = 0.2\ \text{m/s}$$
+$$\mathbf{v} = \frac{\dot{V}}{A} = \frac{2\ \text{L/s} \cdot \frac{1\ \text{m³}}{1000\ \text{L}}}{0.01\ \text{m²}} = 0.2\ \text{m/s}$$
 
 where:
+
 - \(A\) is the nozzle exit area (m²)
 
 Calculating power required by the pump:
 
-$$$\dot{W} = \dot{m}gz + \frac{1}{2}\dot{m}\mathbf{v}^2 = 2\ \text{kg/s} \cdot 9.81\ \text{m/s²} \cdot 50\ \text{m} + \frac{1}{2} \cdot 2\ \text{kg/s} \cdot (0.2\ \text{m/s})^2 = 981\ \text{W} + 0.04\ \text{W} = 981.04\ \text{W}$$
+$$\dot{W} = \dot{m}\cdot g \cdot z + \frac{1}{2} \cdot \dot{m} \cdot \mathbf{v}^2 $$
+$$\dot{W}= 2\ \text{kg/s} \cdot 9.81\ \text{m/s²} \cdot 50\ \text{m} + \frac{1}{2} \cdot 2\ \text{kg/s} \cdot (0.2\ \text{m/s})^2$$
+$$\dot{W}= 981\ \text{W} + 0.04\ \text{W} = 981.04\ \text{W}$$
 
 :::
