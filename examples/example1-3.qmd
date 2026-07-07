@@ -1,0 +1,36 @@
+## Example 1.2: Potential energy {.unnumbered .scrollable}
+
+A reservoir sits 50 m above the turbines. Calculate the potential energy
+available from 1000 kg of water.
+
+```{python}
+#| echo: true
+#| output: false
+
+
+# Given
+m = 1000   # mass of water (kg)
+g = 9.81   # gravitational acceleration (m/s²)
+z = 50     # height above turbines (m)
+
+# Potential energy
+E_p = m * g * z
+```
+
+```{python}
+#| echo: false
+#| output: true
+
+
+# Given
+m = 1000   # mass of water (kg)
+g = 9.81   # gravitational acceleration (m/s²)
+z = 50     # height above turbines (m)
+
+# Potential energy
+E_p = m * g * z
+
+print(f"E_p = m × g × z")
+print(f"E_p = {m} × {g} × {z}")
+print(f"E_p = {E_p:,.0f} J")
+```
