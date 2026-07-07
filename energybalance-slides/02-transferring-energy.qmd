@@ -64,13 +64,16 @@ A system can gain or lose energy in three ways:
 :::
 
 ## Energy Balance Diagram
-![](figures/energy_balance_diagram.svg){width=70% fig-align="center" #fig-energy_balance_diagram}
+![](figures/energy_balance_diagram.svg){width=70% fig-align="center"}
 
 $$\text{Energy In} - \text{Energy Out} = \text{Accumulation of Energy in the System}$$
+
+::: {.fragment}
 $$\dot{E}_{in} + \dot{Q} + \dot{W} - \dot{E}_{out} = \frac{dE_{sys}}{dt}$$
+:::
 
 ## Heat and Work convention
-!(figures/Energy_balance_diagram.svg){width=70% fig-align="center" #fig-Energy_balance_diagram}
+![](figures/energy_balance_diagram.svg){width=70% fig-align="center"}
 
 ::: {.callout-important}
 ## Important
