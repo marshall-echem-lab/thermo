@@ -201,7 +201,7 @@ e.g. consider the energy change when water is heated from 20°C to 80°C.
 
 ## State change - path independence
 
-![The energy change assoicated with a state change is independent of the path](figures/state_function_change_graph.svg){width=70% fig-align="center" #fig-state_function_change_graph}
+![The energy change assoicated with a state change is independent of the path](figures/statefunction_change_graph.svg){width=70% fig-align="center" #fig-state_function_change_graph}
 
 ## Example 1.1
 

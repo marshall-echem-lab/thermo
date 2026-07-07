@@ -15,10 +15,6 @@ z = 50     # height above turbines (m)
 
 # Potential energy
 E_p = m * g * z
-
-print(f"E_p = m × g × z")
-print(f"E_p = {m} × {g} × {z}")
-print(f"E_p = {E_p:,.0f} J")
 ```
 
 ```{python}
