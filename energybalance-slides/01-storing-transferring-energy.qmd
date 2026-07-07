@@ -107,7 +107,7 @@ State properties include:
 - density (or specific volume or molar volume), $\rho$ (or $v$)
 - pressure, $P$
 - temperature, $T$
-- energy (there are a bunch of different “energy” flavours)
+- energy
 - entropy, $S$
 - composition, $x_i$ (mole fraction of component $i$)
 
@@ -198,6 +198,10 @@ We can choose a path that is convenient for our calculations.
 . . . 
 
 e.g. consider the energy change when water is heated from 20°C to 80°C.
+
+## State change - path independence
+
+![The energy change assoicated with a state change is independent of the path](figures/state_function_change_graph.svg){width=70% fig-align="center" #fig-state_function_change_graph}
 
 ## Example 1.1
 
