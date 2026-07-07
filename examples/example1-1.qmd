@@ -17,4 +17,4 @@ $$\dot{m}_{\text{EtOH}} = (0.20)(100) + (0.60)(50) = 50\ \text{kg/h}.$$
 
 So the outlet ethanol mass fraction is
 
-$$x_\text{EtOH} = \frac{50}{150} = 0.333 = 33.3\ \text{wt\%}.$$
+$$x_\text{EtOH} = \frac{50}{150} = 0.333 = 33.3\ \text{wt}\%.$$
