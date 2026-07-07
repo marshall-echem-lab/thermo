@@ -4,7 +4,7 @@ A reservoir sits 50 m above the turbines. Calculate the potential energy
 available from 1000 kg of water.
 
 ```{python}
-#| echo: false
+#| echo: true
 #| output: true
 
 
