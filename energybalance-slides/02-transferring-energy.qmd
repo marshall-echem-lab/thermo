@@ -43,20 +43,31 @@ A system can store energy in three ways:
 - Potential Energy, $E_p$
 - Kinetic Energy, $E_k$
 - Internal Energy, $U$
-   - The microscopic energy of the system.
 :::
 
 ## How systems gain or lose energy
 A system can gain or lose energy in three ways:
 
-::: {.incremental}
+::: {.fragment}
 - Heat, $Q$
     - Energy transferred due to a temperature difference.
+:::
+
+::: {.fragment}
 - Work, $W$
     - Energy transferred due to a force acting through a distance.
+:::
+
+::: {.fragment}
 - Mass flow, $\dot{m}$
     - Energy carried by mass entering or leaving the system.
 :::
+
+## Energy Balance Diagram
+!(figures/Energy_balance_diagram.svg){width=70% fig-align="center" #fig-Energy_balance_diagram}
+
+$$\text{Energy In} - \text{Energy Out} = \text{Accumulation of Energy in the System}$$
+$$\dot{E}_{in} + \dot{Q} + \dot{W} - \dot{E}_{out} = \frac{dE_{sys}}{dt}$$
 
 ## Enthalpy
 

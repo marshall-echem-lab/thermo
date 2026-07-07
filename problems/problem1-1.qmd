@@ -1,6 +1,6 @@
 ## Problem 1.1: Pumping Water {.unnumbered}
 
-Cooling water is pumped to the top of a 50 m cooling tower. The water enters the cooling tower through a nozzle at high velocity. The flow rate of water is 2 L/s, and the nozzle exit area is 0.01 m². Calculate the power required by the pump.
+Cooling water is pumped to the top of a 50 m cooling tower. The water enters the cooling tower through a nozzle at high velocity. The flow rate of water is 2 L/s, and the cross-sectional area of nozzle at the exit is 0.005 m². Calculate the power required by the pump.
 
 ::: {.content-visible when-meta="show-solutions"}
 **Solution**
@@ -32,7 +32,7 @@ where:
 
 The velocity of water at the nozzle exit can be calculated from the volumetric flow rate and the nozzle exit area:
 
-$$\mathbf{v} = \frac{\dot{V}}{A} = \frac{2\ \text{L/s} \cdot \frac{1\ \text{m³}}{1000\ \text{L}}}{0.01\ \text{m²}} = 0.2\ \text{m/s}$$
+$$\mathbf{v} = \frac{\dot{V}}{A} = \frac{2\ \text{L/s} \cdot \frac{1\ \text{m³}}{1000\ \text{L}}}{0.005\ \text{m²}} = 0.4\ \text{m/s}$$
 
 where:
 
@@ -41,7 +41,7 @@ where:
 Calculating power required by the pump:
 
 $$\dot{W} = \dot{m}\cdot g \cdot z + \frac{1}{2} \cdot \dot{m} \cdot \mathbf{v}^2 $$
-$$\dot{W}= 2\ \text{kg/s} \cdot 9.81\ \text{m/s²} \cdot 50\ \text{m} + \frac{1}{2} \cdot 2\ \text{kg/s} \cdot (0.2\ \text{m/s})^2$$
-$$\dot{W}= 981\ \text{W} + 0.04\ \text{W} = 981.04\ \text{W}$$
+$$\dot{W}= 2\ \text{kg/s} \cdot 9.81\ \text{m/s²} \cdot 50\ \text{m} + \frac{1}{2} \cdot 2\ \text{kg/s} \cdot (0.4\ \text{m/s})^2$$
+$$\dot{W}= 981\ \text{W} + 0.16\ \text{W} = 981.16\ \text{W}$$
 
 :::
