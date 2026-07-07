@@ -1,8 +1,5 @@
 project:
   type: book
-  pre-render:
-    - python ../scripts/generate-key-terms.py energybalance-book
-    - python ../scripts/generate-problems-solutions.py
   output-dir: ../_site/energybalance-book
 
 book:

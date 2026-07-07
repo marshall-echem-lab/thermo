@@ -35,6 +35,12 @@ jobs:
             done
           done
 
+      - name: Generate auto chapters (book only)
+        run: |
+          cd energybalance-book
+          python3 ../scripts/generate-key-terms.py energybalance-book
+          python3 ../scripts/generate-problems-solutions.py
+
       - name: Render energybalance-book
         run: quarto render energybalance-book
 
