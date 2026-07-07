@@ -20,17 +20,20 @@ The system is the part that we are interested in studying. The surroundings are 
 :::: {.columns}
 
 ::: {.column width="50%"}
-![A stirred tank reactor feed by a pump](figures/CSTR_pump.svg){width=50% fig-align="center" #fig-CSTR_pump}
+![A stirred tank feed by a pump](figures/CSTR_pump.svg){width=90% fig-align="center" #fig-CSTR_pump}
 :::
 
 ::: {.column width="50%"}
 The system could be:
-::: {incremental}
-- the contents of the stirred tank reactor
+
+::: {.incremental}
+- the contents of the stirred tank
 - the pump and stirred tank
 - the pump
 :::
+
 :::
+
 ::::
 
 ## How systems store energy

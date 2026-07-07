@@ -13,11 +13,11 @@ $$\dot{W} = \dot{m}\cdot g \cdot z + \frac{1}{2} \cdot \dot{m} \cdot\mathbf{v}^2
 
 where:
 
-$\dot{W}$ is the power required by the pump (W)
-$\dot{m}$ is the mass flow rate of water (kg/s)
-$g$ is the acceleration due to gravity (9.81 m/s²)
-$z$ is the height of the cooling tower (m)
-$\mathbf{v}$ is the velocity of water at the nozzle exit (m/s)
+- $\dot{W}$ is the power required by the pump (W)
+- $\dot{m}$ is the mass flow rate of water (kg/s)
+- $g$ is the acceleration due to gravity (9.81 m/s²)
+- $z$ is the height of the cooling tower (m)
+- $\mathbf{v}$ is the velocity of water at the nozzle exit (m/s)
 
 Note: Power is the rate of energy transfer, and the first term represents the change in potential energy, while the second term represents the change in kinetic energy of the water.
 
@@ -27,8 +27,8 @@ $$\dot{m} = \rho \cdot\dot{V} = 1000\ \text{kg/m³} \cdot 2\ \text{L/s} \cdot \f
 
 where:
 
-- \(\rho\) is the density of water (kg/m³)
-- \(\dot{V}\) is the volumetric flow rate of water (m³/s)
+- $\rho$ is the density of water (kg/m³)
+- $\dot{V}$ is the volumetric flow rate of water (m³/s)
 
 The velocity of water at the nozzle exit can be calculated from the volumetric flow rate and the nozzle exit area:
 
@@ -36,7 +36,7 @@ $$\mathbf{v} = \frac{\dot{V}}{A} = \frac{2\ \text{L/s} \cdot \frac{1\ \text{m³}
 
 where:
 
-- \(A\) is the nozzle exit area (m²)
+- $A$ is the nozzle exit area (m²)
 
 Calculating power required by the pump:
 
