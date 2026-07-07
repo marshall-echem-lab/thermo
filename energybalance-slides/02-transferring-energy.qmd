@@ -15,17 +15,23 @@ An energy balance tracks energy entering / leaving the system and accumulation w
 
 The system is the part that we are interested in studying. The surroundings are everything else.
 
-## What is the system? 
+## What is the system?
 
-![A stirred tank reactor feed by a pump](figures/CSTR_pump.svg){width=60% fig-align="center" #fig-CSTR_pump}
+:::: {.columns}
 
+::: {.column width="50%"}
+![A stirred tank reactor feed by a pump](figures/CSTR_pump.svg){width=50% fig-align="center" #fig-CSTR_pump}
+:::
+
+::: {.column width="50%"}
 The system could be:
-
 ::: {incremental}
 - the contents of the stirred tank reactor
 - the pump and stirred tank
 - the pump
 :::
+:::
+::::
 
 ## How systems store energy
 A system can store energy in three ways:
@@ -33,16 +39,20 @@ A system can store energy in three ways:
 ::: {.incremental}
 - Potential Energy, $E_p$
 - Kinetic Energy, $E_k$
-- Internal Energy, $U$: The total microscopic energy of the system.
+- Internal Energy, $U$
+   - The microscopic energy of the system.
 :::
 
 ## How systems gain or lose energy
 A system can gain or lose energy in three ways:
 
 ::: {.incremental}
-- Heat, $Q$: Energy transferred due to a temperature difference.
-- Work, $W$: Energy transferred due to a force acting through a distance.
-- Mass flow, $\dot{m}$: Energy carried by mass entering or leaving the system.
+- Heat, $Q$
+    - Energy transferred due to a temperature difference.
+- Work, $W$
+    - Energy transferred due to a force acting through a distance.
+- Mass flow, $\dot{m}$
+    - Energy carried by mass entering or leaving the system.
 :::
 
 ## Enthalpy
