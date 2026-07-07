@@ -24,6 +24,14 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: python3 -m pip install -r py_requirements.txt
+
       - name: Stage shared assets into each sub-project
         env:
           COURSE: energybalance
@@ -46,7 +54,7 @@ jobs:
 
       - name: Render energybalance-slides
         run: quarto render energybalance-slides
-      
+
       # - name: Render thermodynamics-book
       #   run: quarto render thermodynamics-book
       # - name: Render thermodynamics-slides

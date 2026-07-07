@@ -9,7 +9,7 @@ ethanol mass fraction.
 
 A total mass balance at steady state (no accumulation, no reaction):
 
-$$\dot{m}_\text{out} = \dot{m}_1 + \dot{m}_2 = 100 + 50 = 150\ \text{kg/h}$$
+$$\dot{m}_\text{ out} = \dot{m}_1 + \dot{m}_2 = 100 + 50 = 150\ \text{kg/h}$$
 
 An ethanol balance:
 
