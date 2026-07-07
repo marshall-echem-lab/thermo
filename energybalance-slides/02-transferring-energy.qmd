@@ -1,0 +1,53 @@
+---
+title: "Lecture 2: Transferring Energy, Heat and Work"
+format: revealjs
+---
+
+## System and Surroundings
+
+![A simple energy balance diagram](figures/energy_balance_simple_diagram.svg){width=70% fig-align="center" #fig-simple_energy_balance_diagram}
+
+An energy balance tracks energy entering / leaving the system and accumulation within the system.
+
+## What is the system?
+
+![The system and surroundings defines where the energy balance is applied](figures/system_surroundings.svg){width=70% fig-align="center" #fig-system_surroundings}
+
+The system is the part that we are interested in studying. The surroundings are everything else.
+
+## What is the system? 
+
+![A stirred tank reactor feed by a pump](figures/CSTR_pump.svg){width=60% fig-align="center" #fig-CSTR_pump}
+
+The system could be:
+
+::: {incremental}
+- the contents of the stirred tank reactor
+- the pump and stirred tank
+- the pump
+:::
+
+## How systems store energy
+A system can store energy in three ways:
+
+::: {.incremental}
+- Potential Energy, $E_p$
+- Kinetic Energy, $E_k$
+- Internal Energy, $U$: The total microscopic energy of the system.
+:::
+
+## How systems gain or lose energy
+A system can gain or lose energy in three ways:
+
+::: {.incremental}
+- Heat, $Q$: Energy transferred due to a temperature difference.
+- Work, $W$: Energy transferred due to a force acting through a distance.
+- Mass flow, $\dot{m}$: Energy carried by mass entering or leaving the system.
+:::
+
+## Enthalpy
+
+$$H = U + PV$$
+
+Placeholder text. Enthalpy is convenient for open systems and constant-pressure processes.
+

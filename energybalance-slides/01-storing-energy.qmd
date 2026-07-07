@@ -1,5 +1,5 @@
 ---
-title: "Lecture 1: Storing and transferring Energy"
+title: "Lecture 1: Storing Energy and Systems"
 format: revealjs
 ---
 
@@ -130,7 +130,7 @@ State changes can be caused by:
 ::: {.incremental}
 - Temperature changes
 - Pressure changes
-- Phase change
+- Phase changes
 - Composition changes (reaction or solution formation)
 :::
 
@@ -152,10 +152,6 @@ We can choose a path that is convenient for our calculations.
 ## State change - path independence
 
 ![The energy change associated with a state change is independent of the path](figures/statefunction_change_graph.svg){width=70% fig-align="center" #fig-state_function_change_graph}
-
-::: aside
-While the energy difference between the two states is path independent, the energy used by the path is path dependent! 
-:::
 
 {{< include examples/example1-2.qmd >}}
 
