@@ -219,4 +219,4 @@ A 20g cube of ice is dropped from a height of 10m onto the ground. Describe the 
 
 {{< include problems/problem1-1.qmd >}}
 
-{{< include problems/example1-2.qmd >}}
+{{< include examples/example1-2.qmd >}}
