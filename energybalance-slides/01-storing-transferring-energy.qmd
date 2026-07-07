@@ -118,7 +118,7 @@ $$F = C - \pi + 2$$
 
 where:
 
-- F = degrees of freedom
+- F = degrees of freedom (number of independent intensive properties)
 - C = number of components
 - $\pi$ = number of phases
 
@@ -149,13 +149,13 @@ The energy associated with a state change is always the same[^1], regardless of 
 
 We can choose a path that is convenient for our calculations.
 
-. . . 
-
-e.g. consider the energy change when water is heated from 20°C to 80°C.
-
 ## State change - path independence
 
 ![The energy change associated with a state change is independent of the path](figures/statefunction_change_graph.svg){width=70% fig-align="center" #fig-state_function_change_graph}
+
+::: aside
+While the energy difference between the two states is path independent, the energy used by the path is path dependent! 
+:::
 
 {{< include examples/example1-2.qmd >}}
 

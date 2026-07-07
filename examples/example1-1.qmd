@@ -9,27 +9,29 @@ b. A mixture of liquid ethanol and water
 
 **Solution**
 
+::: {.fragment}
 a. 1 phase (liquid) and 1 component (water)
 
 $$F = C - \pi + 2$$
 $$F = 1 - 1 + 2 = 2$$
 
 We need to specify two intensive properties (e.g. temperature and pressure) to fully define the state of the system. Only knowing the temperature of the water would under-specify the state of the system
+:::
 
-. . .
-
+::: {.fragment}
 b. 2 phases (liquid+solid) and 1 component (water)
 
 $$F = C - \pi + 2$$
 $$F = 1 - 2 + 2 = 1$$
 
 We need to specify one intensive property (e.g. temperature or pressure) to fully define the state of the system. We cannot specify both temperature and pressure. This would over specify the system.
+:::
 
-. . .
-
+::: {.fragment}
 c. 1 phase (liquid) and 2 components (ethanol+water)
 
 $$F = C - \pi + 2$$
 $$F = 2 - 1 + 2 = 3$$
 
 We need to specify three intensive properties (e.g. temperature, pressure, and composition) to fully define the state of the system. Any three intensive properties will do, but we often choose temperature, pressure, and composition.
+:::
