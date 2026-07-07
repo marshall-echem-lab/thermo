@@ -17,10 +17,10 @@ The system is the part that we are interested in studying. The surroundings are 
 
 ## What is the system?
 
-:::: {.columns}
+:::: {.columns .v-center}
 
 ::: {.column width="50%"}
-![A stirred tank feed by a pump](figures/CSTR_pump.svg){width=90% fig-align="center" #fig-CSTR_pump}
+![A stirred tank feed by a pump](figures/CSTR_pump.svg){width=100% fig-align="center" #fig-CSTR_pump}
 :::
 
 ::: {.column width="50%"}
@@ -64,10 +64,26 @@ A system can gain or lose energy in three ways:
 :::
 
 ## Energy Balance Diagram
-!(figures/Energy_balance_diagram.svg){width=70% fig-align="center" #fig-Energy_balance_diagram}
+![](figures/Energy_balance_diagram.svg){width=70% fig-align="center" #fig-Energy_balance_diagram}
 
 $$\text{Energy In} - \text{Energy Out} = \text{Accumulation of Energy in the System}$$
 $$\dot{E}_{in} + \dot{Q} + \dot{W} - \dot{E}_{out} = \frac{dE_{sys}}{dt}$$
+
+## Heat and Work convention
+!(figures/Energy_balance_diagram.svg){width=70% fig-align="center" #fig-Energy_balance_diagram}
+
+::: {.callout-important}
+## Important
+Heat and work are defined as energy transfer *into* the system. If heat or work leaves the system, their values are negative.
+:::
+
+## Heat and work are quantities, not properties
+Heat and work are not properties of a system. They are quantities that describe energy transfer across the system boundary.
+
+::: {.callout-important}
+## Important
+Heat and work represent quantities of energy transfer. Heat is not stored in a system, and work is not stored in a system. When heat or work is transferred across the system boundary, the energy transferred is stored as $U$, $E_k$, or $E_p$.
+:::
 
 ## Enthalpy
 
