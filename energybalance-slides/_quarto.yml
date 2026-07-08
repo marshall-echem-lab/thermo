@@ -8,10 +8,10 @@ website:
     left:
       - text: "Energy Balances Slides"
         href: index.qmd
-      - text: "Lecture 1: Storing and Transferring Energy"
-        href: 01-introduction.qmd
-      - text: "Lecture 2: First Law"
-        href: 02-first-law.qmd
+      - text: "Summary: Storing and Transferring Energy"
+        href: 01-storing-energy.qmd
+      - text: "Summary 2: Transferring Energy, Heat and Work"
+        href: 02-transferring-energy.qmd
 
 format:
   revealjs:

@@ -115,11 +115,17 @@ Heat and work are defined as energy transfer *into* the system. If heat or work 
 :::
 
 ## Heat and work are quantities, not properties
-Internal energy ($U$) is a property of the system. Heat ($Q$) and work ($W$) are not properties of the system.
+Internal energy ($U$) is a property of the system.
 
+::: {.fragment}
+Heat ($Q$) and work ($W$) are not properties of the system.
+:::
+
+::: {.fragment}
 ::: {.callout-important}
 ## Important
 Heat and work represent quantities of energy transfer. Heat is not stored in a system, and work is not stored in a system. When heat or work is transferred across the system boundary, the energy transferred is stored as $U$, $E_k$, or $E_p$.
+:::
 :::
 
 ## Heat and work are different
