@@ -1,4 +1,4 @@
-## Energy Balances - Lecture Slides {.smaller}
+## Energy Balances - Summary Slides {.smaller}
 
 [Summary 1](01-storing-energy.qmd) Storing Energy and Systems
 

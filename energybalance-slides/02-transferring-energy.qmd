@@ -138,10 +138,13 @@ Heat and work are different forms of energy transfer.
 - Work is always more useful that heat
 :::
 
+{{< include examples/example2-1.qmd >}}
 
 ## Enthalpy
 
 $$H = U + PV$$
 
-Placeholder text. Enthalpy is convenient for open systems and constant-pressure processes.
+Enthalpy is a convenient property for open systems and constant-pressure processes.
+
+We use enthalpy for calculations, but we could have equally used internal energy. The difference is that enthalpy includes the $PV$ work done by the system when it expands or contracts.
 

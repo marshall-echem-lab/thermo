@@ -2,15 +2,15 @@
 
 Determine how many intensive properties need to be defined or known to fully define:
 
-    a. Liquid water
-    b. A mixture of liquid water and ice
-    c. A mixture of liquid ethanol and water
+ a. Liquid water
+ b. A mixture of liquid water and ice
+ c. A mixture of liquid ethanol and water
 
 
 **Solution**
 
 ::: {.fragment}
-    a. 1 phase (liquid) and 1 component (water)
+ a. 1 phase (liquid) and 1 component (water)
 
 $$F = C - \pi + 2$$
 $$F = 1 - 1 + 2 = 2$$
@@ -19,7 +19,7 @@ We need to specify two intensive properties (e.g. temperature and pressure) to f
 :::
 
 ::: {.fragment}
-     b. 2 phases (liquid+solid) and 1 component (water)
+ b. 2 phases (liquid+solid) and 1 component (water)
 
 $$F = C - \pi + 2$$
 $$F = 1 - 2 + 2 = 1$$
@@ -28,7 +28,7 @@ We need to specify one intensive property (e.g. temperature or pressure) to full
 :::
 
 ::: {.fragment}
-    c. 1 phase (liquid) and 2 components (ethanol+water)
+ c. 1 phase (liquid) and 2 components (ethanol+water)
 
 $$F = C - \pi + 2$$
 $$F = 2 - 1 + 2 = 3$$
