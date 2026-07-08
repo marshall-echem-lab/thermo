@@ -13,7 +13,9 @@ An energy balance tracks energy entering, leaving and accumulating in a system.
 
 ## What is the system?
 
-![The system and surroundings defines where the energy balance is applied](figures/system_surroundings.svg){width=70% fig-align="center" #fig-system_surroundings}
+::: {style="text-align:center;"}
+![The system and surroundings defines where the energy balance is applied](figures/system_surroundings.svg){width=70% #fig-system_surroundings}
+:::
 
 The system is the part that we are interested in studying. The surroundings are everything else.
 
@@ -22,7 +24,9 @@ The system is the part that we are interested in studying. The surroundings are 
 :::: {.columns .v-center}
 
 ::: {.column width="50%"}
+::: {style="text-align:center;"}
 ![A stirred tank feed by a pump](figures/CSTR_pump.svg){width=100% fig-align="center" #fig-CSTR_pump}
+:::
 :::
 
 ::: {.column width="50%"}
@@ -42,8 +46,10 @@ The system could be:
 
 :::: {.columns .v-center}
 
+::: {style="text-align:center;"}
 ::: {.column width="50%"}
 ![A heat exchanger](figures/heat_exchanger.svg){width=100% fig-align="center" #fig-heat_exchanger}
+:::
 :::
 
 ::: {.column width="50%"}
@@ -91,8 +97,9 @@ A system can gain or lose energy in three ways:
 :::
 
 ## Energy Balance Diagram
-![](figures/energy_balance_diagram.svg){width=70% fig-align="center"}
-
+::: {style="text-align:center;"}
+![](figures/energy_balance_diagram.svg){width=70%}
+:::
 $$\text{Energy In} - \text{Energy Out} = \text{Accumulation of Energy in the System}$$
 
 ::: {.fragment}
@@ -100,7 +107,9 @@ $$\dot{E}_{in} + \dot{Q} + \dot{W} - \dot{E}_{out} = \frac{dE_{sys}}{dt}$$
 :::
 
 ## Heat and Work convention
-![](figures/energy_balance_diagram.svg){width=70% fig-align="center"}
+::: {style="text-align:center;"}
+![](figures/energy_balance_diagram.svg){width=70%}
+:::
 
 ::: {.callout-important}
 ## Important
