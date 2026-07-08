@@ -1,5 +1,5 @@
 ---
-title: "Lecture 1: Storing Energy and Systems"
+title: "Summary 1: Storing Energy and Systems"
 format: revealjs
 ---
 

@@ -1,21 +1,5 @@
 ## Energy Balances - Lecture Slides {.smaller}
 
-[Lecture 1](01-storing-energy.qmd) Storing Energy and Systems
+[Summary 1](01-storing-energy.qmd) Storing Energy and Systems
 
-[Lecture 2](02-transferring-energy.qmd) Transferring Energy, Heat and Work
-
-The First Law of Thermodynamics
-
-The First Law of Thermodynamics
-
-The First Law of Thermodynamics
-
-The First Law of Thermodynamics
-
-The First Law of Thermodynamics
-
-The First Law of Thermodynamics
-
-The First Law of Thermodynamics
-
-The First Law of Thermodynamics
+[Summary 2](02-transferring-energy.qmd) Transferring Energy, Heat and Work

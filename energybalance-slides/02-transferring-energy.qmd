@@ -1,5 +1,5 @@
 ---
-title: "Lecture 2: Transferring Energy, Heat and Work"
+title: "Summary 2: Transferring Energy, Heat and Work"
 format: revealjs
 ---
 
@@ -7,7 +7,7 @@ format: revealjs
 
 ![A simple energy balance diagram](figures/energy_balance_simple_diagram.svg){width=70% fig-align="center" #fig-simple_energy_balance_diagram}
 
-An energy balance tracks energy entering / leaving the system and accumulation within the system.
+An energy balance tracks energy entering, leaving and accumulating in a system.
 
 ## What is the system?
 
@@ -15,7 +15,7 @@ An energy balance tracks energy entering / leaving the system and accumulation w
 
 The system is the part that we are interested in studying. The surroundings are everything else.
 
-## What is the system?
+## System example 1
 
 :::: {.columns .v-center}
 
@@ -27,14 +27,39 @@ The system is the part that we are interested in studying. The surroundings are 
 The system could be:
 
 ::: {.incremental}
-- the contents of the stirred tank
-- the pump and stirred tank
-- the pump
+- the stirred tank
+- the pump 
+- the pump + stirred tank
 :::
 
 :::
 
 ::::
+
+## System example 2
+
+:::: {.columns .v-center}
+
+::: {.column width="50%"}
+![A heat exchanger](figures/heat_exchanger.svg){width=100% fig-align="center" #fig-heat_exchanger}
+:::
+
+::: {.column width="50%"}
+The system could be:
+
+::: {.incremental}
+- the entire heat exchanger
+- the hot side of the heat exchanger
+- the cold side of the heat exchanger
+:::
+
+:::
+
+::::
+
+::: aside
+Heat exchangers can be co-current or countercurrent. The hot and cold sides are normally separated by a wall
+:::
 
 ## How systems store energy
 A system can store energy in three ways:
@@ -50,17 +75,17 @@ A system can gain or lose energy in three ways:
 
 ::: {.fragment}
 - Heat, $Q$
-    - Energy transferred due to a temperature difference.
+    - Energy transferred to/from surroundings due to a temperature difference.
 :::
 
 ::: {.fragment}
 - Work, $W$
-    - Energy transferred due to a force acting through a distance.
+    - Energy transferred to/from surroundings due to a force acting through a distance.
 :::
 
 ::: {.fragment}
 - Mass flow, $\dot{m}$
-    - Energy carried by mass entering or leaving the system.
+    - Internal energy carried by mass entering or leaving the system.
 :::
 
 ## Energy Balance Diagram
@@ -81,12 +106,23 @@ Heat and work are defined as energy transfer *into* the system. If heat or work 
 :::
 
 ## Heat and work are quantities, not properties
-Heat and work are not properties of a system. They are quantities that describe energy transfer across the system boundary.
+Internal energy ($U$) is a property of the system. Heat ($Q$) and work ($W$) are not properties of the system.
 
 ::: {.callout-important}
 ## Important
 Heat and work represent quantities of energy transfer. Heat is not stored in a system, and work is not stored in a system. When heat or work is transferred across the system boundary, the energy transferred is stored as $U$, $E_k$, or $E_p$.
 :::
+
+## Heat and work are different
+Heat and work are different forms of energy transfer. 
+
+::: {.incremental}
+- Adding 100 J of heat to a system may bethe same as doing 100 J of work on a system.
+- Both will increase the energy of the system by 100 J
+- But the way energy is stored in the system may differ
+- Work is always more useful that heat
+:::
+
 
 ## Enthalpy
 
