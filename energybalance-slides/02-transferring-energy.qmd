@@ -5,7 +5,7 @@ format: revealjs
 
 ## System and Surroundings
 
-![A simple energy balance diagram](figures/energy_balance_simple_diagram.svg){width=70% fig-align="center" #fig-simple_energy_balance_diagram}
+![A simple energy balance diagram](figures/energy_balance_simple_diagram.svg){width=70% #fig-simple_energy_balance_diagram}
 
 An energy balance tracks energy entering, leaving and accumulating in a system.
 
