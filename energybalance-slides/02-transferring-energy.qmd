@@ -49,15 +49,17 @@ The system could be:
 
 :::: {.columns}
 
-::: {style="text-align:center;"}
+::: {.column #vcenter width="50%"}
 
-::: {.column width="50%"}
+::: {style="text-align:center;"}
 ![A heat exchanger](figures/heat_exchanger.svg){width=100% #fig-heat_exchanger}
 :::
 
 :::
 
-::: {.column width="50%"}
+:::
+
+::: {.column #vcenter width="50%"}
 
 The system could be:
 
@@ -85,7 +87,6 @@ A system can store energy in three ways:
 :::
 
 ## How systems gain or lose energy
-A system can gain or lose energy in three ways:
 
 ::: {.fragment}
 - Heat, $Q$
