@@ -50,9 +50,9 @@ The system could be:
 :::: {.columns}
 
 ::: {.column #vcenter width="50%"}
+::: {style="text-align:center;"}
 ![A heat exchanger](figures/heat_exchanger.svg){width=100% #fig-heat_exchanger}
 :::
-
 :::
 
 ::: {.column #vcenter width="50%"}
@@ -67,9 +67,6 @@ The system could be:
 
 ::::
 
-::: aside
-Heat exchangers can be co-current or countercurrent. The hot and cold sides are normally separated by a wall
-:::
 
 ## How systems store energy
 A system can store energy in three ways:
