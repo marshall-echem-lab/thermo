@@ -7,3 +7,7 @@
 #vcenter {
   vertical-align: middle;
 }
+
+.reveal ol[type="a"] {
+  padding-left: 1.5em !important;
+}
