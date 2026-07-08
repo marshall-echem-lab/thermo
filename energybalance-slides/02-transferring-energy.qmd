@@ -50,17 +50,12 @@ The system could be:
 :::: {.columns}
 
 ::: {.column #vcenter width="50%"}
-
-::: {style="text-align:center;"}
 ![A heat exchanger](figures/heat_exchanger.svg){width=100% #fig-heat_exchanger}
 :::
 
 :::
 
-:::
-
 ::: {.column #vcenter width="50%"}
-
 The system could be:
 
 ::: {.incremental}
@@ -68,7 +63,6 @@ The system could be:
 - the hot side of the heat exchanger
 - the cold side of the heat exchanger
 :::
-
 :::
 
 ::::
