@@ -20,3 +20,4 @@ format:
     toc: false
     auto-stretch: false
     css: slide_styles.css
+    html-math-method: katex

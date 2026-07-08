@@ -132,7 +132,7 @@ Heat and work represent quantities of energy transfer. Heat is not stored in a s
 Heat and work are different forms of energy transfer. 
 
 ::: {.incremental}
-- Adding 100 J of heat to a system may bethe same as doing 100 J of work on a system.
+- Adding 100 J of heat to a system maybe the same as doing 100 J of work on a system.
 - Both will increase the energy of the system by 100 J
 - But the way energy is stored in the system may differ
 - Work is always more useful that heat
