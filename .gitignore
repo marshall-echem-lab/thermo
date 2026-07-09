@@ -9,6 +9,7 @@ slides/_output/
 slides/_freeze/
 slides/EnergyBalances/
 slides/ElectrochemEng/
+.quarto/
 
 # Python
 __pycache__/

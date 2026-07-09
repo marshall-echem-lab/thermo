@@ -15,7 +15,7 @@ website:
 
 format:
   revealjs:
-    theme: default
+    theme: [default, adaptive.scss]
     slide-number: true
     toc: false
     auto-stretch: false

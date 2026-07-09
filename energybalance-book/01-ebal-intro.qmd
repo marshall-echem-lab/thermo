@@ -4,54 +4,82 @@ title: "Introduction to Energy Balances"
 
 ## What is an Energy Balance?
 
-Placeholder text. An energy balance is an accounting of all energy entering and leaving a system.
+An energy balance accounts all the energy entering and leaving a system and links these to the energy stored or accumulated within the system.
 
 ## System and Surroundings
 
-Placeholder text. We define a system boundary and track energy flows across it.
+We define a system boundary and track energy flows across it. For a mass balance, we track the mass flowing in and out of the system (@fig-simple_mass_balance_diagram). This enables us to calculate the mass accumulated within the system ($\frac{dm_{sys}}{dt}$). For reacting systems, the mass balance gets a little bit tricky as we need to apply the balance to each species in the system (e.g. an atomic mass balance).
+
+::: {style="text-align:center;"}
+![A simple mass balance diagram](figures/mass_balance_simple_diagram.svg){width=70% #fig-simple_mass_balance_diagram}
+:::
+
+For an energy balance we essentially follow the same concept. We track the energy flowing in and out of the system and balance this against the energy accumulated in the system (@fig-simple_energy_balance_diagram).
+
+::: {style="text-align:center;"}
+![A simple energy balance diagram](figures/energy_balance_simple_diagram.svg){width=70% #fig-simple_energy_balance_diagram}
+:::
+
+::: {.callout-note}
+## Key Terms
+**System** — a specified region of space or matter that is under consideration.
+**Surroundings** — everything outside the system boundary.
+:::
+
+When solving energy balances, one of the first important steps is deciding what is the system, or the location of the system-surroundings boundary. The choice of the system-surroundings boundary is sometimes really obvious, but in other cases it can be arbitrary. In many cases we can choose the bounadry to make calculations easier.
+
+::: {style="text-align:center;"}
+![A stirred tank feed by a pump](figures/CSTR_pump.svg){width=100% #fig-CSTR_pump}
+:::
+
+
+In @fig-fig-CSTR_pump, the system could be:
+
+- the stirred tank
+- the pump 
+- the pump + stirred tank
+
+If we only cared about the process which occurs in the stirred tank, we would define the system to be the stirred tank. In this particular process, we could do separate energy balances on the stirred tank and the pump, and it is likely that the two energy balances would be independent of each other (unless the pump altered the temperature of the fluid entering the stirred tank, and thus the inlet tank temperature may depend on the inlet flow rate).
+
+::: {style="text-align:center;"}
+![A heat exchanger](figures/heat_exchanger.svg){width=100% #fig-heat_exchanger}
+:::
+
+When solving the energy balance on a heat exchanger (e.g. @fig-heat_exchanger), depending on how the process is defined, we may choose the system to be:
+
+- the entire heat exchanger
+- the hot side of the heat exchanger
+- the cold side of the heat exchanger
+
+In many cases, the inlet and outlet temperatures of one side of the heat exchanger would be defined, in which case it makes sense to treat each side of the heat exchanger as separate energy balances (so you would have two systems), then you could calculate the heat transferred between these systems. In many cases this simplified the overall calculation.
+
+## Types of Systems
+
+Systems may be open, closed, or isolated depending on whether mass and energy can cross the boundary.
+
+## How is energy stored in systems
+
+::: {.callout-note}
+## Key Term
+**Internal Energy** ($U$) — a thermodynamic state function describing the energy stored within matter.
+:::
 
 {{< include examples/example1-1.qmd >}}
 
 {{< include problems/problem1-1.qmd >}}
-
-## Types of Systems
-
-Placeholder text. Systems may be open, closed, or isolated depending on whether mass and energy can cross the boundary.
 
 ::: {.callout-note}
 ## Key Term
 **Gibbs Energy** ($G$) — a thermodynamic state function defined as $G = H - TS$.
 :::
 
+
+
 ::: {.callout-note}
 ## Key Term
-**Energy** ($E$) — a thermodynamic state function defined as $G = H - TS$.
-:::
-
-::: {.callout-note}
-## Key Terms
-**Denergy** ($D$) — a thermodynamic state function defined as $G = H - TS$.
-**Enthalpy** ($H$) — a thermodynamic state function defined as $H = E + PV$.
-**EnthaFlpy** ($F$) — a thermodynamic state function defined as $H = E + PV$.
+**Enthalpy** ($H$) — a thermodynamic state function defined as $H = U + PV$.
 :::
 
 
-## Figures
 
-![no stretch width=70%](figures/U_statefunction_diagram.png){.nostretch width=70% fig-align="center" #fig-5}
 
-## Figures
-
-![no stretch width=20%](figures/U_statefunction_diagram.png){.nostretch width=20% fig-align="center" #fig-6}
-
-## Figures
-
-![no stretch width=70%](figures/example_1.svg){.nostretch width=70% fig-align="center" #fig-7}
-
-## Figures
-
-![no stretch width=70%](figures/example_2.svg){.nostretch width=70% fig-align="center" #fig-8}
-
-## Figures
-
-![no stretch width=70%](figures/example_2.svg){.nostretch width=20% fig-align="center" #fig-9}

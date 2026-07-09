@@ -1,0 +1,12 @@
+/*-- scss:rules --*/
+
+/* let the page + figures follow the device's light/dark setting */
+:root { color-scheme: light dark; }
+
+@media (prefers-color-scheme: dark) {
+  .reveal-viewport { background-color: #101418 !important; }
+  .reveal          { color: #e6e6e6 !important; }
+  .reveal h1, .reveal h2, .reveal h3,
+  .reveal h4, .reveal h5, .reveal h6 { color: #f2f2f2 !important; }
+  .reveal a        { color: #6db3f2 !important; }
+}
