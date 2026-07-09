@@ -53,7 +53,7 @@ Absolute energy is not important, only differences in energy are important.
 
 ::: {.incremental}
 - does the energy change over time?
-- does the energy change when the system undergoes some change
+- does the energy change when the system undergoes some change?
     - the temperature changes
     - a phase change occurs
     - a reaction occurs 
