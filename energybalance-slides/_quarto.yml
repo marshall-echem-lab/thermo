@@ -20,4 +20,24 @@ format:
     toc: false
     auto-stretch: false
     css: slide_styles.css
-    html-math-method: katex
+    html-math-method: mathjax
+    include-after-body:
+      text: |
+        <script>
+          function retypeset() {
+            if (window.MathJax && MathJax.typesetPromise) {
+              MathJax.typesetPromise();
+            }
+          }
+          window.addEventListener('load', function () {
+            if (typeof Reveal !== 'undefined') {
+              Reveal.on('ready', retypeset);
+              Reveal.on('slidechanged', retypeset);
+              Reveal.on('resize', retypeset);
+            }
+            window.addEventListener('orientationchange', retypeset);
+            window.addEventListener('pageshow', function (event) {
+              if (event.persisted) retypeset();
+            });
+          });
+        </script>

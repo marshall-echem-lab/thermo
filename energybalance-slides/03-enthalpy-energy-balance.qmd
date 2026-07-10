@@ -1,5 +1,5 @@
 ---
-title: "Summary 2: Enthalpy and the Energy Balance"
+title: "Summary 3: Enthalpy and the Energy Balance"
 format: revealjs
 ---
 
@@ -61,12 +61,9 @@ $$H = U + PV$$
 :::
 
 ## The General Energy Balance Equation {.scrollable}
-Combining all the terms gives the general energy balance:
 $$\frac{d(m_{sys}H_{sys})}{dt} = \dot{m}_{in} H_{in} - \dot{m}_{out} H_{out} + \dot{Q} + \dot{W}$$
 
 ::: {style="font-size: 0.7em"}
-where:
-
 - $m_{sys}$ is the mass of the system (kg)
 - $H_{sys}$ is the enthalpy of the system (J/kg)
 - $\dot{m}_{in}$ is the mass flow rate entering the system (kg/s)
