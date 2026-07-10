@@ -20,7 +20,7 @@ An energy balance tracks energy entering, leaving and accumulating in a system.
 The system is the part that we are interested in studying. The surroundings are everything else.
 
 ::: {.fragment}
-We can often choose where the system-cthe boundary. Choosing well can simplify calculations.
+Often can freely choose the system-surroundings boundary location. Choosing well can simplify calculations.
 :::
 
 ## System example 1

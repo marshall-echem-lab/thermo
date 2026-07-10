@@ -1,7 +1,13 @@
 /*-- scss:rules --*/
 
-/* let the page + figures follow the device's light/dark setting */
+/* Page chrome follows the device light/dark setting. */
 :root { color-scheme: light dark; }
+
+/* Figures: pin their internal colours to light, and let the PAGE decide dark.
+   iOS Safari ignores prefers-color-scheme inside <img> SVGs on first paint, but
+   honours page-level media queries (that's why the chrome below flips reliably).
+   So we invert the figure at page level instead of trusting light-dark() inside it. */
+.reveal img[src*=".svg"] { color-scheme: light; }
 
 @media (prefers-color-scheme: dark) {
   .reveal-viewport { background-color: #101418 !important; }
@@ -9,4 +15,7 @@
   .reveal h1, .reveal h2, .reveal h3,
   .reveal h4, .reveal h5, .reveal h6 { color: #f2f2f2 !important; }
   .reveal a        { color: #6db3f2 !important; }
+
+  /* Swap black<->white; hue-rotate keeps other hues roughly intact. */
+  .reveal img[src*=".svg"] { filter: invert(1) hue-rotate(180deg) !important; }
 }
