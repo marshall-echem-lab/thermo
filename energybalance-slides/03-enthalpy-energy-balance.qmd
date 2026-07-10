@@ -65,7 +65,7 @@ $$\frac{m_{sys}H_{sys}}{dt} = \sum_i \dot{m}_{in,i} H_{in,i} - \sum_i \dot{m}_{i
 
 where:
 
-::: {.smaller}
+::: {.small-list}
 - $m_{sys}$ is the mass of the system (kg)
 - $H_{sys}$ is the enthalpy of the system (J/kg)
 - $\dot{m}_{in,i}$ is the mass flow rate of stream $i$ entering the system (kg/s)
