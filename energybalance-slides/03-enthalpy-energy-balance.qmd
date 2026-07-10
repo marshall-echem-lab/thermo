@@ -48,7 +48,7 @@ Must account for this work in the energy balance
 When mass enters a system, internal energy *and* work is added.
 
 ## Enthalpy
-We can account for the extra work by using enthalpy instead of internal energy
+The extra work can by accounted for by using enthalpy instead of internal energy
 
 . . .
 
@@ -80,6 +80,7 @@ For multiple stream, include each term:
 ![](figures/energy_balance_diagram_multiplestreams.svg){width=70%}
 :::
 
+::: {style="font-size: 1em"}
 $$
 \begin{aligned}
 \frac{d(m_{sys}H_{sys})}{dt} &= \dot{m}_{in,1} H_{in,1} + \dot{m}_{in,2} H_{in,2} + \dot{m}_{in,3} H_{in,3} \\
@@ -88,4 +89,21 @@ $$
            &+ \dot{W}
 \end{aligned}
 $$
+:::
+
+## What effects Enthalpy ?
+To solve the energy balance, must calculate the enthalpy of the flow streams and system.
+
+. . .
+
+Enthalpy is affected by:
+
+::: {.incremental}
+- Temperature changes
+- Pressure changes
+- Phase changes
+- Formation and separation of solutions
+- Reactions
+:::
+
 

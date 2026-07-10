@@ -5,3 +5,11 @@
 [Summary 2](02-transferring-energy.qmd) Transferring Energy, Heat and Work
 
 [Summary 3](03-enthalpy-energy-balance.qmd) Enthalpy and the Energy Balance
+
+[Summary 4](04-sensible-heat.qmd) Sensible Heat
+
+[Summary 5](05-latent-heat.qmd) Latent Heat and Phase Changes
+
+[Summary 6](06-solution-heat.qmd) Heat of Solution
+
+[Summary 7](06-reactions.qmd) Reactions
