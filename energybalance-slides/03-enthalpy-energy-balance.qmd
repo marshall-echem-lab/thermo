@@ -119,6 +119,10 @@ Enthalpy changes can be calculated
 Enthalpy can be calculated relative to a reference state
 
 ## Reference states
+<<<<<<< HEAD
+=======
+diagram
+>>>>>>> 5524549 (update)
 
 ## example
 steady state single flow 
@@ -129,5 +133,8 @@ steady state two flows mix continuous
 ## example
 unsteady state heat
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5524549 (update)
 
