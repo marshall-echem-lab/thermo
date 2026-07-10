@@ -73,11 +73,11 @@ $$\frac{d(m_{sys}H_{sys})}{dt} = \dot{m}_{in} H_{in} - \dot{m}_{out} H_{out} + \
 - $\dot{W}$ is the rate of work done on the system (W)
 :::
 
-## Multiple streams
+## Multiple streams {.scrollable}
 For multiple stream, include each term:
 
 ::: {style="text-align:center;"}
-![](figures/energy_balance_diagram_multiplestreams.svg){width=70%}
+![](figures/energy_balance_diagram_multiplestreams.svg){width=60%}
 :::
 
 ::: {style="font-size: 0.7em"}
