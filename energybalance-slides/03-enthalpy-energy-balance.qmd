@@ -62,17 +62,17 @@ $$H = U + PV$$
 
 ## The General Energy Balance Equation
 Combining all the terms gives the general energy balance:
-$$\frac{d(m_{sys}H_{sys})}{dt} = \sum_i (\dot{m}_{in,i} H_{in,i} - \dot{m}_{out,i} H_{out,i}) + \dot{Q} + \dot{W}$$
+$$\frac{d(m_{sys}H_{sys})}{dt} = \dot{m}_{in} H_{in} - \dot{m}_{out} H_{out} + \dot{Q} + \dot{W}$$
 
-::: {style="font-size: 0.8em"}
+::: {style="font-size: 0.7em"}
 where:
 
 - $m_{sys}$ is the mass of the system (kg)
 - $H_{sys}$ is the enthalpy of the system (J/kg)
-- $\dot{m}_{in,i}$ is the mass flow rate of stream $i$ entering the system (kg/s)
-- $H_{in,i}$ is the enthalpy of stream $i$ entering the system (J/kg)
-- $\dot{m}_{out,i}$ is the mass flow rate of stream $i$ leaving the system (kg/s)
-- $H_{out,i}$ is the enthalpy of stream $i$ leaving the system (J/kg)
+- $\dot{m}_{in}$ is the mass flow rate entering the system (kg/s)
+- $H_{in}$ is the enthalpy of the stream entering the system (J/kg)
+- $\dot{m}_{out}$ is the mass flow rate leaving the system (kg/s)
+- $H_{out}$ is the enthalpy of the stream leaving the system (J/kg)
 - $\dot{Q}$ is the rate of heat transfer to the system (W)
 - $\dot{W}$ is the rate of work done on the system (W)
 :::
