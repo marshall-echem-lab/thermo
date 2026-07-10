@@ -1,7 +1,6 @@
 /*-- scss:rules --*/
 
-/* Page chrome follows the device light/dark setting.
-   (This half is already working — background, title, slide math all flip.) */
+/* Slide chrome follows the device light/dark setting. */
 :root { color-scheme: light dark; }
 
 @media (prefers-color-scheme: dark) {
@@ -12,14 +11,8 @@
   .reveal a        { color: #6db3f2 !important; }
 }
 
-/* Figures: pin to light so they render identically on every browser, THEN
-   flip them at page level with a filter. The pin alone leaves them stuck in
-   light mode (what your screenshot shows); the filter is what inverts them.
-   Both rules are required — they work as a pair. */
-.reveal img[src*=".svg"] { color-scheme: light; }
-
-@media (prefers-color-scheme: dark) {
-  .reveal img[src*=".svg"] {
-    filter: invert(1) hue-rotate(180deg) !important;
-  }
-}
+/* Figures adapt themselves — no pin, no filter.
+   Each drawio SVG already carries `color-scheme: light dark` + light-dark()
+   colours: the exact mechanism that flips correctly when you open the SVG
+   directly on your phone. The old `color-scheme: light` pin is what froze them
+   in light appearance inside the slide. */
