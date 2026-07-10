@@ -41,11 +41,11 @@ Work is needed when:
 :::
 . . .
 
-We need to account for this work in the energy balance
+Must account for this work in the energy balance
 
 . . .
 
-When mass is added to a system, internal energy *and* work is added.
+When mass enters a system, internal energy *and* work is added.
 
 ## Enthalpy
 We can account for the extra work by using enthalpy instead of internal energy
