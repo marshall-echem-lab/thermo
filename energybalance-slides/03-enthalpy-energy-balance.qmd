@@ -64,9 +64,9 @@ $$H = U + PV$$
 Combining all the terms gives the general energy balance:
 $$\frac{d(m_{sys}H_{sys})}{dt} = \sum_i (\dot{m}_{in,i} H_{in,i} - \dot{m}_{out,i} H_{out,i}) + \dot{Q} + \dot{W}$$
 
+::: {style="font-size: 0.8em"}
 where:
 
-::: {.small-list}
 - $m_{sys}$ is the mass of the system (kg)
 - $H_{sys}$ is the enthalpy of the system (J/kg)
 - $\dot{m}_{in,i}$ is the mass flow rate of stream $i$ entering the system (kg/s)

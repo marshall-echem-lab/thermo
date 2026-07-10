@@ -81,9 +81,11 @@ A system can store energy in three ways:
 - Internal Energy, $U$
 :::
 
+::: {.fragment}
 ::: {.callout-note}
 ## Key Term
 **Internal Energy** ($U$) — a thermodynamic state function describing the energy stored within matter.
+:::
 :::
 
 ## How systems gain or lose energy
