@@ -23,6 +23,7 @@ format:
     html-math-method: mathjax
     include-after-body:
       text: |
+        <!-- MathJax retypeset (mobile render fix) -->
         <script>
           function retypeset() {
             if (window.MathJax && MathJax.typesetPromise) {
@@ -40,4 +41,33 @@ format:
               if (event.persisted) retypeset();
             });
           });
+        </script>
+
+        <!-- Force adaptive SVG figures to re-decode against the current OS
+             colour scheme; works around the WebKit/Chromium <img>-SVG stale
+             buffer bug where figures only switch on a live theme toggle. -->
+        <script>
+          (function () {
+            var mq = window.matchMedia('(prefers-color-scheme: dark)');
+            function refreshFigures() {
+              var tag = mq.matches ? 'dark' : 'light';
+              document.querySelectorAll('.reveal img[src*=".svg"]').forEach(function (img) {
+                var base = img.getAttribute('data-cs-base')
+                        || img.src.split('#')[0].split('?')[0];
+                img.setAttribute('data-cs-base', base);
+                var next = base + '?cs=' + tag;
+                if (img.src !== next) img.src = next;
+              });
+            }
+            window.addEventListener('load', function () {
+              refreshFigures();
+              if (typeof Reveal !== 'undefined') {
+                Reveal.on('ready', refreshFigures);
+              }
+              window.addEventListener('pageshow', function (event) {
+                if (event.persisted) refreshFigures();
+              });
+              mq.addEventListener('change', refreshFigures);
+            });
+          })();
         </script>
