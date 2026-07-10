@@ -34,6 +34,7 @@ $$\dot{E}_{out} = \dot{U}_{out} + \dot{E}_{k,out} + \dot{E}_{p,out}$$
 
 ## Shifting mass in/out of the system
 Work is needed when:
+
 ::: {.incremental}
 - mass enters or leaves a system
 - a system expands or compresses
