@@ -3,3 +3,5 @@
 [Summary 1](01-storing-energy.qmd) Storing Energy and Systems
 
 [Summary 2](02-transferring-energy.qmd) Transferring Energy, Heat and Work
+
+[Summary 3](03-enthalpy-energy-balance.qmd) Enthalpy and the Energy Balance

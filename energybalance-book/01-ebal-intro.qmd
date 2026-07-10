@@ -14,7 +14,7 @@ We define a system boundary and track energy flows across it. For a mass balance
 ![A simple mass balance diagram](figures/mass_balance_simple_diagram.svg){width=70% #fig-simple_mass_balance_diagram}
 :::
 
-For an energy balance we essentially follow the same concept. We track the energy flowing in and out of the system and balance this against the energy accumulated in the system (@fig-simple_energy_balance_diagram).
+For an energy balance we essentially follow the same concept. We track the energy flowing in and out of the system and balance this against the energy accumulated ($\frac{dE_{sys}}{dt}$) in the system (@fig-simple_energy_balance_diagram).
 
 ::: {style="text-align:center;"}
 ![A simple energy balance diagram](figures/energy_balance_simple_diagram.svg){width=70% #fig-simple_energy_balance_diagram}
@@ -23,17 +23,18 @@ For an energy balance we essentially follow the same concept. We track the energ
 ::: {.callout-note}
 ## Key Terms
 **System** — a specified region of space or matter that is under consideration.
+
 **Surroundings** — everything outside the system boundary.
 :::
 
 When solving energy balances, one of the first important steps is deciding what is the system, or the location of the system-surroundings boundary. The choice of the system-surroundings boundary is sometimes really obvious, but in other cases it can be arbitrary. In many cases we can choose the bounadry to make calculations easier.
 
 ::: {style="text-align:center;"}
-![A stirred tank feed by a pump](figures/CSTR_pump.svg){width=100% #fig-CSTR_pump}
+![A stirred tank feed by a pump](figures/CSTR_pump.svg){width=70% #fig-CSTR_pump}
 :::
 
 
-In @fig-fig-CSTR_pump, the system could be:
+In @fig-CSTR_pump, the system could be:
 
 - the stirred tank
 - the pump 
@@ -42,7 +43,7 @@ In @fig-fig-CSTR_pump, the system could be:
 If we only cared about the process which occurs in the stirred tank, we would define the system to be the stirred tank. In this particular process, we could do separate energy balances on the stirred tank and the pump, and it is likely that the two energy balances would be independent of each other (unless the pump altered the temperature of the fluid entering the stirred tank, and thus the inlet tank temperature may depend on the inlet flow rate).
 
 ::: {style="text-align:center;"}
-![A heat exchanger](figures/heat_exchanger.svg){width=100% #fig-heat_exchanger}
+![A heat exchanger](figures/heat_exchanger.svg){width=70% #fig-heat_exchanger}
 :::
 
 When solving the energy balance on a heat exchanger (e.g. @fig-heat_exchanger), depending on how the process is defined, we may choose the system to be:

@@ -19,6 +19,10 @@ An energy balance tracks energy entering, leaving and accumulating in a system.
 
 The system is the part that we are interested in studying. The surroundings are everything else.
 
+::: {.fragment}
+We can often choose where the system-cthe boundary. Choosing well can simplify calculations.
+:::
+
 ## System example 1
 
 :::: {.columns}
@@ -45,6 +49,7 @@ The system could be:
 
 ::::
 
+
 ## System example 2
 
 :::: {.columns}
@@ -67,7 +72,6 @@ The system could be:
 
 ::::
 
-
 ## How systems store energy
 A system can store energy in three ways:
 
@@ -75,6 +79,11 @@ A system can store energy in three ways:
 - Potential Energy, $E_p$
 - Kinetic Energy, $E_k$
 - Internal Energy, $U$
+:::
+
+::: {.callout-note}
+## Key Term
+**Internal Energy** ($U$) — a thermodynamic state function describing the energy stored within matter.
 :::
 
 ## How systems gain or lose energy
@@ -98,7 +107,7 @@ A system can store energy in three ways:
 ::: {style="text-align:center;"}
 ![](figures/energy_balance_diagram.svg){width=70%}
 :::
-$$\text{Energy In} - \text{Energy Out} = \text{Accumulation of Energy in the System}$$
+$$\text{Energy In} - \text{Energy Out} = \text{Accumulation of Energy}$$
 
 ::: {.fragment}
 $$\dot{E}_{in} + \dot{Q} + \dot{W} - \dot{E}_{out} = \frac{dE_{sys}}{dt}$$
@@ -140,11 +149,4 @@ Heat and work are different forms of energy transfer.
 
 {{< include examples/example2-1.qmd >}}
 
-## Enthalpy
-
-$$H = U + PV$$
-
-Enthalpy is a convenient property for open systems and constant-pressure processes.
-
-We use enthalpy for calculations, but we could have equally used internal energy. The difference is that enthalpy includes the $PV$ work done by the system when it expands or contracts.
 
