@@ -83,10 +83,10 @@ For multiple stream, include each term:
 ::: {style="font-size: 0.7em"}
 $$
 \begin{aligned}
-\frac{d(m_{sys}H_{sys})}{dt} &= \dot{m}_{in,1} H_{in,1} + \dot{m}_{in,2} H_{in,2} + \dot{m}_{in,3} H_{in,3} \\
-           &- \dot{m}_{out,1} H_{out,1} - \dot{m}_{out,2} H_{out,2}\\
-           &+ \dot{Q}_1 + \dot{Q}_2 - \dot{Q}_3\\
-           &+ \dot{W}
+\frac{d(m_{sys}H_{sys})}{dt} =& \dot{m}_{in,1} H_{in,1} + \dot{m}_{in,2} H_{in,2} + \dot{m}_{in,3} H_{in,3} \\
+           & - \dot{m}_{out,1} H_{out,1} - \dot{m}_{out,2} H_{out,2}\\
+           & + \dot{Q}_1 + \dot{Q}_2 - \dot{Q}_3\\
+           & + \dot{W}
 \end{aligned}
 $$
 :::
