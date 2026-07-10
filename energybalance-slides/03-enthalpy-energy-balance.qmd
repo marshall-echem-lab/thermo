@@ -61,6 +61,7 @@ $$H = U + PV$$
 :::
 
 ## The General Energy Balance Equation {.scrollable}
+Combining all the terms gives:
 $$\frac{d(m_{sys}H_{sys})}{dt} = \dot{m}_{in} H_{in} - \dot{m}_{out} H_{out} + \dot{Q} + \dot{W}$$
 
 ::: {style="font-size: 0.7em"}
@@ -73,3 +74,19 @@ $$\frac{d(m_{sys}H_{sys})}{dt} = \dot{m}_{in} H_{in} - \dot{m}_{out} H_{out} + \
 - $\dot{Q}$ is the rate of heat transfer to the system (W)
 - $\dot{W}$ is the rate of work done on the system (W)
 :::
+
+## Multiple streams
+For multiple stream, include each term:
+::: {style="text-align:center;"}
+![](figures/energy_balance_diagram_multiplestreams.svg){width=70%}
+:::
+
+$$
+\begin{aligned}
+\frac{d(m_{sys}H_{sys})}{dt} &= \dot{m}_{in,1} H_{in,1} + \dot{m}_{in,2} H_{in,2} + \dot{m}_{in,3} H_{in,3} \\
+           &- \dot{m}_{out,1} H_{out,1} - \dot{m}_{out,2} H_{out,2}\\
+           &+ \dot{Q}_1 + \dot{Q}_2 - \dot{Q}_3\\
+           &+ \dot{W}$$
+\end{aligned}
+$$
+
