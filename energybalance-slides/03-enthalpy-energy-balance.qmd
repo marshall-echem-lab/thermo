@@ -77,6 +77,7 @@ $$\frac{d(m_{sys}H_{sys})}{dt} = \dot{m}_{in} H_{in} - \dot{m}_{out} H_{out} + \
 
 ## Multiple streams
 For multiple stream, include each term:
+
 ::: {style="text-align:center;"}
 ![](figures/energy_balance_diagram_multiplestreams.svg){width=70%}
 :::
