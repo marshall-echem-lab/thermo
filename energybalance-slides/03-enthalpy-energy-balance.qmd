@@ -16,48 +16,62 @@ $$\frac{dE_{sys}}{dt} = \dot{E}_{in} + \dot{Q} + \dot{W} - \dot{E}_{out}$$
 ## Energy accumulation in a system
 $$\frac{dE_{sys}}{dt} = \dot{E}_{in} + \dot{Q} + \dot{W} - \dot{E}_{out}$$
 
-Energy can be accumulated in a system as internal energy, kinetic energy, or potential energy. Therefore, the total energy of a system is:
+Energy can be accumulated in a system as internal energy, kinetic energy, or potential energy.
+
+. . .
+
+Therefore, the total energy of a system is:
 $$E_{sys} = U + E_k + E_p$$
 
 ## Energy entering and leaving a system
-Energy can enter or leave a system within a mass flow as internal energy, kinetic energy or potential energy. Therefore, the total energy entering or leaving a system as mass flows are:
+Energy can enter or leave a system within a mass flow as internal energy, kinetic energy or potential energy.
+
+. . .
+
+Therefore:
 $$\dot{E}_{in} = \dot{U}_{in} + \dot{E}_{k,in} + \dot{E}_{p,in}$$
 $$\dot{E}_{out} = \dot{U}_{out} + \dot{E}_{k,out} + \dot{E}_{p,out}$$
 
-## The work to shift mass across the system-surroundings boundary
-When mass enters or leaves a system, the work is needed. Similarly, when a system expands or compresses, work is done. 
+## Shifting mass in/out of the system
+Work is needed when:
+::: {.incremental}
+- mass enters or leaves a system
+- a system expands or compresses
+:::
+. . .
+
+We need to account for this work in the energy balance
 
 . . .
 
-This means we need to account for the work done by the system when mass enters or leaves the system, and when the system expands or compresses. 
-
-. . .
-
-So when we add mass to a system, we add internal energy *and* some work.
+When mass is added to a system, internal energy *and* work is added.
 
 ## Enthalpy
-While internal energy is how energy is stored in matter, enthalpy is more convenient for calculations as it accounts for the work to shift mass across the system-surroundings boundary and expansion / compression of the system.
+We can account for the extra work by using enthalpy instead of internal energy
+
+. . .
 
 Enthalpy is **defined** as:
 $$H = U + PV$$
 
 ::: {.callout-note}
 ## Key Term
-**Enthalpy** ($H$) — a convenient thermodynamic state function defined by $H=U+PV$.
+**Enthalpy** ($H$) — a convenient state function defined by $H=U+PV$.
 :::
 
 ## The General Energy Balance Equation {.scrollable}
-Putting it all together, the general energy balance equation is:
+Combining all the terms gives the general energy balance:
 $$\frac{m_{sys}H_{sys}}{dt} = \sum_i \dot{m}_{in,i} H_{in,i} - \sum_i \dot{m}_{in,out} H_{in,out} + \dot{Q} + \dot{W}$$
 
 where:
 
-    - $m_{sys}$ is the mass of the system (kg)
-    - $H_{sys}$ is the enthalpy of the system (J/kg)
-    - $\dot{m}_{in,i}$ is the mass flow rate of stream $i$ entering the system (kg/s)
-    - $H_{in,i}$ is the enthalpy of stream $i$ entering the system (J/kg)
-    - $\dot{m}_{out,i}$ is the mass flow rate of stream $i$ leaving the system (kg/s)
-    - $H_{out,i}$ is the enthalpy of stream $i$ leaving the system (J/kg)
-    - $\dot{Q}$ is the rate of heat transfer to the system (W)
-    - $\dot{W}$ is the rate of work done on the system (W)
-
+::: {.smaller}
+- $m_{sys}$ is the mass of the system (kg)
+- $H_{sys}$ is the enthalpy of the system (J/kg)
+- $\dot{m}_{in,i}$ is the mass flow rate of stream $i$ entering the system (kg/s)
+- $H_{in,i}$ is the enthalpy of stream $i$ entering the system (J/kg)
+- $\dot{m}_{out,i}$ is the mass flow rate of stream $i$ leaving the system (kg/s)
+- $H_{out,i}$ is the enthalpy of stream $i$ leaving the system (J/kg)
+- $\dot{Q}$ is the rate of heat transfer to the system (W)
+- $\dot{W}$ is the rate of work done on the system (W)
+:::
