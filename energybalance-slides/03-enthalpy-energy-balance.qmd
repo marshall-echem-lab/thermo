@@ -59,9 +59,9 @@ $$H = U + PV$$
 **Enthalpy** ($H$) — a convenient state function defined by $H=U+PV$.
 :::
 
-## The General Energy Balance Equation {.scrollable}
+## The General Energy Balance Equation
 Combining all the terms gives the general energy balance:
-$$\frac{m_{sys}H_{sys}}{dt} = \sum_i \dot{m}_{in,i} H_{in,i} - \sum_i \dot{m}_{in,out} H_{in,out} + \dot{Q} + \dot{W}$$
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum_i \dot{m}_{in,i} H_{in,i} - \sum_i \dot{m}_{out,i} H_{out,i} + \dot{Q} + \dot{W}$$
 
 where:
 
