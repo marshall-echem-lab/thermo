@@ -11,8 +11,3 @@
 .reveal ol[type="a"] {
   padding-left: 1.2em !important;
 }
-
-.reveal .small-list,
-.reveal .small-list li {
-  font-size: 0.7em !important;
-}
