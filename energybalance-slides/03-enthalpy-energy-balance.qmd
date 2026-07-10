@@ -7,42 +7,39 @@ format: revealjs
 ::: {style="text-align:center;"}
 ![](figures/energy_balance_diagram.svg){width=70%}
 :::
-$$\text{Energy In} - \text{Energy Out} = \text{Accumulation of Energy}$$
+$$\text{Accumulation of Energy} = \text{Energy In} - \text{Energy Out}$$
 
 ::: {.fragment}
-$$\dot{E}_{in} + \dot{Q} + \dot{W} - \dot{E}_{out} = \frac{dE_{sys}}{dt}$$
+$$\frac{dE_{sys}}{dt} = \dot{E}_{in} + \dot{Q} + \dot{W} - \dot{E}_{out}$$
 :::
 
 ## Energy accumulation in a system
-$$\dot{E}_{in} + \dot{Q} + \dot{W} - \dot{E}_{out} = \frac{dE_{sys}}{dt}$$
+$$\frac{dE_{sys}}{dt} = \dot{E}_{in} + \dot{Q} + \dot{W} - \dot{E}_{out}$$
 
 Energy can be accumulated in a system as internal energy, kinetic energy, or potential energy. Therefore, the total energy of a system is:
 $$E_{sys} = U + E_k + E_p$$
 
 ## Energy entering and leaving a system
-Energy can enter or leave a system within a mass flow as internal energy, kinetic energy or potential energy. Heat, and work can also be transferred. Therefore, the total energy entering or leaving a system is:
-$$\dot{E}_{in} = \dot{U}_{in} + \dot{E}_{k,in} + \dot{E}_{p,in} + \dot{Q} + \dot{W}$$
-$$\dot{E}_{out} = \dot{U}_{out} + \dot{E}_{k,out} + \dot{E}_{p,out} + \dot{Q} + \dot{W}$$
+Energy can enter or leave a system within a mass flow as internal energy, kinetic energy or potential energy. Therefore, the total energy entering or leaving a system as mass flows are:
+$$\dot{E}_{in} = \dot{U}_{in} + \dot{E}_{k,in} + \dot{E}_{p,in}$$
+$$\dot{E}_{out} = \dot{U}_{out} + \dot{E}_{k,out} + \dot{E}_{p,out}$$
 
 ## The work to shift mass across the system-surroundings boundary
 When mass enters or leaves a system, the work is needed. Similarly, when a system expands or compresses, work is done. 
 
-- - -
+. . .
 
 This means we need to account for the work done by the system when mass enters or leaves the system, and when the system expands or compresses. 
 
-- - - 
+. . .
 
 So when we add mass to a system, we add internal energy *and* some work.
 
 ## Enthalpy
-Energy balances track how energy is transferred and accumulated in a system. While internal energy is how energy is stored in matter, enthalpy is more convenient for calculations.
+While internal energy is how energy is stored in matter, enthalpy is more convenient for calculations as it accounts for the work to shift mass across the system-surroundings boundary and expansion / compression of the system.
 
 Enthalpy is **defined** as:
 $$H = U + PV$$
-
-## Enthalpy
-We use enthalpy for calculations, but we could have equally used internal energy. The $PV$ term accounts for the work to shift mass across the system-surroundings boundary and expansion / compression of the system.
 
 ::: {.callout-note}
 ## Key Term
@@ -54,11 +51,13 @@ Putting it all together, the general energy balance equation is:
 $$\frac{m_{sys}H_{sys}}{dt} = \sum_i \dot{m}_{in,i} H_{in,i} - \sum_i \dot{m}_{in,out} H_{in,out} + \dot{Q} + \dot{W}$$
 
 where:
-- $m_{sys}$ is the mass of the system (kg)
-- $H_{sys}$ is the enthalpy of the system (J/kg)
-- $\dot{m}_{in,i}$ is the mass flow rate of stream $i$ entering the system (kg/s)
-- $H_{in,i}$ is the enthalpy of stream $i$ entering the system (J/kg)
-- $\dot{m}_{out,i}$ is the mass flow rate of stream $i$ leaving the system (kg/s)
-- $H_{out,i}$ is the enthalpy of stream $i$ leaving the system (J/kg)
-- $\dot{Q}$ is the rate of heat transfer to the system (W)
-- $\dot{W}$ is the rate of work done on the system (W)
+
+    - $m_{sys}$ is the mass of the system (kg)
+    - $H_{sys}$ is the enthalpy of the system (J/kg)
+    - $\dot{m}_{in,i}$ is the mass flow rate of stream $i$ entering the system (kg/s)
+    - $H_{in,i}$ is the enthalpy of stream $i$ entering the system (J/kg)
+    - $\dot{m}_{out,i}$ is the mass flow rate of stream $i$ leaving the system (kg/s)
+    - $H_{out,i}$ is the enthalpy of stream $i$ leaving the system (J/kg)
+    - $\dot{Q}$ is the rate of heat transfer to the system (W)
+    - $\dot{W}$ is the rate of work done on the system (W)
+

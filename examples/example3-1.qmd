@@ -1,0 +1,47 @@
+## Example 3.1: Identifying terms for the energy balance {.unnumbered .scrollable}
+
+
+
+
+**Solution**
+
+::: {.fragment}
+Firstly the key is to realise that the energy accumulated in the tank is the difference between the initial and final energy of the toluene in the tank. The energy of the toluene scales with temperature by approximately 155 J/molK, so we can calculate the energy change as:
+$$\Delta E_{cool} = n \cdot C_p \cdot \Delta T$$
+
+where:
+
+- $\Delta E_{cool}$ is the change in energy due to cooling (J)
+- $n$ is the number of moles of toluene
+- $C_p$ is the heat capacity (J/molK)
+- $\Delta T$ is the change in temperature (K)
+:::
+
+::: {.fragment}
+First calculate the number of moles of toluene in the tank:
+
+$$n = \frac{m}{MW} = \frac{500\ \text{L} \cdot 0.867\ \text{kg/L}}{92.14\ \text{g/mol} \cdot \frac{1\ \text{kg}}{1000\ \text{g}}} = 4705.6\ \text{mol}$$
+
+where:
+
+- $m$ is the mass of toluene (kg)
+- $MW$ is the molar mass of toluene (kg/mol)
+:::
+
+::: {.fragment}
+Now calculate the change in energy during the cooling of the toluene from 80 °C to 50 °C:
+
+$$\Delta E_{cool} = n \cdot C_p \cdot \Delta T = 4705.6\ \text{mol} \cdot 155\ \text{J/molK} \cdot (50 - 80)\ \text{K}$$
+$$\Delta E_{cool} = -22,340,000\ \text{J}$$
+:::
+
+::: {.fragment}
+Now calculate the change in energy during the withdrawal of half the toluene from the tank. This is simply half the energy of the toluene remaining in the tank after cooling. But we need add this to the energy change from cooling to get the total energy change in the tank:
+
+$$\Delta E_{withdrawal} = \frac{1}{2} \cdot \Delta E$$
+
+$$\Delta E_{total} = \Delta E_{cool} + \Delta E_{withdrawal} = -22,340,000\ \text{J} + \frac{1}{2} \cdot (-22,340,000\ \text{J})$$
+$$\Delta E_{total} = -33,510,000\ \text{J}$$
+
+This is relative to the initial state of the toluene in the tank. The negative sign indicates that energy has been lost from the tank.
+:::

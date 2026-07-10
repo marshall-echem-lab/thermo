@@ -107,10 +107,10 @@ A system can store energy in three ways:
 ::: {style="text-align:center;"}
 ![](figures/energy_balance_diagram.svg){width=70%}
 :::
-$$\text{Energy In} - \text{Energy Out} = \text{Accumulation of Energy}$$
+$$\text{Accumulation of Energy} = \text{Energy In} - \text{Energy Out}$$
 
 ::: {.fragment}
-$$\dot{E}_{in} + \dot{Q} + \dot{W} - \dot{E}_{out} = \frac{dE_{sys}}{dt}$$
+$$\frac{dE_{sys}}{dt} = \dot{E}_{in} + \dot{Q} + \dot{W} - \dot{E}_{out}$$
 :::
 
 ## Heat and Work convention
@@ -141,7 +141,7 @@ Heat and work represent quantities of energy transfer. Heat is not stored in a s
 Heat and work are different forms of energy transfer. 
 
 ::: {.incremental}
-- Adding 100 J of heat to a system maybe the same as doing 100 J of work on a system.
+- Adding 100 J of heat to a system vs adding 100 J of work on a system.
 - Both will increase the energy of the system by 100 J
 - But the way energy is stored in the system may differ
 - Work is always more useful that heat
