@@ -106,4 +106,28 @@ Enthalpy is affected by:
 - Reactions
 :::
 
+## Enthalpy changes
+
+It is not possible to calculate absolute enthalpy values
+
+. . .
+
+Enthalpy changes can be calculated
+
+. . .
+
+Enthalpy can be calculated relative to a reference state
+
+## Reference states
+
+## example
+steady state single flow 
+
+## example 
+steady state two flows mix continuous
+
+## example
+unsteady state heat
+
+
 
