@@ -42,28 +42,3 @@ format:
             });
           });
         </script>
-
-        <!-- Force adaptive SVG figures to re-decode against the current OS
-             colour scheme, so they flip live rather than only after a manual
-             reload (embedded <img> SVGs keep a lazy buffer on iOS). -->
-        <script>
-          (function () {
-            var mq = window.matchMedia('(prefers-color-scheme: dark)');
-            function refreshFigures() {
-              document.querySelectorAll('.reveal img[src*=".svg"]').forEach(function (img) {
-                var base = img.getAttribute('data-cs-base') || img.src.split('#')[0].split('?')[0];
-                img.setAttribute('data-cs-base', base);
-                var next = base + '?cs=' + (mq.matches ? 'dark' : 'light');
-                if (img.src !== next) img.src = next;
-              });
-            }
-            window.addEventListener('load', function () {
-              refreshFigures();
-              if (typeof Reveal !== 'undefined') Reveal.on('ready', refreshFigures);
-              window.addEventListener('pageshow', function (event) {
-                if (event.persisted) refreshFigures();
-              });
-              mq.addEventListener('change', refreshFigures);
-            });
-          })();
-        </script>

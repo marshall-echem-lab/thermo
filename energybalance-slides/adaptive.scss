@@ -1,6 +1,6 @@
 /*-- scss:rules --*/
 
-/* Slide chrome follows the device light/dark setting. */
+/* Slide chrome follows the device light/dark setting (this half already works). */
 :root { color-scheme: light dark; }
 
 @media (prefers-color-scheme: dark) {
@@ -11,8 +11,16 @@
   .reveal a        { color: #6db3f2 !important; }
 }
 
-/* Figures adapt themselves — no pin, no filter.
-   Each drawio SVG already carries `color-scheme: light dark` + light-dark()
-   colours: the exact mechanism that flips correctly when you open the SVG
-   directly on your phone. The old `color-scheme: light` pin is what froze them
-   in light appearance inside the slide. */
+/* Figures: decode once in light on every browser, then flip them with a
+   PAGE-LEVEL filter. iOS Safari won't reliably adapt an <img> SVG to dark on
+   its own (the buffer stays light — that's why the long-press "save" preview
+   is light), but it DOES apply page-level media queries and CSS filters
+   reliably. Figures are transparent, so invert leaves the background alone and
+   only the line-art flips; hue-rotate keeps the red arrow roughly red. */
+.reveal img[src*=".svg"] { color-scheme: light; }
+
+@media (prefers-color-scheme: dark) {
+  .reveal img[src*=".svg"] {
+    filter: invert(1) hue-rotate(180deg) !important;
+  }
+}
