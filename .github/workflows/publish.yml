@@ -53,3 +53,32 @@ jobs:
       - name: Generate auto chapters (book only)
         run: |
           cd energybalance-book
+          python3 ../scripts/generate-key-terms.py energybalance-book
+          python3 ../scripts/generate-problems-solutions.py
+
+      - name: Render energybalance-book
+        run: quarto render energybalance-book
+
+      - name: Render energybalance-slides
+        run: quarto render energybalance-slides
+
+      # - name: Render thermodynamics-book
+      #   run: quarto render thermodynamics-book
+      # - name: Render thermodynamics-slides
+      #   run: quarto render thermodynamics-slides
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
