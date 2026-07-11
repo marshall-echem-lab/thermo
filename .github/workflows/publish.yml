@@ -41,37 +41,15 @@ jobs:
               rm -rf "$proj/$asset"
               cp -r  "$asset" "$proj/$asset"
             done
+            # Pin each figure to a single (light) colour scheme so its internal
+            # light-dark() can't resolve to dark and race on iOS. Dark mode on
+            # the slides is then produced ONLY by the page-level invert filter
+            # in adaptive.scss — deterministic on every browser. The book has no
+            # filter, so its figures simply stay light.
+            find "$proj/figures" -name '*.svg' -exec \
+              sed -i 's/color-scheme: light dark/color-scheme: light/g' {} +
           done
 
       - name: Generate auto chapters (book only)
         run: |
           cd energybalance-book
-          python3 ../scripts/generate-key-terms.py energybalance-book
-          python3 ../scripts/generate-problems-solutions.py
-
-      - name: Render energybalance-book
-        run: quarto render energybalance-book
-
-      - name: Render energybalance-slides
-        run: quarto render energybalance-slides
-
-      # - name: Render thermodynamics-book
-      #   run: quarto render thermodynamics-book
-      # - name: Render thermodynamics-slides
-      #   run: quarto render thermodynamics-slides
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4

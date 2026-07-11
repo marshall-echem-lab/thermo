@@ -124,7 +124,7 @@ Enthalpy can be calculated relative to a reference state
 steady state single flow 
 
 ## example 
-steady state two flows mix continuous
+steady state two flows mix continuously
 
 ## example
 unsteady state heat
