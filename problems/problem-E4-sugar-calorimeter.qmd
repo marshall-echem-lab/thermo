@@ -1,15 +1,16 @@
+## Problem E4: Bomb Calorimeter — Combustion of Sucrose {.unnumbered}
 
-Sucrose (table sugar, C₁₂H₂₂O₁₁) is the most common dietary sugar. When metabolised by the body it is ultimately oxidised to CO₂ and H₂O — a process energetically equivalent to combustion. Food scientists measure the energy content of foods by burning samples in a bomb calorimeter: the food is ignited inside a sealed steel vessel (the "bomb") filled with oxygen, which is itself immersed in a water bath. The entire assembly sits inside a perfectly insulated outer container. After the reaction is complete, the temperature rise of the water bath is used to determine the enthalpy of combustion.
+Sucrose (table sugar, $\mathrm{C_{12}H_{22}O_{11}}$) is the most common dietary sugar. When metabolised by the body it is ultimately oxidised to $\mathrm{CO_2}$ and $\mathrm{H_2O}$ — a process energetically equivalent to combustion. Food scientists measure the energy content of foods by burning samples in a bomb calorimeter: the food is ignited inside a sealed steel vessel (the "bomb") filled with oxygen, which is itself immersed in a water bath. The entire assembly sits inside a perfectly insulated outer container. After the reaction is complete, the temperature rise of the water bath is used to determine the enthalpy of combustion.
 
 The following data are provided:
 
-| Species | Enthalpy of formation, $\Delta H^\circ_f$ / kJ mol⁻¹ | Heat capacity, $C_P$ / J mol⁻¹ K⁻¹ | Molecular weight / g mol⁻¹ |
+| Species | Enthalpy of formation, $\Delta H^\circ_f$ / kJ mol$^{-1}$ | Heat capacity, $C_P$ / J mol$^{-1}$ K⁻¹ | Molecular weight / g mol$^{-1}$ |
 |---|---|---|---|
-| C₁₂H₂₂O₁₁ (s) | −2222 | 425.5 | 342 |
+| $\mathrm{C_{12}H_{22}O_{11}}$ (s) | −2222 | 425.5 | 342 |
 | O₂ (g) | 0 | 29.4 | 32 |
-| CO₂ (g) | −393.5 | 37.1 | 44 |
-| H₂O (g) | −241.8 | 33.6 | 18 |
-| H₂O (l) | −285.8 | 75.4 | 18 |
+| $\mathrm{CO_2}$ (g) | −393.5 | 37.1 | 44 |
+| $\mathrm{H_2O}$ (g) | −241.8 | 33.6 | 18 |
+| $\mathrm{H_2O}$ (l) | −285.8 | 75.4 | 18 |
 
 | Component | Mass / kg | Heat capacity ($C_P$) / kJ kg⁻¹ K⁻¹ |
 |---|---|---|
@@ -20,7 +21,7 @@ The bomb is charged with 5$\times$ the stoichiometric quantity of oxygen. Mass o
 
 **(a)** Write the balanced combustion reaction for sucrose.
 
-**(b)** Calculate the enthalpy of reaction ($\Delta H^\circ_{rxn}$) at 298.15 K with H₂O(g) as the product.
+**(b)** Calculate the enthalpy of reaction ($\Delta H^\circ_{rxn}$) at 298.15 K with $\mathrm{H_2O}$(g) as the product.
 
 **(c)** Starting from the general energy balance, write down and simplify the energy balance that describes what happens inside the bomb calorimeter from ignition until the system reaches its final temperature.
 
@@ -35,7 +36,7 @@ The bomb is charged with 5$\times$ the stoichiometric quantity of oxygen. Mass o
 
 $$\text{C}_{12}\text{H}_{22}\text{O}_{11} + 12\,\text{O}_2 \rightarrow 12\,\text{CO}_2 + 11\,\text{H}_2\text{O}$$
 
-**(b) Enthalpy of reaction at 298.15 K, with H₂O(g) as product**
+**(b) Enthalpy of reaction at 298.15 K, with $\mathrm{H_2O}$(g) as product**
 
 $$\Delta H^\circ_{rxn} = \sum \nu_j\,\Delta H^\circ_{f,j} = 12(-393.5) + 11(-241.8) - (-2222) - 0$$
 
@@ -70,7 +71,7 @@ Following a reaction-then-heat path (react at 298.15 K, then bring everything to
 
 $$\Delta H_{sys} = n_{surcose}\,\Delta H_{rxn,298.15} + \sum n_j\,C_{P,j}\,(T_f - T_i) + \sum m_k\,C_{P,k}\,(T_f - T_i) = 0$$
 
-where the first sum runs over the gas-phase species in the bomb (combustion products plus excess O₂), and the second sum runs over the steel bomb and the water bath.
+where the first sum runs over the gas-phase species in the bomb (combustion products plus excess $\mathrm{O_2}$), and the second sum runs over the steel bomb and the water bath.
 
 **(d) Final temperature**
 To calculate the final temperature, solve:
@@ -86,23 +87,25 @@ Moles of sucrose:
 
 $$n_{sucrose} = \frac{20}{342} = 0.05848\ \text{mol}$$
 
-Stoichiometric O₂ required: $12 \times 0.05848 = 0.7018$ mol. Total O₂ charged (5$\times$ stoichiometric): $3.509$ mol. Excess O₂: $3.509 - 0.7018 = 2.807$ mol.
+Stoichiometric $\mathrm{O_2}$ required: $12 \times 0.05848 = 0.7018$ mol. Total $\mathrm{O_2}$ charged (5$\times$ stoichiometric): $3.509$ mol. Excess $\mathrm{O_2}$: $3.509 - 0.7018 = 2.807$ mol.
 
-Products formed: CO₂ $= 0.7018$ mol; H₂O(g) $= 11 \times 0.05848 = 0.6433$ mol.
+Products formed: $\mathrm{CO_2}$ $= 0.7018$ mol; $\mathrm{H_2O}$(g) $= 11 \times 0.05848 = 0.6433$ mol.
 
 "Heat" released by the reaction:
 
-$$n_{sucrose} \times |\Delta H^\circ_{rxn}| = 0.05848 \times  -5159.8 = - 301.745 \ \text{kJ}$$
+$$n_{sucrose} \times \Delta H^\circ_{rxn} = 0.05848 \times  -5159.8 = - 301.745 \ \text{kJ}$$
+
+{{< pagebreak >}}
 
 Heat capacity contributions of everything that must be warmed from 298.15 K to $T_f$:
 
 | Component | $n$ or $m$ | $C_P$ | $nC_P$ or $mC_P$ (kJ/K) |
 |---|---|---|---|
-| CO₂ (g) | 0.7018 mol | 0.0371 kJ mol⁻¹ K⁻¹ | 0.026 |
-| H₂O (g) | 0.6433 mol | 0.0336 kJ mol⁻¹ K⁻¹ | 0.022 |
-| Excess O₂ (g) | 2.807 mol | 0.0294 kJ mol⁻¹ K⁻¹ | 0.082 |
-| Steel bomb | 0.5 kg | 0.49 kJ kg⁻¹ K⁻¹ | 0.245 |
-| Water bath | 2.0 kg | 4.18 kJ kg⁻¹ K⁻¹ | 8.360 |
+| $\mathrm{CO_2}$ (g) | 0.7018 mol | 0.0371 kJ mol$^{-1}$ K$^{-1}$ | 0.026 |
+| $\mathrm{H_2O}$ (g) | 0.6433 mol | 0.0336 kJ mol$^{-1}$ K$^{-1}$ | 0.022 |
+| Excess $\mathrm{O_2}$ (g) | 2.807 mol | 0.0294 kJ mol$^{-1}$ K$^{-1}$ | 0.082 |
+| Steel bomb | 0.5 kg | 0.49 kJ kg$^{-1}$ K$^{-1}$ | 0.245 |
+| Water bath | 2.0 kg | 4.18 kJ kg$^{-1}$ K$^{-1}$ | 8.360 |
 | **Total** | | | **8.735** |
 
 The gas-phase heat capacity contribution ($0.130$ kJ/K) is only about 1.5% of the total, so it is reasonable to neglect it, simplifying the total to $\sum m_k C_{P,k} = 8.605$ kJ/K (steel bomb + water bath only). Using the full total of 8.735 kJ/K:
