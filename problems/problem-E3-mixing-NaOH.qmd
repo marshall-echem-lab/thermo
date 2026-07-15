@@ -4,9 +4,9 @@ A 10 wt% NaOH solution is made by mixing 100 g of solid NaOH (initially at 20 °
 
 | Property | Value |
 |---|---|
-| Water heat capacity ($C_P$) | 4.18 kJ kg⁻¹ K⁻¹ |
-| NaOH heat capacity ($C_P$) | 1.46 kJ kg⁻¹ K⁻¹ |
-| 10 wt% NaOH solution heat capacity ($C_P$) | 3.90 kJ kg⁻¹ K⁻¹ |
+| Water heat capacity ($C_{P,water}$) | 4.18 kJ kg⁻¹ K⁻¹ |
+| NaOH heat capacity ($C_{P,NaOH}$) | 1.46 kJ kg⁻¹ K⁻¹ |
+| 10 wt% NaOH solution heat capacity ($C_{P,sol}$) | 3.90 kJ kg⁻¹ K⁻¹ |
 | Molar mass of NaOH | 40 g mol⁻¹ |
 
 **(a)** Use an energy balance to calculate the final temperature of the mixture assuming that there is no heat of dissolution.
@@ -40,12 +40,12 @@ The energy balance starts as:
 
 $$\frac{d(m_{sys}H_{sys})}{dt} = \dot{m}_{in} H_{in} - \dot{m}_{out} H_{out} + \dot{Q} + \dot{W}$$
 
-As there are no mass flows in or out ($\dot{m}_{in}=\dot{m}_{out}=0$) and as the system is well insulated ($\dot{Q}=0$} and no work is done ($\dot{W}=0$):
+As there are no mass flows in or out ($\dot{m}_{in}=\dot{m}_{out}=0$) and as the system is well insulated ($\dot{Q}=0$) and no work is done ($\dot{W}=0$):
 $$\frac{d(m_{sys}H_{sys})}{dt} = 0$$
 
 Separating the variables gives:
 
-$d(m_{sys}H_{sys}) = 0\,dt$$
+$$d(m_{sys}H_{sys}) = 0\,dt$$
 
 Integrating between the initial and final states:
 
@@ -57,22 +57,22 @@ where $H_{sys,i}$ is the enthalpy of the unmixed components and $H_{sys,f}$ is t
 
 For this problem, it is easiest to calculate the enthalpy of the initial and final states relative to some reference state. As the water starts at 0 °C, it is convenient to use  0 °C (and 1 bar) of the *un-mixed* species as the reference state. Therefore the initial total enthalpy ($m_{sys,i}H_{sys,i}$) is:
 
-$$$m_{sys,i}H_{sys,i}$ = m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH}-0) + m_{water}\,C_{P,water}\,(T_{water}-0)$$
+$$$m_{sys,i}H_{sys,i} = m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH,i}-T_{ref}) + m_{water}\,C_{P,water}\,(T_{water,i}-T_{ref})$$
 
-$m_{sys,f}H_{sys,f}$ is the enthalpy of the solution at its actual final temperature, relative to 0 °C and the un-mixed components:
+$m_{sys,f}H_{sys,f}$ is the total enthalpy of the solution (units kJ) at its actual final temperature ($T_{sol,f}$), relative to 0 °C and the un-mixed components:
 
-$$m_{sys,f}H_{sys,f} = m_{solution}\,C_{P,solution}\,(T_{actual}-0) + m_{solution}\,\Delta H_{dissolution}$$
+$$m_{sys,f}H_{sys,f} = m_{sol}\,C_{P,sol}\,(T_{sol,f}-T_{ref}) + m_{sol}\,\Delta H_{diss}$$
 
-The heat of dissolution ($\Delta H_{dissolution}$) is therefore:
+The heat of dissolution ($\Delta H_{diss}$) is therefore:
 
-$$m_{solution}\,C_{P,solution}\,(T_{actual}-0) + m_{solution}\,\Delta H_{dissolution} - m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH}-0) + m_{water}\,C_{P,water}\,(T_{water}-0) = 0$$ 
+$$m_{sol}\,C_{P,sol}\,(T_{sol,f}-0) + m_{sol}\,\Delta H_{diss} - m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH,i}-T_{ref}) + m_{water}\,C_{P,water}\,(T_{water,i}-T_{ref}) = 0$$ 
 
-$$ m_{solution}\,\Delta H_{dissolution} = m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH}-0) + m_{water}\,C_{P,water}\,(T_{water}-0) - m_{solution}\,C_{P,solution}\,(T_{actual}-0)$$
-$$ m_{solution}\,\Delta H_{dissolution} = (0.1)(1.46)(20-0) + (0.9)(4.18)(0-0) - (1)(3.9)(30-0) = - 114.08 \ \text{kJ}$$
+$$ m_{sol}\,\Delta H_{diss} = m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH,i}-T_{ref}) + m_{water}\,C_{P,water}\,(T_{water,i}-T_{ref}) - m_{sol}\,C_{P,sol}\,(T_{sol,f}-T_{ref})$$
+$$ m_{sol}\,\Delta H_{diss} = (0.1)(1.46)(20-0) + (0.9)(4.18)(0-0) - (1)(3.9)(30-0) = - 114.08 \ \text{kJ}$$
 
-$m_{solution}\,\Delta H_{dissolution} = -114.08$ kJ for the 100 g of NaOH dissolved. So on a mass basis of NaOH, the heat of dissolution is:
+$m_{sol}\,\Delta H_{diss} = -114.08$ kJ for the 100 g of NaOH dissolved. So on a mass basis of NaOH, the heat of dissolution is:
 
-$$\Delta H_{dissolution} = -1141 \ \text{kJ/kg}$$
+$$\Delta H_{diss} = -1141 \ \text{kJ/kg}$$
 
 The heat of dissolution is approximately **-1141 kJ per kg of NaOH dissolved**, and is exothermic.
 
