@@ -11,6 +11,10 @@ slides/EnergyBalances/
 slides/ElectrochemEng/
 .quarto/
 
+# Local Quarto builds for problems
+pdf-wrapper.qmd
+local-pdf/
+
 # Python
 __pycache__/
 *.pyc
