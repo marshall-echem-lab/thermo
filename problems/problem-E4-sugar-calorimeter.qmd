@@ -58,7 +58,7 @@ Assumptions and simplifications:
 
 Starting from the general energy balance:
 
-$$\frac{d(m_{sys}H_{sys})}{dt} + \sum \dot{m}_{out}H_{out} - \sum \dot{m}_{in}H_{in} = \dot{Q} + \dot{W}$$
+$$\frac{d(m_{sys}H_{sys})}{dt} =\sum \dot{m}_{in}H_{in} - \sum \dot{m}_{out}H_{out}  + \dot{Q} + \dot{W}$$
 
 with the flow terms and $\dot{Q}$, $\dot{W}$ all zero, so:
 $$\frac{d(m_{sys}H_{sys})}{dt}=0$$

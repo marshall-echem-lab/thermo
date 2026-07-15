@@ -34,7 +34,7 @@ The following data are provided:
 
 Cell (System A, steady state):
 
-$$\frac{d(m_{sys}H_{sys})}{dt} - \sum \dot{m}_{out}H_{out} - \sum \dot{m}_{in}H_{in} = \dot{Q} + \dot{W}$$
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum \dot{m}_{in}H_{in} - \sum \dot{m}_{out}H_{out} + \dot{Q} + \dot{W}$$
 
 At steady state $\frac{d(m_{sys}H_{sys})}{dt} = 0$, and there is no heat loss from the cell ($\dot{Q} = 0$). Since the electrolyte simply passes through the cell, $\dot{m}_{out} = \dot{m}_{in} = \dot{m}_{electrolyte}$, so the balance reduces to:
 

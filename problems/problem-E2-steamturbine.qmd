@@ -48,11 +48,11 @@ $$H_{out} = (0.9)(2584) + (1-0.90)(192) = 2325.6 + 19.2 = 2344.8\ \text{kJ/kg}$$
 
 At steady state, with a single inlet and outlet stream and no heat loss ($\dot{Q}=0$), the energy balance
 
-$$\frac{d(m_{sys}H_{sys})}{dt} + \sum \dot{m}_{out}H_{out} - \sum \dot{m}_{in}H_{in} = \dot{Q} + \dot{W}$$
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum \dot{m}_{in}H_{in} - \sum \dot{m}_{out}H_{out} + \dot{Q} + \dot{W}$$
 
 reduces to:
 
-$$\dot{W} = \dot{m}\,(H_{out} - H_{in})$$
+$$0 = \dot{m}\,(H_{in} - H_{out}) + \dot{W}$$
 
 Per kg of steam:
 
