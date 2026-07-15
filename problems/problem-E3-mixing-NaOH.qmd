@@ -18,7 +18,8 @@ A 10 wt% NaOH solution is made by mixing 100 g of solid NaOH (initially at 20 °
 {{< pagebreak >}}
 
 ::: {.content-visible when-meta="show-solutions"}
-**Solution**
+
+::: {.callout-note icon=false collapse="true" title="Solution"}
 
 **(a) Final temperature ignoring heat of dissolution**
 
@@ -113,4 +114,6 @@ The solution contains **less** enthalpy than the unmixed components at the same 
 Dissolving NaOH in water is strongly exothermic — energy is released as the solid dissolves. If the 10 wt% solution were instead prepared isothermally at 30 °C, this released energy (114 kJ, from part (b)) would have to be removed from the system to hold the temperature at 30 °C.
 
 Because that energy has left the system, the solution at 30 °C sits at a **lower** enthalpy state than the separated components at 30 °C — by approximately 114 kJ per 100 g of NaOH dissolved (≈1141 kJ/kg NaOH).
+:::
+
 :::
