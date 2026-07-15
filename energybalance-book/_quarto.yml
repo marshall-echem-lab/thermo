@@ -19,3 +19,14 @@ format:
     theme: cosmo
     toc: true
     css: book-styles.css
+    include-in-header:
+      - text: |
+          <script>
+          window.MathJax = {
+            tex: {
+              macros: {
+                hb: ["\\boldsymbol{#1}", 1]
+              }
+            }
+          };
+          </script>
