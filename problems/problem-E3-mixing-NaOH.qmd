@@ -57,7 +57,7 @@ where $H_{sys,i}$ is the enthalpy of the unmixed components and $H_{sys,f}$ is t
 
 For this problem, it is easiest to calculate the enthalpy of the initial and final states relative to some reference state. As the water starts at 0 °C, it is convenient to use  0 °C (and 1 bar) of the *un-mixed* species as the reference state. Therefore the initial total enthalpy ($m_{sys,i}H_{sys,i}$) is:
 
-$$$m_{sys,i}H_{sys,i} = m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH,i}-T_{ref}) + m_{water}\,C_{P,water}\,(T_{water,i}-T_{ref})$$
+$$m_{sys,i}H_{sys,i} = m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH,i}-T_{ref}) + m_{water}\,C_{P,water}\,(T_{water,i}-T_{ref})$$
 
 $m_{sys,f}H_{sys,f}$ is the total enthalpy of the solution (units kJ) at its actual final temperature ($T_{sol,f}$), relative to 0 °C and the un-mixed components:
 
