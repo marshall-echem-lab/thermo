@@ -1,0 +1,83 @@
+## Problem E2: Steam Turbine Expansion {.unnumbered}
+
+A steam turbine operates at steady state with no heat loss to the surroundings. Superheated steam enters the turbine at 10 bar and 300 °C. The steam expands through the turbine and exits as wet saturated steam at 0.1 bar with a dryness fraction (quality) of $x = 0.90$ (i.e. 90% vapour by mass). Steam tables are provided.
+
+**(a)** Determine the specific enthalpy of the inlet steam and state whether the inlet steam is saturated or superheated, briefly justifying your answer.
+
+**(b)** Write down the expression for the specific enthalpy of wet steam in terms of the dryness fraction $x$, the enthalpy of saturated vapour ($H_{vap,sat}$) and the latent heat of condensation ($\Delta H_{vap-liq}$). Use this expression to calculate the specific enthalpy at the outlet of the turbine.
+
+**(c)** Write down the steady-state energy balance for the turbine and calculate the specific work output per kg of steam passing through the turbine.
+
+**(d)** Calculate how much of the specific work output is attributable to the condensation of the 10% of steam that has become liquid water at the turbine outlet. Assume the condensation occurs at 0.1 bar.
+
+**(e)** Sketch a pressure vs temperature phase diagram for water, clearly labelling the solid, liquid, and vapour regions, the saturation curve, and the triple point. On your diagram, draw two different expansion paths from turbine inlet to outlet: Path 1, where the steam remains superheated throughout and condenses at the final outlet pressure of 0.1 bar; and Path 2, where the steam condenses at some intermediate pressure inside the turbine. Mark the inlet and outlet states clearly. Also draw an enthalpy vs temperature diagram showing both Path 1 and Path 2, and describe why the work produced by the turbine does not depend on the path taken by the steam.
+
+::: {.content-visible when-meta="show-solutions"}
+**Solution**
+
+**(a) Inlet enthalpy**
+
+From the superheated steam tables at 10 bar, 300 °C:
+
+$$H_{in} = 3052\ \text{kJ/kg}$$
+
+The saturation temperature at 10 bar is 179.9 °C, which is well below the actual inlet temperature of 300 °C. The steam is therefore **superheated** — it is hotter than its boiling point at this pressure.
+
+**(b) Outlet enthalpy — wet steam**
+
+The specific enthalpy of a wet steam mixture is the saturated vapour enthalpy less the portion lost to condensation:
+
+$$H_{out} = H_{vap,sat} - (1-x)\,\Delta H_{vap-liq}$$
+
+where $x$ is the mass fraction of dry saturated steam.
+
+From the saturated steam tables at 0.1 bar: $H_{vap,sat} = 2584$ kJ/kg, $\Delta H_{vap-liq} = 2392$ kJ/kg.
+
+$$H_{out} = 2584 - (1-0.90)(2392) = 2584 - 239.2 = 2344.8\ \text{kJ/kg}$$
+
+An alternative calculation is to add the specific enthalpies of saturated liquid water and saturated vapour, weighted by their mass fractions:
+$$H_{out} = x\,H_{vap,sat} + (1-x)\,H_{liq,sat}$$
+
+From the saturated steam tables at 0.1 bar: $H_{vap,sat} = 2584$ kJ/kg, $H_{liq,sat} = 192$ kJ/kg.
+$$H_{out} = (0.9)(2584) + (1-0.90)(192) = 2325.6 + 19.2 = 2344.8\ \text{kJ/kg}$$
+
+**(c) Specific work output**
+
+At steady state, with a single inlet and outlet stream and no heat loss ($\dot{Q}=0$), the energy balance
+
+$$\frac{d(m_{sys}H_{sys})}{dt} + \sum \dot{m}_{out}H_{out} - \sum \dot{m}_{in}H_{in} = \dot{Q} + \dot{W}$$
+
+reduces to:
+
+$$\dot{W} = \dot{m}\,(H_{out} - H_{in})$$
+
+Per kg of steam:
+
+$$\frac{\dot{W}}{\dot{m}} = H_{out} - H_{in} = 2345 - 3052 = -707\ \text{kJ/kg}$$
+
+The negative sign reflects the sign convention of the balance above ($\dot{W}$ is work done *on* the system); a negative value means the turbine does work *on* the surroundings. The specific work **output** of the turbine is therefore:
+
+$$|\dot{W}/\dot{m}| = 707\ \text{kJ/kg}$$
+
+**(d) Condensation contribution to work**
+
+Partial condensation of the outlet steam lowers the outlet enthalpy — and so increases the work extracted — by:
+
+$$(1-x)\,\Delta H_{vap-liq} = (0.10)(2392) = 239\ \text{kJ/kg}$$
+
+This is the portion of the specific work output attributable to the condensation of the 10% liquid fraction, which is:
+
+$$\frac{239}{707} \approx 34\%$$
+
+of the total specific work output.
+
+**(e) Phase diagram, H–T diagram, and state function argument**
+
+![Pressure–temperature phase diagram showing Path 1 (condensing only at the outlet pressure) and Path 2 (condensing at an intermediate pressure), both running from the same inlet state to the same outlet state](figures/problem-steamturbine-E2-phasediagram.svg)
+
+![Enthalpy–temperature diagram for the same two paths](figures/problem-steamturbine-E2-enthalpydiagram.svg)
+
+Note that for both paths, the enthalpy is the sum of the enthalpy of vapour and liquid after the condensation occurs.
+
+**State function argument:** Enthalpy is a state function — its value depends only on the current state (temperature, pressure, phase), not on the path taken to reach that state. Since both expansion paths share the same inlet state and the same outlet state, $\Delta H = H_{out} - H_{in}$ is identical for both paths. Because the turbine work is $\dot{W} = \dot{m}\,\Delta H$, the work output is therefore path-independent, even though Path 1 and Path 2 pass through very different intermediate states.
+:::
