@@ -20,7 +20,13 @@ A 10 wt% NaOH solution is made by mixing 100 g of solid NaOH (initially at 20 °
 
 **(a) Final temperature ignoring heat of dissolution**
 
-Assumptions: perfectly insulated vessel ($\dot{Q}=0$); no work ($\dot{W}=0$); no flow — a batch system; integrating from mixing to equilibrium gives $\Delta H_{sys} = 0$.
+Assumptions:
+
+- perfectly insulated vessel ($\dot{Q}=0$)
+- no work ($\dot{W}=0$)
+- no flow — a batch system
+
+Integrating from mixing to equilibrium gives $\Delta H_{sys} = 0$.
 
 Energy balance (each component brought from its initial temperature to the common final temperature $T_f$):
 
@@ -63,12 +69,18 @@ $m_{sys,f}H_{sys,f}$ is the total enthalpy of the solution (units kJ) at its act
 
 $$m_{sys,f}H_{sys,f} = m_{sol}\,C_{P,sol}\,(T_{sol,f}-T_{ref}) + m_{sol}\,\Delta H_{diss}$$
 
-The heat of dissolution ($\Delta H_{diss}$) is therefore:
+Combining full terms for $$m_{sys,f}H_{sys,f} and $$m_{sys,i}H_{sys,i} gives:
 
-$$m_{sol}\,C_{P,sol}\,(T_{sol,f}-0) + m_{sol}\,\Delta H_{diss} - m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH,i}-T_{ref}) + m_{water}\,C_{P,water}\,(T_{water,i}-T_{ref}) = 0$$ 
+::: {style="font-size: 0.8em"}
+$$m_{sol}\,C_{P,sol}\,(T_{sol,f}-T_{ref}) + m_{sol}\,\Delta H_{diss} - m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH,i}-T_{ref}) + m_{water}\,C_{P,water}\,(T_{water,i}-T_{ref}) = 0$$ 
+:::
 
+Solving for the heat of dissolution ($\Delta H_{diss}$):
+
+::: {style="font-size: 0.8em"}
 $$ m_{sol}\,\Delta H_{diss} = m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH,i}-T_{ref}) + m_{water}\,C_{P,water}\,(T_{water,i}-T_{ref}) - m_{sol}\,C_{P,sol}\,(T_{sol,f}-T_{ref})$$
 $$ m_{sol}\,\Delta H_{diss} = (0.1)(1.46)(20-0) + (0.9)(4.18)(0-0) - (1)(3.9)(30-0) = - 114.08 \ \text{kJ}$$
+:::
 
 $m_{sol}\,\Delta H_{diss} = -114.08$ kJ for the 100 g of NaOH dissolved. So on a mass basis of NaOH, the heat of dissolution is:
 
