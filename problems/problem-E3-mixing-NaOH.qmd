@@ -1,0 +1,86 @@
+## Problem E3: Enthalpy of Dissolution of NaOH {.unnumbered}
+
+A 10 wt% NaOH solution is made by mixing 100 g of solid NaOH (initially at 20 °C) with 900 g of water (initially at 0 °C) in a perfectly insulated vessel. The following data are provided:
+
+| Property | Value |
+|---|---|
+| Water heat capacity ($C_P$) | 4.18 kJ kg⁻¹ K⁻¹ |
+| NaOH heat capacity ($C_P$) | 1.46 kJ kg⁻¹ K⁻¹ |
+| 10 wt% NaOH solution heat capacity ($C_P$) | 3.90 kJ kg⁻¹ K⁻¹ |
+| Molar mass of NaOH | 40 g mol⁻¹ |
+
+**(a)** Use an energy balance to calculate the final temperature of the mixture assuming that there is no heat of dissolution.
+
+**(b)** In practice, the final temperature of the solution is measured to be 30 °C (this should be different from your prediction in part (a)). Estimate the heat of dissolution per kg of NaOH dissolved.
+
+**(c)** Consider 1 kg of 10 wt% NaOH solution at 30 °C, compared with the unmixed components (100 g of solid NaOH at 30 °C and 900 g of liquid water at 30 °C). Does the solution contain more or less enthalpy than the unmixed components at the same temperature? Justify your answer.
+
+::: {.content-visible when-meta="show-solutions"}
+**Solution**
+
+**(a) Final temperature ignoring heat of dissolution**
+
+Assumptions: perfectly insulated vessel ($\dot{Q}=0$); no work ($\dot{W}=0$); no flow — a batch system; integrating from mixing to equilibrium gives $\Delta H_{sys} = 0$.
+
+Energy balance (each component brought from its initial temperature to the common final temperature $T_f$):
+
+$$m_{NaOH}\,C_{P,NaOH}\,(T_f - T_{NaOH}) + m_{water}\,C_{P,water}\,(T_f - T_{water}) = 0$$
+
+Solving for $T_f$:
+
+$$T_f = \frac{m_{NaOH}\,C_{P,NaOH}\,T_{NaOH} + m_{water}\,C_{P,water}\,T_{water}}{m_{NaOH}\,C_{P,NaOH} + m_{water}\,C_{P,water}}$$
+
+$$T_f = \frac{(0.1)(1.46)(20) + (0.9)(4.18)(0)}{(0.1)(1.46) + (0.9)(4.18)} = \frac{2.92}{3.908} = 0.75\ ^\circ\text{C}$$
+
+$$T_f \approx 0.75\ ^\circ\text{C}$$
+
+**(b) Heat of dissolution from the actual final temperature (30 °C)**
+
+The energy balance starts as:
+
+$$\frac{d(m_{sys}H_{sys})}{dt} = \dot{m}_{in} H_{in} - \dot{m}_{out} H_{out} + \dot{Q} + \dot{W}$$
+
+As there are no mass flows in or out ($\dot{m}_{in}=\dot{m}_{out}=0$) and as the system is well insulated ($\dot{Q}=0$} and no work is done ($\dot{W}=0$):
+$$\frac{d(m_{sys}H_{sys})}{dt} = 0$$
+
+Separating the variables gives:
+
+$d(m_{sys}H_{sys}) = 0\,dt$$
+
+Integrating between the initial and final states:
+
+$$\int ^f_i d(m_{sys}H_{sys}) = 0$$
+
+$$m_{sys,f}H_{sys,f} - m_{sys,i}H_{sys,i} = 0$$ 
+
+where $H_{sys,i}$ is the enthalpy of the unmixed components and $H_{sys,f}$ is the enthalpy of the final solution. 
+
+For this problem, it is easiest to calculate the enthalpy of the initial and final states relative to some reference state. As the water starts at 0 °C, it is convenient to use  0 °C (and 1 bar) of the *un-mixed* species as the reference state. Therefore the initial total enthalpy ($m_{sys,i}H_{sys,i}$) is:
+
+$$$m_{sys,i}H_{sys,i}$ = m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH}-0) + m_{water}\,C_{P,water}\,(T_{water}-0)$$
+
+$m_{sys,f}H_{sys,f}$ is the enthalpy of the solution at its actual final temperature, relative to 0 °C and the un-mixed components:
+
+$$m_{sys,f}H_{sys,f} = m_{solution}\,C_{P,solution}\,(T_{actual}-0) + m_{solution}\,\Delta H_{dissolution}$$
+
+The heat of dissolution ($\Delta H_{dissolution}$) is therefore:
+
+$$m_{solution}\,C_{P,solution}\,(T_{actual}-0) + m_{solution}\,\Delta H_{dissolution} - m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH}-0) + m_{water}\,C_{P,water}\,(T_{water}-0) = 0$$ 
+
+$$ m_{solution}\,\Delta H_{dissolution} = m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH}-0) + m_{water}\,C_{P,water}\,(T_{water}-0) - m_{solution}\,C_{P,solution}\,(T_{actual}-0)$$
+$$ m_{solution}\,\Delta H_{dissolution} = (0.1)(1.46)(20-0) + (0.9)(4.18)(0-0) - (1)(3.9)(30-0) = - 114.08 \ \text{kJ}$$
+
+$m_{solution}\,\Delta H_{dissolution} = -114.08$ kJ for the 100 g of NaOH dissolved. So on a mass basis of NaOH, the heat of dissolution is:
+
+$$\Delta H_{dissolution} = -1141 \ \text{kJ/kg}$$
+
+The heat of dissolution is approximately **-1141 kJ per kg of NaOH dissolved**, and is exothermic.
+
+**(c) Enthalpy of the solution vs. the unmixed components**
+
+The solution contains **less** enthalpy than the unmixed components at the same temperature.
+
+Dissolving NaOH in water is strongly exothermic — energy is released as the solid dissolves. If the 10 wt% solution were instead prepared isothermally at 30 °C, this released energy (114 kJ, from part (b)) would have to be removed from the system to hold the temperature at 30 °C.
+
+Because that energy has left the system, the solution at 30 °C sits at a **lower** enthalpy state than the separated components at 30 °C — by approximately 114 kJ per 100 g of NaOH dissolved (≈1141 kJ/kg NaOH).
+:::
