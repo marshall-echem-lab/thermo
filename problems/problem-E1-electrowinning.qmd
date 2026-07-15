@@ -27,7 +27,8 @@ The following data are provided:
 {{< pagebreak >}}
 
 ::: {.content-visible when-meta="show-solutions"}
-**Solution**
+
+::: {.callout-note icon=false collapse="true" title="Solution"}
 
 **(a) Energy balances**
 
@@ -103,4 +104,6 @@ $$t = \frac{m\,C_P\,(T_f - T_0)}{\dot{W}_{excess}}$$
 Substituting $m = 4000$ kg, $C_P = 3800$ J kg⁻¹ K⁻¹, and $T_f - T_0 = 48 - 38 = 10$ K:
 
 $$t = \frac{4000 \times 3800 \times 10}{11{,}500} = 13{,}217\ \text{s} \approx 3.7\ \text{hours}$$
+:::
+
 :::

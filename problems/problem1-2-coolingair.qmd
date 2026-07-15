@@ -2,11 +2,12 @@
 
 A stream of 200 kg/h of air is cooled from 150 °C to 40 °C at constant
 pressure with no phase change. Taking the specific heat capacity of air as
-$c_p = 1.005\ \text{kJ}\,\text{kg}^{-1}\,\text{K}^{-1}$, determine the
+$C_P = 1.005\ \text{kJ}\,\text{kg}^{-1}\,\text{K}^{-1}$, determine the
 cooling duty in kW.
 
 ::: {.content-visible when-meta="show-solutions"}
-**Solution**
+
+::: {.callout-note icon=false collapse="true" title="Solution"}
 
 Sensible heat only:
 
@@ -16,4 +17,6 @@ $$\dot{Q} = \dot{m}\,c_p\,\Delta T
 The negative sign indicates heat removed. As a cooling duty:
 
 $$|\dot{Q}| = \frac{22{,}110\ \text{kJ/h}}{3600\ \text{s/h}} \approx 6.14\ \text{kW}.$$
+:::
+
 :::

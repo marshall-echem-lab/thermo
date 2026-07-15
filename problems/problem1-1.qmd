@@ -3,7 +3,8 @@
 Cooling water is pumped to the top of a 50 m cooling tower. The water enters the cooling tower through a nozzle at high velocity. The flow rate of water is 2 L/s, and the cross-sectional area of nozzle at the exit is 0.005 m². Calculate the power required by the pump.
 
 ::: {.content-visible when-meta="show-solutions"}
-**Solution**
+
+::: {.callout-note icon=false collapse="true" title="Solution"}
 
 The power required by the pump is equal to the rate of energy transfer to the water to overcome the change in potential energy and the change in kinetic energy of the water as it is pumped to the top of the cooling tower.
 
@@ -43,5 +44,7 @@ Calculating power required by the pump:
 $$\dot{W} = \dot{m}\cdot g \cdot z + \frac{1}{2} \cdot \dot{m} \cdot \mathbf{v}^2 $$
 $$\dot{W}= 2\ \text{kg/s} \cdot 9.81\ \text{m/s²} \cdot 50\ \text{m} + \frac{1}{2} \cdot 2\ \text{kg/s} \cdot (0.4\ \text{m/s})^2$$
 $$\dot{W}= 981\ \text{W} + 0.16\ \text{W} = 981.16\ \text{W}$$
+
+:::
 
 :::

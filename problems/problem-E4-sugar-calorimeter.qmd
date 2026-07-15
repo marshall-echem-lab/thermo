@@ -30,7 +30,8 @@ The bomb is charged with 5$\times$ the stoichiometric quantity of oxygen. Mass o
 {{< pagebreak >}}
 
 ::: {.content-visible when-meta="show-solutions"}
-**Solution**
+
+::: {.callout-note icon=false collapse="true" title="Solution"}
 
 **(a) Balanced combustion reaction**
 
@@ -115,4 +116,6 @@ $$\Delta T = \frac{- n_{surcose}\,\Delta H_{rxn,298.15}}{\sum(n_jC_{P,j} + m_kC_
 $$T_f = 298.15 + 34.54 = 332.69\ \text{K}$$
 
 $$T_f = 332.69\ \text{K} \ (59.5\ ^\circ\text{C})$$
+:::
+
 :::

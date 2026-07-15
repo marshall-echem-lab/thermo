@@ -15,7 +15,8 @@ A steam turbine operates at steady state with no heat loss to the surroundings. 
 {{< pagebreak >}}
 
 ::: {.content-visible when-meta="show-solutions"}
-**Solution**
+
+::: {.callout-note icon=false collapse="true" title="Solution"}
 
 **(a) Inlet enthalpy**
 
@@ -82,4 +83,6 @@ of the total specific work output.
 Note that for both paths, the enthalpy is the sum of the enthalpy of vapour and liquid after the condensation occurs.
 
 **State function argument:** Enthalpy is a state function — its value depends only on the current state (temperature, pressure, phase), not on the path taken to reach that state. Since both expansion paths share the same inlet state and the same outlet state, $\Delta H = H_{out} - H_{in}$ is identical for both paths. Because the turbine work is $\dot{W} = \dot{m}\,\Delta H$, the work output is therefore path-independent, even though Path 1 and Path 2 pass through very different intermediate states.
+:::
+
 :::
