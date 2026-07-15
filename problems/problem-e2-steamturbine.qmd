@@ -12,6 +12,8 @@ A steam turbine operates at steady state with no heat loss to the surroundings. 
 
 **(e)** Sketch a pressure vs temperature phase diagram for water, clearly labelling the solid, liquid, and vapour regions, the saturation curve, and the triple point. On your diagram, draw two different expansion paths from turbine inlet to outlet: Path 1, where the steam remains superheated throughout and condenses at the final outlet pressure of 0.1 bar; and Path 2, where the steam condenses at some intermediate pressure inside the turbine. Mark the inlet and outlet states clearly. Also draw an enthalpy vs temperature diagram showing both Path 1 and Path 2, and describe why the work produced by the turbine does not depend on the path taken by the steam.
 
+{{< pagebreak >}}
+
 ::: {.content-visible when-meta="show-solutions"}
 **Solution**
 

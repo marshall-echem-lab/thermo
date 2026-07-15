@@ -1,4 +1,3 @@
-## Problem E4: Bomb Calorimeter — Combustion of Sucrose {.unnumbered}
 
 Sucrose (table sugar, C₁₂H₂₂O₁₁) is the most common dietary sugar. When metabolised by the body it is ultimately oxidised to CO₂ and H₂O — a process energetically equivalent to combustion. Food scientists measure the energy content of foods by burning samples in a bomb calorimeter: the food is ignited inside a sealed steel vessel (the "bomb") filled with oxygen, which is itself immersed in a water bath. The entire assembly sits inside a perfectly insulated outer container. After the reaction is complete, the temperature rise of the water bath is used to determine the enthalpy of combustion.
 
@@ -26,6 +25,8 @@ The bomb is charged with 5$\times$ the stoichiometric quantity of oxygen. Mass o
 **(c)** Starting from the general energy balance, write down and simplify the energy balance that describes what happens inside the bomb calorimeter from ignition until the system reaches its final temperature.
 
 **(d)** Calculate the final temperature of the entire system (bomb and water bath).
+
+{{< pagebreak >}}
 
 ::: {.content-visible when-meta="show-solutions"}
 **Solution**

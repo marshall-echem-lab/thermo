@@ -15,6 +15,8 @@ A 10 wt% NaOH solution is made by mixing 100 g of solid NaOH (initially at 20 °
 
 **(c)** Consider 1 kg of 10 wt% NaOH solution at 30 °C, compared with the unmixed components (100 g of solid NaOH at 30 °C and 900 g of liquid water at 30 °C). Does the solution contain more or less enthalpy than the unmixed components at the same temperature? Justify your answer.
 
+{{< pagebreak >}}
+
 ::: {.content-visible when-meta="show-solutions"}
 **Solution**
 
@@ -28,13 +30,13 @@ Assumptions:
 
 Integrating from mixing to equilibrium gives $\Delta H_{sys} = 0$.
 
-Energy balance (each component brought from its initial temperature to the common final temperature $T_f$):
+Energy balance approach. Each component brought from its initial temperature ($T_i$) to the common final temperature $T_f$):
 
-$$m_{NaOH}\,C_{P,NaOH}\,(T_f - T_{NaOH}) + m_{water}\,C_{P,water}\,(T_f - T_{water}) = 0$$
+$$m_{NaOH}\,C_{P,NaOH}\,(T_f - T_{NaOH,i}) + m_{water}\,C_{P,water}\,(T_f - T_{water,i}) = 0$$
 
 Solving for $T_f$:
 
-$$T_f = \frac{m_{NaOH}\,C_{P,NaOH}\,T_{NaOH} + m_{water}\,C_{P,water}\,T_{water}}{m_{NaOH}\,C_{P,NaOH} + m_{water}\,C_{P,water}}$$
+$$T_f = \frac{m_{NaOH}\,C_{P,NaOH}\,T_{NaOH,i} + m_{water}\,C_{P,water}\,T_{water,i}}{m_{NaOH}\,C_{P,NaOH} + m_{water}\,C_{P,water}}$$
 
 $$T_f = \frac{(0.1)(1.46)(20) + (0.9)(4.18)(0)}{(0.1)(1.46) + (0.9)(4.18)} = \frac{2.92}{3.908} = 0.75\ ^\circ\text{C}$$
 
@@ -65,15 +67,21 @@ For this problem, it is easiest to calculate the enthalpy of the initial and fin
 
 $$m_{sys,i}H_{sys,i} = m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH,i}-T_{ref}) + m_{water}\,C_{P,water}\,(T_{water,i}-T_{ref})$$
 
-$m_{sys,f}H_{sys,f}$ is the total enthalpy of the solution (units kJ) at its actual final temperature ($T_{sol,f}$), relative to 0 °C and the un-mixed components:
+$m_{sys,f}H_{sys,f}$ is the total enthalpy of the solution (units kJ) at its actual final temperature ($T_{sol,f}$), relative to 0 °C and the *un-mixed* components:
 
 $$m_{sys,f}H_{sys,f} = m_{sol}\,C_{P,sol}\,(T_{sol,f}-T_{ref}) + m_{sol}\,\Delta H_{diss}$$
 
-Combining full terms for $$m_{sys,f}H_{sys,f}$ and $$m_{sys,i}H_{sys,i}$ gives:
+The $m_{sol}\,\Delta H_{diss}$ is added on to account for the change from the un-mixed species at 0 °C and the mixed species at 0 °C.
 
-::: {style="font-size: 0.9em"}
-$$m_{sol}\,C_{P,sol}\,(T_{sol,f}-T_{ref}) + m_{sol}\,\Delta H_{diss} - m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH,i}-T_{ref}) + m_{water}\,C_{P,water}\,(T_{water,i}-T_{ref}) = 0$$ 
-:::
+Combining full terms for $m_{sys,f}H_{sys,f}$ and $m_{sys,i}H_{sys,i}$ gives:
+
+$$
+\begin{aligned}
+m_{sol}\,C_{P,sol}\,(T_{sol,f}-T_{ref}) + m_{sol}\,\Delta H_{diss} & \\
+- m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH,i}-T_{ref}) & \\
++ m_{water}\,C_{P,water}\,(T_{water,i}-T_{ref}) & = 0
+\end{aligned}
+$$
 
 Solving for the heat of dissolution ($\Delta H_{diss}$):
 
@@ -81,7 +89,7 @@ $$
 \begin{aligned}
 m_{sol}\,\Delta H_{diss} ={} &m_{NaOH}\,C_{P,NaOH}\,(T_{NaOH,i}-T_{ref}) \\
            & + m_{water}\,C_{P,water}\,(T_{water,i}-T_{ref})\\
-           & - m_{sol}\,C_{P,sol}\,(T_{sol,f}-T_{ref})$$
+           & - m_{sol}\,C_{P,sol}\,(T_{sol,f}-T_{ref})
 \end{aligned}
 $$
 
