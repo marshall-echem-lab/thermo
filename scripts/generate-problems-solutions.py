@@ -40,6 +40,8 @@ def main():
         "number-sections: false",
         "---",
         "",
+        "Problems labelled with E1, E2 etc featured in exams",
+        ""
     ]
 
     if problems:
