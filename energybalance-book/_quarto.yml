@@ -18,3 +18,4 @@ format:
   html:
     theme: cosmo
     toc: true
+    css: book-styles.css
