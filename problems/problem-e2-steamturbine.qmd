@@ -73,9 +73,9 @@ of the total specific work output.
 
 **(e) Phase diagram, H–T diagram, and state function argument**
 
-![Pressure–temperature phase diagram showing Path 1 (condensing only at the outlet pressure) and Path 2 (condensing at an intermediate pressure), both running from the same inlet state to the same outlet state](figures/problem-steamturbine-E2-phasediagram.svg)
+![Pressure–temperature phase diagram showing Path 1 (condensing only at the outlet pressure) and Path 2 (condensing at an intermediate pressure), both running from the same inlet state to the same outlet state](figures/problem-E2-steamturbine-phasediagram.svg)
 
-![Enthalpy–temperature diagram for the same two paths](figures/problem-steamturbine-E2-enthalpydiagram.svg)
+![Enthalpy–temperature diagram for the same two paths](figures/problem-E2-steamturbine-enthalpydiagram.svg)
 
 Note that for both paths, the enthalpy is the sum of the enthalpy of vapour and liquid after the condensation occurs.
 

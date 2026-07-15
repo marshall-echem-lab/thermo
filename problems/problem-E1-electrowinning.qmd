@@ -16,7 +16,7 @@ The following data are provided:
 | Maximum electrolyte circulation rate | 5 kg s⁻¹ |
 | Cooling water heat capacity ($C_P$) | 4.18 kJ kg⁻¹ K⁻¹ |
 
-![Process schematic](figures/problem-electrowinning.svg)
+![Process schematic](figures/problem-E1-electrowinning.svg)
 
 **(a)** Write down two energy balances. One for the electrowinning cell and one for the external heat exchanger. Treat these as separate systems and be sure to define the terms.
 
