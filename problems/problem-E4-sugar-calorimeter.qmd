@@ -7,7 +7,7 @@ The following data are provided:
 | Species | Enthalpy of formation, $\Delta H^\circ_f$ / kJ mol$^{-1}$ | Heat capacity, $C_P$ / J mol$^{-1}$ K⁻¹ | Molecular weight / g mol$^{-1}$ |
 |---|---|---|---|
 | $\mathrm{C_{12}H_{22}O_{11}}$ (s) | −2222 | 425.5 | 342 |
-| O₂ (g) | 0 | 29.4 | 32 |
+| $\mathrm{O_2}$ (g) | 0 | 29.4 | 32 |
 | $\mathrm{CO_2}$ (g) | −393.5 | 37.1 | 44 |
 | $\mathrm{H_2O}$ (g) | −241.8 | 33.6 | 18 |
 | $\mathrm{H_2O}$ (l) | −285.8 | 75.4 | 18 |
@@ -119,3 +119,4 @@ $$T_f = 332.69\ \text{K} \ (59.5\ ^\circ\text{C})$$
 :::
 
 :::
+
