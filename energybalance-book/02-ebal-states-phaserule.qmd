@@ -21,3 +21,6 @@ Placeholder text. For a closed system:
 $$\Delta U = Q - W$$
 
 where $Q$ is heat added to the system and $W$ is work done by the system.
+
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum \dot{m}_{in}H_{in} - \sum \dot{m}_{out}H_{out} + \dot{Q} + \dot{W}$$
+
