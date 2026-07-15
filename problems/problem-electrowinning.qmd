@@ -1,0 +1,104 @@
+## Problem E1: Electrowinning Cell Energy Balance {.unnumbered}
+
+Zinc is recovered from an electrolyte solution by electrowinning. The electrowinning cell holds approximately 4,000 kg of electrolyte solution. The cell is operated at a constant current of 10,000 A and a cell voltage of 3.5 V. Because the theoretical minimum voltage for zinc deposition is only 2.35 V, the excess electrical energy is converted entirely to heat within the electrolyte.
+
+To control the temperature of the cell, the electrolyte is periodically circulated through an external heat exchanger. The flow rate of electrolyte through the heat exchanger is 5 kg/s. Cooling water enters the heat exchanger at 20 °C and leaves at 35 °C. In normal operation the electrolyte enters the heat exchanger at 40 °C and returns to the cell at 38 °C.
+
+The following data are provided:
+
+| Property | Value |
+|---|---|
+| Cell current | 10,000 A |
+| Cell voltage | 3.5 V |
+| Theoretical minimum voltage | 2.35 V |
+| Electrolyte mass in cell | 4,000 kg |
+| Electrolyte heat capacity ($C_P$) | 3.8 kJ kg⁻¹ K⁻¹ |
+| Maximum electrolyte circulation rate | 5 kg s⁻¹ |
+| Cooling water heat capacity ($C_P$) | 4.18 kJ kg⁻¹ K⁻¹ |
+
+![Process schematic](figures/problem-electrowinning.svg)
+
+**(a)** Write down two energy balances. One for the electrowinning cell and one for the external heat exchanger. Treat these as separate systems and be sure to define the terms.
+
+**(b)** Calculate the maximum amount of heat which would need to be removed in the heat exchanger assuming the electrolyte inlet/outlet temperatures stated above. Calculate the required cooling water flow rate to achieve this heat removal.
+
+**(c)** Derive an expression for the electrolyte temperature as a function of time assuming the electrolyte cooling circuit is switched off. State and justify any assumptions used, and show the integration steps clearly. Then calculate how long it takes for the temperature of the electrolyte (within the cell) to increase from 38 °C to 48 °C.
+
+::: {.content-visible when-meta="show-solutions"}
+**Solution**
+
+**(a) Energy balances**
+
+Cell (System A, steady state):
+
+$$\frac{d(m_{sys}H_{sys})}{dt} - \sum \dot{m}_{out}H_{out} - \sum \dot{m}_{in}H_{in} = \dot{Q} + \dot{W}$$
+
+At steady state $\frac{d(m_{sys}H_{sys})}{dt} = 0$, and there is no heat loss from the cell ($\dot{Q} = 0$). Since the electrolyte simply passes through the cell, $\dot{m}_{out} = \dot{m}_{in} = \dot{m}_{electrolyte}$, so the balance reduces to:
+
+$$\dot{m}_{electrolyte}(H_{out} - H_{in}) = \dot{W}$$
+
+where:
+
+- $\dot{m}_{electrolyte}$ is the mass flow rate of electrolyte through the cell (kg/s)
+- $H_{in}$, $H_{out}$ are the specific enthalpies of the electrolyte entering and leaving the cell (kJ/kg)
+- $\dot{W}$ is the excess electrical power delivered to the cell above the theoretical minimum, which appears entirely as heat in the electrolyte (kW)
+
+Heat exchanger (System B, steady state):
+
+$$\frac{d(m_{sys}H_{sys})}{dt} - \sum \dot{m}_{out}H_{out} - \sum \dot{m}_{in}H_{in} = \dot{Q} + \dot{W}$$
+
+At steady state, with no heat loss to the surroundings and no work done ($\dot{Q} = 0$, $\dot{W} = 0$), and treating the electrolyte and cooling water as two separate streams passing through the exchanger:
+
+$$\dot{m}_{electrolyte}(H_{out,electrolyte} - H_{in,electrolyte}) + \dot{m}_{coolingwater}(H_{out,coolingwater} - H_{in,coolingwater}) = 0$$
+
+where:
+
+- $\dot{m}_{coolingwater}$ is the mass flow rate of cooling water through the exchanger (kg/s)
+- $H_{in,electrolyte}$, $H_{out,electrolyte}$ are the specific enthalpies of the electrolyte entering and leaving the exchanger (kJ/kg)
+- $H_{in,coolingwater}$, $H_{out,coolingwater}$ are the specific enthalpies of the cooling water entering and leaving the exchanger (kJ/kg)
+
+**(b) Heat removal and cooling water flow rate**
+
+The heat removed is found from the electrolyte side of the heat exchanger balance:
+
+$$\dot{Q} = \dot{m}_{electrolyte} C_P (T_{out,electrolyte} - T_{in,electrolyte})$$
+
+$$\dot{Q} = 5\ \text{kg/s} \times 3.8\ \text{kJ kg}^{-1}\text{K}^{-1} \times (38 - 40)\ \text{K} = -38\ \text{kW}$$
+
+The negative sign shows heat leaves the electrolyte; the heat exchanger must therefore remove 38 kW.
+
+Applying the same balance to the cooling water side gives the required cooling water flow rate:
+
+$$\dot{m}_{cw} = \frac{\dot{Q}}{C_{P,cw}\,\Delta T_{cw}} = \frac{38}{4.18 \times (35-20)} = 0.61\ \text{kg/s}$$
+
+**(c) Transient heating with cooling off**
+
+Assumptions:
+
+- No heat loss to the surroundings.
+- All excess electrical energy heats the electrolyte (none is lost elsewhere).
+- $C_P$ of the electrolyte is constant over the temperature range considered.
+- The cell is well-mixed, so the electrolyte has a single, uniform temperature at any instant.
+
+The excess electrical power — the power delivered above the theoretical minimum needed for zinc deposition — is:
+
+$$\dot{W}_{excess} = (V_{cell} - V_{min})\,I = (3.5 - 2.35) \times 10{,}000 = 11{,}500\ \text{W}$$
+
+With the cooling circuit switched off, this excess power accumulates entirely as sensible heat in the electrolyte. The non-steady-state energy balance for the well-mixed cell is:
+
+$$m\,C_P\,\frac{dT}{dt} = \dot{W}_{excess}$$
+
+Separating variables and integrating from $T_0$ at $t = 0$ to $T_f$ at time $t$ (with $m$, $C_P$ and $\dot{W}_{excess}$ constant):
+
+$$\int_{T_0}^{T_f} dT = \frac{\dot{W}_{excess}}{m\,C_P}\int_0^{t} dt$$
+
+$$T(t) = T_0 + \frac{\dot{W}_{excess}}{m\,C_P}\,t$$
+
+Rearranging for the time to reach a given temperature:
+
+$$t = \frac{m\,C_P\,(T_f - T_0)}{\dot{W}_{excess}}$$
+
+Substituting $m = 4000$ kg, $C_P = 3800$ J kg⁻¹ K⁻¹, and $T_f - T_0 = 48 - 38 = 10$ K:
+
+$$t = \frac{4000 \times 3800 \times 10}{11{,}500} = 13{,}217\ \text{s} \approx 3.7\ \text{hours}$$
+:::
