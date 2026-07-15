@@ -25,6 +25,7 @@ The following data are provided:
 **(c)** Derive an expression for the electrolyte temperature as a function of time assuming the electrolyte cooling circuit is switched off. State and justify any assumptions used, and show the integration steps clearly. Then calculate how long it takes for the temperature of the electrolyte (within the cell) to increase from 38 °C to 48 °C.
 
 {{< pagebreak >}}
+
 ::: {.content-visible when-meta="show-solutions"}
 **Solution**
 
