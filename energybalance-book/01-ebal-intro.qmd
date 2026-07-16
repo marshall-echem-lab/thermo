@@ -60,6 +60,8 @@ Systems may be open, closed, or isolated depending on whether mass and energy ca
 
 ## How is energy stored in systems
 
+{{< include examples/example1-1.qmd >}}
+
 ::: {.callout-note}
 ## Key Term
 **Internal Energy** ($U$) — a thermodynamic state function describing the energy stored within matter.
