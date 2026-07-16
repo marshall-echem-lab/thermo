@@ -7,7 +7,9 @@ Determine how many intensive properties need to be defined or known to fully def
  c. A mixture of liquid ethanol and water
 
 
-**Solution**
+::: {.content-visible unless-format="revealjs"}
+
+::: {.callout-note icon=false collapse="true" title="Solution"}
 
 ::: {.fragment}
  a. 1 phase (liquid) and 1 component (water)
@@ -34,4 +36,7 @@ $$F = C - \pi + 2$$
 $$F = 2 - 1 + 2 = 3$$
 
 We need to specify three intensive properties (e.g. temperature, pressure, and composition) to fully define the state of the system. Any three intensive properties will do, but we often choose temperature, pressure, and composition.
+:::
+
+:::
 :::

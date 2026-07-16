@@ -71,7 +71,7 @@ Per kg of steam:
 
 $$
 \begin{aligned}
-frac{\dot{W}}{\dot{m}} & = H_{out} - H_{in} \\
+\frac{\dot{W}}{\dot{m}} & = H_{out} - H_{in} \\
                         & = 2345 - 3052 \\
                         & = -707\ \text{kJ/kg}
 \end{aligned}
