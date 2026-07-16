@@ -67,7 +67,6 @@ Systems may be open, closed, or isolated depending on whether mass and energy ca
 **Internal Energy** ($U$) — a thermodynamic state function describing the energy stored within matter.
 :::
 
-{{< include examples/example1-1.qmd >}}
 
 {{< include problems/problem1-1.qmd >}}
 

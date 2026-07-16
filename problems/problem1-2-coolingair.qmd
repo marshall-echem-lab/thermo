@@ -11,8 +11,13 @@ cooling duty in kW.
 
 Sensible heat only:
 
-$$\dot{Q} = \dot{m}\,C_P\,\Delta T
-= (200)(1.005)(40 - 150) = -22{,}110\ \text{kJ/h}.$$
+$$
+\begin{aligned}
+\dot{Q} & = \dot{m} C_P \Delta T \\
+& = (200)(1.005)(40 - 150) \\
+& = -22{,}110\ \text{kJ/h}
+\end{aligned}
+$$
 
 The negative sign indicates heat removed. As a cooling duty:
 

@@ -10,7 +10,7 @@ The power required by the pump is equal to the rate of energy transfer to the wa
 
 Assuming the water is incompressible and neglecting any frictional losses, the power required by the pump can be calculated using the following equation:
 
-$$\dot{W} = \dot{m}\cdot g \cdot z + \frac{1}{2} \cdot \dot{m} \cdot\mathbf{v}^2$$
+$$\dot{W} = \dot{m} g z + \frac{1}{2} \dot{m} \mathbf{v}^2$$
 
 where:
 
@@ -24,7 +24,13 @@ Note: Power is the rate of energy transfer, and the first term represents the ch
 
 The mass flow rate of water can be calculated from the volumetric flow rate and the density of water:
 
-$$\dot{m} = \rho \cdot\dot{V} = 1000\ \text{kg/m³} \cdot 2\ \text{L/s} \cdot \frac{1\ \text{m³}}{1000\ \text{L}} = 2\ \text{kg/s}$$
+$$
+\begin{aligned}
+\dot{m} &= \rho \dot{V} \\
+&= 1000\ \text{kg/m³} \cdot 2\ \text{L/s} \cdot \frac{1\ \text{m³}}{1000\ \text{L}} \\
+&= 2\ \text{kg/s}
+\end{aligned}
+$$
 
 where:
 
@@ -33,7 +39,13 @@ where:
 
 The velocity of water at the nozzle exit can be calculated from the volumetric flow rate and the nozzle exit area:
 
-$$\mathbf{v} = \frac{\dot{V}}{A} = \frac{2\ \text{L/s} \cdot \frac{1\ \text{m³}}{1000\ \text{L}}}{0.005\ \text{m²}} = 0.4\ \text{m/s}$$
+$$
+\begin{aligned}
+\mathbf{v} & = \frac{\dot{V}}{A} \\
+           & = \frac{2\ \text{L/s} \cdot \frac{1\ \text{m³}}{1000\ \text{L}}}{0.005\ \text{m²}} \\
+           & = 0.4\ \text{m/s}
+\end{aligned}
+$$
 
 where:
 
@@ -41,9 +53,13 @@ where:
 
 Calculating power required by the pump:
 
-$$\dot{W} = \dot{m}\cdot g \cdot z + \frac{1}{2} \cdot \dot{m} \cdot \mathbf{v}^2 $$
-$$\dot{W}= 2\ \text{kg/s} \cdot 9.81\ \text{m/s²} \cdot 50\ \text{m} + \frac{1}{2} \cdot 2\ \text{kg/s} \cdot (0.4\ \text{m/s})^2$$
-$$\dot{W}= 981\ \text{W} + 0.16\ \text{W} = 981.16\ \text{W}$$
+$$
+\begin{aligned}
+\dot{W} & = \dot{m}\cdot g \cdot z + \frac{1}{2} \cdot \dot{m} \cdot \mathbf{v}^2 \\
+        & = 2\ \text{kg/s} \cdot 9.81\ \text{m/s²} \cdot 50\ \text{m} + \frac{1}{2} \cdot 2\ \text{kg/s} \cdot (0.4\ \text{m/s})^2 \\
+        & = 981.16\ \text{W}
+\end{aligned}
+$$
 
 :::
 
