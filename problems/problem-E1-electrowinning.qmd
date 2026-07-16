@@ -64,15 +64,24 @@ where:
 
 The heat removed is found from the electrolyte side of the heat exchanger balance:
 
-$$\dot{Q} = \dot{m}_{electrolyte} C_P (T_{out,electrolyte} - T_{in,electrolyte})$$
-
-$$\dot{Q} = 5\ \text{kg/s} \times 3.8\ \text{kJ kg}^{-1}\text{K}^{-1} \times (38 - 40)\ \text{K} = -38\ \text{kW}$$
+$$
+\begin{aligned}
+\dot{Q} & = \dot{m}_{electrolyte} C_P (T_{out,electrolyte} - T_{in,electrolyte})\\
+        & = 5\ \text{kg/s} \times 3.8\ \text{kJ kg}^{-1}\text{K}^{-1} \times (38 - 40)\ \text{K}\\
+        & = -38\ \text{kW}
+\end{aligned}
+$$
 
 The negative sign shows heat leaves the electrolyte; the heat exchanger must therefore remove 38 kW.
 
 Applying the same balance to the cooling water side gives the required cooling water flow rate:
 
-$$\dot{m}_{cw} = \frac{\dot{Q}}{C_{P,cw}\,\Delta T_{cw}} = \frac{38}{4.18 \times (35-20)} = 0.61\ \text{kg/s}$$
+$$
+\begin{aligned}
+\dot{m}_{cw} & = \frac{\dot{Q}}{C_{P,cw}\,\Delta T_{cw}}\\
+            & = \frac{38}{4.18 \times (35-20)} = 0.61\ \text{kg/s}
+\end{aligned}
+$$
 
 **(c) Transient heating with cooling off**
 
@@ -103,7 +112,13 @@ $$t = \frac{m\,C_P\,(T_f - T_0)}{\dot{W}_{excess}}$$
 
 Substituting $m = 4000$ kg, $C_P = 3800$ J kg⁻¹ K⁻¹, and $T_f - T_0 = 48 - 38 = 10$ K:
 
-$$t = \frac{4000 \times 3800 \times 10}{11{,}500} = 13{,}217\ \text{s} \approx 3.7\ \text{hours}$$
+$$
+\begin{aligned}
+t & = \frac{4000 \times 3800 \times 10}{11{,}500}\\
+  & = 13{,}217\ \text{s} \approx 3.7\ \text{hours}
+\end{aligned}
+$$
+
 :::
 
 :::
