@@ -39,7 +39,12 @@ Solving for $T_f$:
 
 $$T_f = \frac{m_{NaOH}\,C_{P,NaOH}\,T_{NaOH,i} + m_{water}\,C_{P,water}\,T_{water,i}}{m_{NaOH}\,C_{P,NaOH} + m_{water}\,C_{P,water}}$$
 
-$$T_f = \frac{(0.1)(1.46)(20) + (0.9)(4.18)(0)}{(0.1)(1.46) + (0.9)(4.18)} = \frac{2.92}{3.908} = 0.75\ ^\circ\text{C}$$
+$$
+\begin{aligned}
+T_f & = \frac{(0.1)(1.46)(20) + (0.9)(4.18)(0)}{(0.1)(1.46) + (0.9)(4.18)} \\
+  & = \frac{2.92}{3.908} = 0.75\ ^\circ\text{C}
+\end{aligned}
+$$
 
 $$T_f \approx 0.75\ ^\circ\text{C}$$
 

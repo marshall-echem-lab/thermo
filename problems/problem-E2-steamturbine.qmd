@@ -37,7 +37,7 @@ where $x$ is the mass fraction of dry saturated steam.
 From the saturated steam tables at 0.1 bar: $H_{vap,sat} = 2584$ kJ/kg, $\Delta H_{vap-liq} = 2392$ kJ/kg.
 
 $$
-\beign{aligned}
+\begin{aligned}
 H_{out} & = 2584 - (1-0.90)(2392) \\
   & = 2584 - 239.2\\
   & = 2344.8\ \text{kJ/kg}
@@ -50,7 +50,7 @@ $$H_{out} = x\,H_{vap,sat} + (1-x)\,H_{liq,sat}$$
 From the saturated steam tables at 0.1 bar: $H_{vap,sat} = 2584$ kJ/kg, $H_{liq,sat} = 192$ kJ/kg.
 
 $$
-\beign{aligned}
+\begin{aligned}
 H_{out} & = (0.9)(2584) + (1-0.90)(192)  \\
   & = 2325.6 + 19.2\\
   & = 2344.8\ \text{kJ/kg}

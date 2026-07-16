@@ -39,9 +39,14 @@ $$\text{C}_{12}\text{H}_{22}\text{O}_{11} + 12\,\text{O}_2 \rightarrow 12\,\text
 
 **(b) Enthalpy of reaction at 298.15 K, with $\mathrm{H_2O}$(g) as product**
 
-$$\Delta H^\circ_{rxn} = \sum \nu_j\,\Delta H^\circ_{f,j} = 12(-393.5) + 11(-241.8) - (-2222) - 0$$
+$$
+\begin{aligned}
+\Delta H^\circ_{rxn} & = \sum \nu_j\,\Delta H^\circ_{f,j} \\
+                & = 12(-393.5) + 11(-241.8) - (-2222) - 0 \\
+                & = -5159.8\ \text{kJ/mol}
+\end{aligned}
+$$
 
-$$\Delta H^\circ_{rxn} = -4722 - 2659.8 + 2222 = -5159.8\ \text{kJ/mol}$$
 
 $$\Delta H^\circ_{rxn} \approx -5160\ \text{kJ/mol} \quad \text{(strongly exothermic)}$$
 
@@ -78,14 +83,11 @@ where the first sum runs over the gas-phase species in the bomb (combustion prod
 To calculate the final temperature, solve:
 
 $$n_{surcose}\,\Delta H_{rxn,298.15} + \sum n_j\,C_{P,j}\,(T_f - T_i) + \sum m_k\,C_{P,k}\,(T_f - T_i) = 0$$
-$$\sum n_j\,C_{P,j}\,(T_f - T_i) + \sum m_k\,C_{P,k}\,(T_f - T_i) = - n_{surcose}\,\Delta H_{rxn,298.15}$$
-$$(T_f - 298.15) (\sum n_j\,C_{P,j} + \sum m_k\,C_{P,k}) = - n_{surcose}\,\Delta H_{rxn,298.15}$$
-$$T_f - T_i = \frac{- n_{surcose}\,\Delta H_{rxn,298.15}}{\sum n_j\,C_{P,j} + \sum m_k\,C_{P,k}}$$
+rearranging gives:
 $$T_f = \frac{- n_{surcose}\,\Delta H_{rxn,298.15}}{\sum n_j\,C_{P,j} + \sum m_k\,C_{P,k}} + T_i$$
 
 
 Moles of sucrose:
-
 $$n_{sucrose} = \frac{20}{342} = 0.05848\ \text{mol}$$
 
 Stoichiometric $\mathrm{O_2}$ required: $12 \times 0.05848 = 0.7018$ mol. Total $\mathrm{O_2}$ charged (5$\times$ stoichiometric): $3.509$ mol. Excess $\mathrm{O_2}$: $3.509 - 0.7018 = 2.807$ mol.
@@ -111,11 +113,20 @@ Heat capacity contributions of everything that must be warmed from 298.15 K to $
 
 The gas-phase heat capacity contribution ($0.130$ kJ/K) is only about 1.5% of the total, so it is reasonable to neglect it, simplifying the total to $\sum m_k C_{P,k} = 8.605$ kJ/K (steel bomb + water bath only). Using the full total of 8.735 kJ/K:
 
-$$\Delta T = \frac{- n_{surcose}\,\Delta H_{rxn,298.15}}{\sum(n_jC_{P,j} + m_kC_{P,k})} = \frac{301.745}{8.735} = 34.54\ \text{K}$$
+$$
+\begin{aligned}
+\Delta T & = \frac{- n_{surcose}\,\Delta H_{rxn,298.15}}{\sum(n_jC_{P,j} + m_kC_{P,k})}\\
+        & = \frac{301.745}{8.735} = 34.54\ \text{K}
+\end{aligned}
+$$
 
-$$T_f = 298.15 + 34.54 = 332.69\ \text{K}$$
+$$
+\begin{aligned}
+T_f & = 298.15 + 34.54 \\
+& = 332.69\ \text{K}\ (59.5\ ^\circ\text{C})
+\end{aligned}
+$$
 
-$$T_f = 332.69\ \text{K} \ (59.5\ ^\circ\text{C})$$
 :::
 :::
 
