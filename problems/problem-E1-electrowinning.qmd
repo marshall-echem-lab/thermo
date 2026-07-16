@@ -48,7 +48,7 @@ where:
 
 Heat exchanger (System B, steady state):
 
-$$\frac{d(m_{sys}H_{sys})}{dt} - \sum \dot{m}_{out}H_{out} - \sum \dot{m}_{in}H_{in} = \dot{Q} + \dot{W}$$
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum \dot{m}_{in}H_{in} - \sum \dot{m}_{out}H_{out} + \dot{Q} + \dot{W}$$
 
 At steady state, with no heat loss to the surroundings and no work done ($\dot{Q} = 0$, $\dot{W} = 0$), and treating the electrolyte and cooling water as two separate streams passing through the exchanger:
 
