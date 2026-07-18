@@ -13,3 +13,5 @@
 [Summary 6](06-solution-heat.qmd) Heat of Solution
 
 [Summary 7](06-reactions.qmd) Reactions
+
+[Glossary](00-nomenclature-units.qmd) Nomenclature & Units

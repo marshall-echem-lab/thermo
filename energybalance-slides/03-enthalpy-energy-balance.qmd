@@ -55,16 +55,15 @@ The extra work can by accounted for by using enthalpy instead of internal energy
 Enthalpy is **defined** as:
 $$H = U + PV$$
 
-::: {.callout-note}
+::: {.callout-note icon=false}
 ## Key Term
 **Enthalpy** ($H$) — a convenient state function defined by $H=U+PV$.
 :::
 
-## The General Energy Balance Equation {.scrollable}
-Combining all the terms gives:
+## Combining all the terms
 $$\frac{d(m_{sys}H_{sys})}{dt} = \dot{m}_{in} H_{in} - \dot{m}_{out} H_{out} + \dot{Q} + \dot{W}$$
 
-::: {style="font-size: 0.7em"}
+::: {style="font-size: 0.8em"}
 - $m_{sys}$ is the mass of the system (kg)
 - $H_{sys}$ is the enthalpy of the system (J/kg)
 - $\dot{m}_{in}$, $\dot{m}_{out}$ are the mass flow rates in or out of the system (kg/s)
@@ -73,7 +72,7 @@ $$\frac{d(m_{sys}H_{sys})}{dt} = \dot{m}_{in} H_{in} - \dot{m}_{out} H_{out} + \
 - $\dot{W}$ is the rate of work done on the system (W)
 :::
 
-## Multiple streams {.scrollable}
+## Multiple streams
 For multiple stream, include each term:
 
 ::: {style="text-align:center;"}
@@ -90,6 +89,23 @@ $$
 \end{aligned}
 $$
 :::
+
+## The General Energy Balance Equation
+The general energy balance equation can describe every process:
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum_i \dot{m}_{i,i} H_{in,i} - \sum_j \dot{m}_{out,j} H_{out,j} + \sum_k \dot{Q}_k + \sum_l \dot{W}_l$$
+
+The general balance allows for an arbitary number of flow terms via the sum terms.
+
+. . .
+
+if the system is described in moles rather than mass:
+
+$$\frac{d(n_{sys}H_{sys})}{dt} = \sum_i \dot{n}_{i,i} H_{in,i} - \sum_j \dot{n}_{out,j} H_{out,j} + \sum_k \dot{Q}_k + \sum_l \dot{W}_l$$
+
+where:
+
+- $n_{sys}$ is the moles of system
+- $\dot{n}$ is the molar flow rate in or out of the system
 
 ## What affects Enthalpy ?
 To solve the energy balance, must calculate the enthalpy of the flow streams and system.
@@ -112,13 +128,31 @@ It is not possible to calculate absolute enthalpy values
 
 . . .
 
-Enthalpy changes can be calculated
+Enthalpy changes between two states can be calculated:
+
+$$\Delta H_{state\:1\rightarrow\:state\:2} = H_{state\:2} - H_{state\:1} \quad \checkmark $$
 
 . . .
 
-Enthalpy can be calculated relative to a reference state
+An "absolute" Enthalpy can be calculated *relative* to a reference state
+
+$$H_{state\:1} = H_{ref\:state} + \Delta H_{ref\:state\rightarrow\:state\:1} \quad \checkmark $$
 
 ## Reference states
+
+In many cases, calculating "absolute" enthalpy *relative* to a reference state simplifies process calculations
+
+. . .
+
+Reference states can be freely defined. But must use the same reference state entire process calculation
+
+. . .
+
+Common reference states include:
+
+- Triple point of water
+- Pure species at 298.15 K
+- Dry Air at 101.325 kPa and 0 $^\circ$C 
 
 ## example
 steady state single flow 

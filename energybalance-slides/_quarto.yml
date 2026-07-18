@@ -12,6 +12,8 @@ website:
         href: 01-storing-energy.qmd
       - text: "Summary 2: Transferring Energy, Heat and Work"
         href: 02-transferring-energy.qmd
+      - text: "Nomenclature and Units"
+        href: 00-nomenclature-units.qmd.qmd
 
 format:
   revealjs:

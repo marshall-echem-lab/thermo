@@ -1,0 +1,87 @@
+---
+title: "Nomenclature & Units"
+format: revealjs
+---
+
+## Energy & Balance Quantities
+
+::: {style="font-size: 0.62em"}
+| Symbol | Quantity | Typical unit | Notes |
+|---|---|---|---|
+| $E$ | Total energy of a system | kJ | $E = U + E_k + E_p$ |
+| $U$ | Internal energy | kJ, kJ/kg, or kJ/mol | depends on context — see note below |
+| $E_k$ | Kinetic energy | kJ | macroscopic |
+| $E_p$ | Potential energy | kJ | macroscopic |
+| $H$ | Enthalpy | kJ, kJ/kg, or kJ/mol | $H = U + PV$; depends on context — see note below |
+| $S$ | Entropy | kJ/K | state property |
+| $Q$ | Heat | kJ | $+$ = transferred **into** the system |
+| $\dot{Q}$ | Rate of heat transfer | kW | $+$ = transferred **into** the system |
+| $W$ | Work | kJ | $+$ = done **on** the system |
+| $\dot{W}$ | Rate of work (power) | kW | $+$ = done **on** the system |
+| $m$ | Mass | kg | |
+| $\dot{m}$ | Mass flow rate | kg/s | |
+| $n$ | Moles | mol | |
+| $\dot{n}$ | Molar flow rate | mol/s | |
+:::
+
+::: {.callout-important}
+## A note on capitalisation (this offering only)
+This course currently uses **capital letters for $U$, $H$, $S$** whether the
+quantity is extensive (total, e.g. kJ) or intensive (specific, e.g. kJ/kg or
+kJ/mol) — you tell which from context, from an accompanying $m$ or $n$ term,
+or from the subscript. For example $H_{sys}$ in the energy balance is
+specific enthalpy (multiplied by $m_{sys}$), while $\Delta H_{sys}$ in a
+worked solution is often the total change. Future offerings will use
+lowercase for intensive and uppercase for extensive properties to remove
+this ambiguity.
+:::
+
+## Process Variables & State Properties
+
+::: {style="font-size: 0.68em"}
+| Symbol | Quantity | Typical unit |
+|---|---|---|
+| $T$ | Temperature | K or °C |
+| $P$ | Pressure | kPa (or bar) |
+| $V$ | Volume | m³ |
+| $\rho$ | Density | kg/m³ |
+| $v$ | Specific volume | m³/kg |
+| $x_i$ | Mole fraction of component $i$ | — (dimensionless) |
+| $C_P$ | Heat capacity (constant pressure) | kJ/(kg·K) or kJ/(mol·K) |
+| $F$ | Degrees of freedom | — |
+| $C$ | Number of components | — |
+| $\pi$ | Number of phases | — |
+:::
+
+::: {.fragment}
+Gibbs phase rule: $F = C - \pi + 2$
+:::
+
+## Reaction, Mixing & Phase-Change Terms — and Conventions
+
+::: {style="font-size: 0.62em"}
+| Symbol | Quantity | Typical unit |
+|---|---|---|
+| $\Delta H_{vap}$ | Latent heat of vaporisation | kJ/kg or kJ/mol |
+| $\Delta H_{rxn}$ | Enthalpy of reaction | kJ/mol |
+| $\Delta H_f$ (or $\Delta H_f^\circ$) | Enthalpy of formation (standard) | kJ/mol |
+| $\Delta H_{dissolution}$ | Enthalpy of dissolution / mixing | kJ/kg or kJ/mol |
+| $\xi$ | Extent of reaction / mixing | mol or kg |
+:::
+
+::: {.fragment}
+**Subscripts & notation**
+
+- $sys$ — the system · $in$ / $out$ — streams crossing the boundary · $ref$ — reference state
+- $i$ — **careful:** used both as an initial-state subscript ($H_{sys,i}$) *and* a component index ($x_i$) — context decides
+- $\dot{(\ )}$ — rate, per unit time
+- $\Delta$ — change, "final − initial"
+:::
+
+::: {.fragment}
+::: {.callout-important}
+## Sign convention (recap from Ch. 2)
+$Q$ and $W$ are always defined as energy transferred **into** the system.
+Energy leaving (heat rejected, work done *by* the system) is negative.
+:::
+:::
