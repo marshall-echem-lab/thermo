@@ -174,4 +174,4 @@ Always state the reference explicitly in the write-up.
 
 {{< include examples/example5-2.qmd >}}
 
-{{< include problems/problem5-1-mxing-ethanol-water.qmd >}}
+{{< include problems/problem5-1-mixing-ethanol-water.qmd >}}
