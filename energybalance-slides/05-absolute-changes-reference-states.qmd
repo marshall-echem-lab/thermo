@@ -5,31 +5,24 @@ format: revealjs
 
 ## The General Energy Balance Equation
 The general energy balance equation can describe any process:
+
+::: {style="font-size: 0.7em"}
 $$\frac{d(m_{sys}H_{sys})}{dt} = \sum_i \dot{m}_{in,i} H_{in,i} - \sum_j \dot{m}_{out,j} H_{out,j} + \sum_k \dot{Q}_k + \sum_l \dot{W}_l$$
+:::
 
 To solve the energy balance, the enthalpy of the system, and of the flow in & out, must be known.
 
 ## What affects Enthalpy?
 Enthalpy is affected by:
 
-::: {.incremental}
 - Temperature changes
 - Pressure changes
 - Phase changes
 - Formation and separation of solutions
 - Reactions
-:::
-
-. . .
-
-For now, assume only temperature matters — **sensible heat only**.
 
 ## The problem: absolute enthalpy
-The balance asks for $H_{in}$, $H_{out}$, $H_{sys}$ — *values*, not changes.
-
-. . .
-
-But recall $H = U + PV$, and there is **no absolute zero of internal energy**.
+The balance asks for $H_{in}$, $H_{out}$ *values*, not changes.
 
 ::: {.incremental}
 - No experiment measures the total energy stored in matter.
@@ -48,7 +41,7 @@ For a sensible heat effect, this is just the integral from Summary 4:
 
 $$\Delta H_{1\rightarrow 2} = \int_{T_1}^{T_2} C_P\,dT = \langle C_P \rangle\,(T_2 - T_1)$$
 
-## The trick: invent a zero
+## The reference state: invent a zero
 Pick a state, call it the **reference state**, and *declare* its enthalpy to be zero.
 
 $$H_{ref} \equiv 0$$
@@ -61,12 +54,7 @@ $$H_{state\:1} = \underbrace{H_{ref}}_{=\,0} + \Delta H_{ref\:\rightarrow\:state
 
 . . .
 
-An "absolute" enthalpy is really just a change — measured from a zero reference point.
-
-::: {.callout-note icon=false}
-## Key Term
-**Reference state** — an arbitrarily chosen state (species, phase, temperature and pressure) at which enthalpy is *defined* to be zero, so that all other enthalpies can be expressed as changes from it.
-:::
+An "absolute" enthalpy is really just a change — measured from a reference point.
 
 ## Enthalpy relative to a reference state
 
@@ -74,13 +62,12 @@ An "absolute" enthalpy is really just a change — measured from a zero referenc
 ![Enthalpy of two states measured relative to a reference state at $T_{ref}$](figures/reference_state_sensible_heat_graph.svg){width=75% #fig-reference_state_sensible_heat}
 :::
 
-## Reading the figure
-The curve is the same for every choice of reference — only the *height of the zero line* changes.
+## Reference state calculations
 
 ::: {.incremental}
-- $H_1 = \displaystyle\int_{T_{ref}}^{T_1} C_P\,dT$ — the area under $C_P$ from the reference to state 1
-- $H_2 = \displaystyle\int_{T_{ref}}^{T_2} C_P\,dT$ — same, out to state 2
-- $\Delta H = H_2 - H_1 = \displaystyle\int_{T_1}^{T_2} C_P\,dT$ — the reference **cancels**
+- $H_1 = \displaystyle\int_{T_{ref}}^{T_1} C_P dT + H_{ref}$ 
+- $H_2 = \displaystyle\int_{T_{ref}}^{T_2} C_P dT + H_{ref}$
+- $\Delta H = H_2 - H_1 = \displaystyle\int_{T_1}^{T_2} C_P\,dT$
 :::
 
 . . .
@@ -99,11 +86,8 @@ So *every* calculation can pass through the reference state:
 
 $$\Delta H_{1\rightarrow 2} = \underbrace{\Delta H_{1\rightarrow ref}}_{-H_1} + \underbrace{\Delta H_{ref\rightarrow 2}}_{H_2}$$
 
-. . .
 
-So the single *desired* change becomes two easy ones, both starting from the same place.
-
-## The reference state cancels — a demonstration
+## The reference state should always cancel
 Steady-state heater, one stream in, one out, no work:
 
 $$\dot{Q} = \dot{m}\left(H_{out} - H_{in}\right)$$
@@ -124,20 +108,20 @@ $T_{ref}$ has vanished. Any reference state gives the same answer.
 If it cancels, why not always work with $\Delta T$ directly?
 
 ::: {.incremental}
-- With **many streams** at different temperatures, tabulating one $H$ per stream is far tidier than tracking every pairwise $\Delta T$.
-- **Tabulated data** (steam tables, mean $C_P$ tables, formation enthalpies) is already published relative to a fixed reference.
-- Once **phase change, mixing or reaction** appear, $\Delta T$ alone is not enough — a reference state is the best way to keep the math straighforward.
+- With **many streams** at different temperatures, tabulating one $H$ per stream is tidier
+- **Tabulated data** (steam tables, formation enthalpies) is already published relative to a fixed reference.
+- Once **phase change, mixing or reaction** appear, reference states keep the math straightforward.
 :::
 
 ## Choosing a reference state
 A reference state is **freely chosen** — but it must be *fully* specified:
 
-::: {.incremental}
+. . .
+
 - **Chemical species** — which substances, in what form
 - **Phase** — solid, liquid or gas
 - **Temperature**, $T_{ref}$
 - **Pressure**, $P_{ref}$
-:::
 
 . . .
 
@@ -147,12 +131,11 @@ Use the **same** reference state for every enthalpy term in a calculation.
 :::
 
 ## Common reference states
-| Reference state | Used for |
-|---|---|
-| Triple point of water (0.01 $^\circ$C, liquid) | Steam tables |
-| Pure species at 298.15 K, 1 bar | $C_P$ tables, formation enthalpies |
-| Dry air at 101.325 kPa and 0 $^\circ$C | Psychrometric / air conditioning charts |
-| Elements at 298.15 K, 1 bar | Reaction calculations ($\Delta H^\circ_f$) |
+
+- Triple point of water (0.01 $^\circ$C, liquid)
+- Pure species at 298.15 K, 1 bar
+- Dry air at 101.325 kPa and 0 $^\circ$C
+- Elements at 298.15 K, 1 bar
 
 . . .
 

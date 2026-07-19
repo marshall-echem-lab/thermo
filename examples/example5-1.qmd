@@ -1,13 +1,13 @@
 ## Example 5.1: Building enthalpies from a reference state
 
 Air is heated in a steady-state duct heater from 25 $^\circ$C to 150 $^\circ$C at a
-mass flow rate of 0.50 kg s$^{-1}$. Take $C_P = 1.01$ kJ kg$^{-1}$ K$^{-1}$, constant.
+mass flow rate of 0.50 kg s$^{-1}$. $C_P = 1.01$ kJ kg$^{-1}$ K$^{-1}$
 
 Using a reference state of **air, gas, 0 $^\circ$C, 1 atm**:
 
 
 1. Tabulate the absolute enthalpy of the inlet and outlet streams.
-2. Calculate the required heat $\dot{Q}$.
+2. Calculate the required heat, $\dot{Q}$.
 
 ::: {.content-visible unless-format="revealjs"}
 ::: {.callout-note icon=false collapse="true" title="Solution"}

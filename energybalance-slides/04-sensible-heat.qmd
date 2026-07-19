@@ -36,7 +36,7 @@ $$\frac{d(m_{sys}H_{sys})}{dt} = \sum \dot{m}_{in}H_{in} - \sum \dot{m}_{out}H_{
 
 . . .
 
-To solve it, $H$$ of each stream and the system is needed.
+To solve it, $H$ of each stream and the system is needed.
 
 
 ## Heat capacity
@@ -62,11 +62,11 @@ $$C_P = \frac{dH}{dT}$$
 
 . . .
 
-For ideal gases, $H^{ig}$ **only** depends on $T$, therefore C_P^{ig}$ also only depends on $T$ 
+For ideal gases, $H^{ig}$ **only** depends on $T$, therefore $C_P^{ig}$ also only depends on $T$ 
 
 ## Calculating a sensible enthalpy change
-Rearrange and integrate between two states:
-$$dH = C_P\,dT$$
+$$\frac{dH}{dT}=C_P$$
+$$dH = C_P dT$$
 
 . . .
 
@@ -76,10 +76,9 @@ $$\int_{H_1}^{H_2} dH = \int_{T_1}^{T_2} C_P\,dT$$
 
 $$\Delta H = \int_{T_1}^{T_2} C_P\,dT$$
 
-The enthalpy change is the **area under the $C_P$–$T$ curve** between the two temperatures.
 
 ## The simplest case: constant $C_P$
-Assumeing $C_P$ is constant over the temperature range:
+Assuming $C_P$ is constant over the temperature range:
 $$\Delta H = C_P\int_{T_1}^{T_2} dT = C_P(T_2 - T_1)$$
 
 . . .
@@ -90,11 +89,11 @@ $C_P$ is *never* truly constant with temperature — but assuming so is a good f
 :::
 
 ## Mass or molar basis?
-$C_P$ comes in two flavours — make sure it matches the units in the balance equation.
+$C_P$ can have mass or molar basis — make sure it matches the units in the balance equation.
 
 ::: {.incremental}
-- **Mass basis:** $C_P$ in J kg$^{-1}$ K$^{-1}$, used with $m\,C_P\,\Delta T$
-- **Molar basis:** $C_P$ in J mol$^{-1}$ K$^{-1}$, used with $n\,C_P\,\Delta T$
+- **Mass basis:** $C_P$ in J kg$^{-1}$ K$^{-1}$, used with $m \int C_P dT$
+- **Molar basis:** $C_P$ in J mol$^{-1}$ K$^{-1}$, used with $n\inr C_P dT$
 :::
 
 ## Some common heat capacities
@@ -114,14 +113,14 @@ Values at 25 $^\circ$C:
 
 . . .
 
-Rule of thumb: almost any solid has a molar $C_P \approx 25$ J mol$^{-1}$ K$^{-1}$.
+Rule of thumb: almost any solid has a $C_P \approx 25$ J mol$^{-1}$ K$^{-1}$.
 
 ## $C_P$ is not constant with temperature
 In reality, $C_P$ changes as the temperature changes.
 
 ::: {.incremental}
-- For gases, $C_P$ generally *rises* with temperature.
-- Over a wide temperature range, a single constant value can introduce real error.
+- For gases, $C_P$ generally *increases* with temperature.
+- Over a wide temperature range, assuming $C_P$ is constant can introduce signficant error.
 - Need equations describing $C_P$ as a **function** of temperature.
 :::
 
@@ -132,12 +131,13 @@ $$\frac{C_P}{R} = A + BT + CT^2 + DT^{-2}$$
 ::: {style="font-size: 0.8em"}
 - $A$, $B$, $C$, $D$ are constants tabulated for each species
 - $R$ is the gas constant (8.314 J mol$^{-1}$ K$^{-1}$)
-- Species use different terms — gases often need $B$ and $C$; some use the $DT^{-2}$ term instead
 :::
 
 . . .
 
-Other textbooks write it as $C_P = a + bT + cT^2 + dT^3$ — same idea, different constants.
+Another equation is:
+$$C_P = a + bT + cT^2 + dT^3$$
+Same idea, different constants.
 
 ## Integrating a temperature-dependent $C_P$
 Substitute the polynomial into $\Delta H = \int C_P\,dT$ and integrate term by term:
@@ -149,34 +149,25 @@ $$\Delta H = a(T_2 - T_1) + \frac{b}{2}\left(T_2^2 - T_1^2\right) + \frac{c}{3}\
 
 . . .
 
-Exact, but tedious — especially with several species in one balance.
+This is exact, but a hassle.
 
 ## The integral-weighted mean heat capacity
-The algebra can be "hidden" inside a single **mean** heat capacity.
-
-. . .
-
-Define $\langle C_P \rangle$ so that it reproduces the exact integral:
+The algebra can be "hidden" by defining the integral-weighted **mean** heat capacity:
 $$\langle C_P \rangle = \frac{1}{T_2 - T_1}\int_{T_1}^{T_2} C_P\,dT$$
+
+. . . 
+
+$$\Delta H = \langle C_P \rangle (T_2 - T_1)$$
 
 ::: {.callout-note icon=false}
 ## Key Term
 **Mean (integral-weighted) heat capacity** ($\langle C_P \rangle$) — the single constant $C_P$ that gives the correct enthalpy change over a temperature interval.
 :::
 
-## Using the mean heat capacity
-With $\langle C_P \rangle$, the messy integral collapses back to the simple form:
-$$\Delta H = \langle C_P \rangle\,(T_2 - T_1)$$
-
-::: {.incremental}
-- It is "integral-weighted" because it averages $C_P$ over the actual temperature path.
-- Mean $C_P$ values are often tabulated relative to a reference temperature (e.g. 298.15 K).
-- Look up $\langle C_P \rangle$, multiply by $\Delta T$ — done.
-:::
 
 ## Sensible heat and reference states
 To build a stream or system enthalpy, measure it from a chosen reference temperature $T_{ref}$:
-$$H = H_{ref} + \int_{T_{ref}}^{T} C_P\,dT$$
+$$H = H_{ref} + \int_{T_{ref}}^{T} C_P dT$$
 
 . . .
 
