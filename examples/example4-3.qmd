@@ -1,0 +1,129 @@
+## Example 4.3: Preheating a canola oil tank {.unnumbered .scrollable}
+
+A batch of canola oil must be preheated to 60 $^\circ$C before it is fed to a biodiesel transesterification reactor. The storage tank holds 12 000 kg of oil, initially at 15 $^\circ$C. The tank is well insulated and is fitted with an agitator that keeps the oil at a uniform temperature (the agitator work is negligible). Nothing enters or leaves the tank during the preheat.
+
+**(a)** The tank is heated by an electric immersion heater rated at 150 kW. How long does the preheat take?
+
+**(b)** The electric heater is replaced with a steam coil. Steam condenses inside the coil at a constant 120 $^\circ$C, and the rate of heat transfer to the oil is
+
+$$\dot{Q} = UA\left(T_{steam} - T\right)$$
+
+with $UA = 4.0$ kW K$^{-1}$. How long does the preheat take now?
+
+Data: $C_{P,oil} = 1.95$ kJ kg$^{-1}$ K$^{-1}$ (constant over this range).
+
+::: {.content-visible unless-format="revealjs"}
+
+::: {.callout-note icon=false collapse="true" title="Solution"}
+
+### Setting up (common to both parts)
+
+**1. Define the system**
+
+The system boundary is around the oil in the tank. Heat crosses the boundary from the heater or coil. No mass crosses the boundary.
+
+**2. Assumptions**
+
+- **Batch (closed) system** — nothing flows in or out, so $\dot{m}_{in} = \dot{m}_{out} = 0$.
+- **Unsteady state** — the whole point is that $T$ changes with time, so the accumulation term **stays**.
+- Well insulated $\Rightarrow$ no heat loss to the surroundings.
+- Agitator work negligible $\Rightarrow \dot{W} = 0$.
+- **Well mixed** $\Rightarrow$ a single uniform temperature $T$ describes the whole tank at any instant. Without this we could not write $m\,C_P\,dT/dt$ at all.
+- Sensible heat effects only; constant $C_P$; constant tank mass $m$.
+
+**3. The energy balance**
+
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum \dot{m}_{in}H_{in} - \sum \dot{m}_{out}H_{out} + \dot{Q} + \dot{W}$$
+
+Deleting the flow terms and the work term:
+
+$$\frac{d(m_{sys}H_{sys})}{dt} = \dot{Q}$$
+
+The tank mass is constant, so $m_{sys}$ comes outside the derivative:
+
+$$m_{sys}\frac{dH_{sys}}{dt} = \dot{Q}$$
+
+Only temperature changes the enthalpy, so $dH_{sys} = C_P\,dT$, and with $C_P$ constant:
+
+$$m_{sys}\,C_P\,\frac{dT}{dt} = \dot{Q} \tag{$\ast$}$$
+
+This is the starting point for both parts. Everything that follows is just a matter of what $\dot{Q}$ does.
+
+Note the useful grouping that will appear in both answers:
+
+$$m_{sys}\,C_P = 12\,000 \times 1.95 = 23\,400\ \text{kJ K}^{-1}$$
+
+---
+
+### Part (a) — constant $\dot{Q}$
+
+Here $\dot{Q} = 150$ kW and does **not** depend on temperature. Separate variables in ($\ast$):
+
+$$m_{sys}\,C_P\,dT = \dot{Q}\,dt$$
+
+Integrate from the initial state to the final state:
+
+$$m_{sys}\,C_P\int_{T_0}^{T_f} dT = \dot{Q}\int_{0}^{t} dt$$
+
+$$m_{sys}\,C_P\left(T_f - T_0\right) = \dot{Q}\,t$$
+
+Rearranging symbolically:
+
+$$t = \frac{m_{sys}\,C_P\left(T_f - T_0\right)}{\dot{Q}}$$
+
+Now substitute:
+
+$$t = \frac{23\,400 \times \left(60 - 15\right)}{150} = \frac{1\,053\,000}{150} = 7020\ \text{s}$$
+
+$$t = 1.95\ \text{hr}$$
+
+Units check:
+
+$$\frac{\left[\text{kJ K}^{-1}\right]\left[\text{K}\right]}{\left[\text{kJ s}^{-1}\right]} = \left[\text{s}\right] \quad \checkmark$$
+
+Because $\dot{Q}$ is constant, the temperature rises **linearly** with time — the oil heats at a steady $\dot{Q}/(m\,C_P) = 150/23\,400 = 0.0064$ K s$^{-1}$, and it would keep on rising indefinitely if the heater were left on.
+
+---
+
+### Part (b) — $\dot{Q}$ depends on temperature
+
+Now substitute the rate expression into ($\ast$):
+
+$$m_{sys}\,C_P\,\frac{dT}{dt} = UA\left(T_{steam} - T\right)$$
+
+The right-hand side contains $T$, so we **cannot** simply multiply by $t$. Separate the variables properly — all the $T$ terms on the side with $dT$:
+
+$$\frac{m_{sys}\,C_P}{T_{steam} - T}\,dT = UA\,dt$$
+
+$$\frac{m_{sys}\,C_P}{UA}\int_{T_0}^{T_f}\frac{1}{T_{steam} - T}\,dT = \int_{0}^{t} dt$$
+
+Recall that $\displaystyle\int \frac{1}{ax + b}\,dx = \frac{1}{a}\ln\left|ax + b\right|$; here $a = -1$, so:
+
+$$\frac{m_{sys}\,C_P}{UA}\left[\frac{1}{-1}\ln\left(T_{steam} - T\right)\right]_{T_0}^{T_f} = t$$
+
+$$t = \frac{m_{sys}\,C_P}{UA}\,\ln\left(\frac{T_{steam} - T_0}{T_{steam} - T_f}\right)$$
+
+Substituting:
+
+$$t = \frac{23\,400}{4.0}\,\ln\left(\frac{120 - 15}{120 - 60}\right) = 5850 \times \ln\left(\frac{105}{60}\right)$$
+
+$$t = 5850 \times \ln(1.75) = 5850 \times 0.5596 = 3274\ \text{s}$$
+
+$$t = 0.91\ \text{hr} \approx 55\ \text{min}$$
+
+---
+
+### Sanity checks and what the two parts show
+
+**The steam coil is faster — why?** At the start, the driving force is large: $\dot{Q} = 4.0 \times (120 - 15) = 420$ kW, nearly three times the electric heater. By the time the oil reaches 60 $^\circ$C the driving force has fallen to $4.0 \times (120 - 60) = 240$ kW, still above 150 kW. The coil beats the heater over this particular temperature range — but only because the target is well below the steam temperature.
+
+**The heating is not linear.** Because $\dot{Q}$ falls as $T$ rises, the temperature approaches $T_{steam}$ asymptotically:
+
+$$T(t) = T_{steam} - \left(T_{steam} - T_0\right)\exp\left(-\frac{UA}{m_{sys}\,C_P}\,t\right)$$
+
+Try putting $T_f = 120\ ^\circ$C into the answer for part (b) and you will find $t = \infty$, since $\ln(105/0) \rightarrow \infty$. The oil can never actually reach the steam temperature — with no temperature difference there is no driving force for heat transfer. This is a general feature of any process where the rate depends on the very quantity that is changing.
+
+**The general lesson.** Both parts start from exactly the same equation, ($\ast$). The only difference is whether $\dot{Q}$ is a constant that can be pulled straight out of the integral, or a function of $T$ that must be separated first. Always isolate the derivative, then look at what the driving term depends on **before** integrating — this is the single easiest step in an unsteady-state problem to shortcut, and the easiest to get wrong.
+
+:::
+:::

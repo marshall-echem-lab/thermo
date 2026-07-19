@@ -8,10 +8,12 @@
 
 [Summary 4](04-sensible-heat.qmd) Sensible Heat
 
-[Summary 5](05-latent-heat.qmd) Latent Heat and Phase Changes
+[Summary 5](05-absolute-changes-reference-states.qmd) Absolute Enthalpy, Changes and Reference States
 
-[Summary 6](06-solution-heat.qmd) Heat of Solution
+[Summary 6](06-latent-heat.qmd) Latent Heat and Phase Changes
 
-[Summary 7](06-reactions.qmd) Reactions
+[Summary 7](07-solution-heat.qmd) Heat of Solution
+
+[Summary 8](08-reactions.qmd) Reactions
 
 [Glossary](00-nomenclature-units.qmd) Nomenclature & Units

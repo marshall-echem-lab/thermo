@@ -1,0 +1,107 @@
+## Problem 5.1: Adiabatic mixing of two streams
+
+Two liquid streams are combined continuously in a well-insulated mixing vessel operating
+at steady state:
+
+::: {style="font-size: 0.85em"}
+| Stream | Fluid | $\dot{m}$ (kg s$^{-1}$) | $T$ ($^\circ$C) | $C_P$ (kJ kg$^{-1}$ K$^{-1}$) |
+|---|---|:---:|:---:|:---:|
+| A | Ethanol | 1.50 | 20 | 2.44 |
+| B | Water   | 0.80 | 75 | 4.18 |
+:::
+
+There is no work. Assume the heat capacities are constant, and **neglect the
+enthalpy of mixing**.
+
+(a) Choosing a reference state of the pure liquids at 20 $^\circ$C, find the outlet
+    temperature.
+(b) Repeat with a reference state of the pure liquids at 0 $^\circ$C. Comment.
+
+::: {.content-visible when-meta="show-solutions"}
+::: {.callout-note icon=false collapse="true" title="Solution"}
+
+**System and assumptions**
+
+The system is the mixing vessel. Steady state, so
+$d(m_{sys}H_{sys})/dt = 0$; adiabatic, so $\dot{Q}=0$; no shaft work, so $\dot{W}=0$.
+The general balance
+
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum \dot{m}_{in}H_{in} - \sum \dot{m}_{out}H_{out} + \dot{Q} + \dot{W}$$
+
+reduces to
+
+$$\sum \dot{m}_{in}H_{in} = \sum \dot{m}_{out}H_{out}$$
+
+Mass balance: $\dot{m}_{out} = 1.50 + 0.80 = 2.30$ kg s$^{-1}$, leaving as a mixture of
+1.50 kg s$^{-1}$ ethanol and 0.80 kg s$^{-1}$ water at a common outlet temperature $T$.
+Because we are neglecting the enthalpy of mixing, the outlet enthalpy is just the sum of
+the two species' enthalpies.
+
+**(a) Reference state: pure liquid ethanol and pure liquid water, 20 $^\circ$C**
+
+Each enthalpy is a sensible heat term, $H = C_P(T - T_{ref})$:
+
+| Stream | $T$ ($^\circ$C) | $H$ (kJ kg$^{-1}$) |
+|---|:---:|:---:|
+| A in (ethanol) | 20 | $2.44(20-20) = 0$ |
+| B in (water)   | 75 | $4.18(75-20) = 229.9$ |
+| Out, ethanol   | $T$ | $2.44(T-20)$ |
+| Out, water     | $T$ | $4.18(T-20)$ |
+
+Substituting into the balance:
+
+$$1.50(0) + 0.80(229.9) = 1.50\left[2.44(T-20)\right] + 0.80\left[4.18(T-20)\right]$$
+
+Solve symbolically first. Writing $\dot{m}_A C_{P,A} + \dot{m}_B C_{P,B} = \sum \dot{m}C_P$:
+
+$$T = T_{ref} + \frac{\dot{m}_B C_{P,B}\left(T_B - T_{ref}\right)}{\sum \dot{m}C_P}$$
+
+$$\sum \dot{m}C_P = 1.50(2.44) + 0.80(4.18) = 3.66 + 3.34 = 7.00\ \text{kW K}^{-1}$$
+
+$$T = 20 + \frac{183.9}{7.00} = 20 + 26.3$$
+
+$$\boxed{T = 46.3\ ^\circ\text{C}}$$
+
+**(b) Reference state: pure liquids at 0 $^\circ$C**
+
+| Stream | $T$ ($^\circ$C) | $H$ (kJ kg$^{-1}$) |
+|---|:---:|:---:|
+| A in (ethanol) | 20 | $2.44(20) = 48.8$ |
+| B in (water)   | 75 | $4.18(75) = 313.5$ |
+| Out, ethanol   | $T$ | $2.44\,T$ |
+| Out, water     | $T$ | $4.18\,T$ |
+
+$$1.50(48.8) + 0.80(313.5) = \left[1.50(2.44) + 0.80(4.18)\right]T$$
+
+$$73.2 + 250.8 = 7.00\,T \quad\Rightarrow\quad T = \frac{324.0}{7.00} = 46.3\ ^\circ\text{C}$$
+
+**Comment.** Identical, as it must be — the reference state cancels from any balance in
+which it is applied consistently. The choice in (a) is more convenient, because setting
+$T_{ref} = T_A$ zeroes stream A's inlet enthalpy and removes a term from the arithmetic.
+Note also that the answer lies between 20 and 75 $^\circ$C and is much closer to the
+ethanol inlet temperature, which is what you would expect given stream A carries roughly
+half again the heat capacity flow of stream B.
+
+**(c) The effect of the mixing enthalpy**
+
+Mixing ethanol and water releases energy. In an adiabatic vessel that energy cannot leave,
+so it appears as a **higher** final temperature. The answer to (a) is therefore an
+**underestimate** of the true outlet temperature.
+
+To correct it, keep the **pure species** reference state — each species zero as a pure
+liquid at $T_{ref}$ — and add the mixing enthalpy explicitly as a term evaluated at
+$T_{ref}$:
+
+$$\underbrace{\dot{m}_{solution}\,\Delta H_{solution}}_{\text{mixing, at }T_{ref}}
++ \underbrace{\sum_k \dot{m}_k C_{P,k}\left(T - T_{ref}\right)}_{\text{sensible heat}} = 0$$
+
+with $\Delta H_{solution}$ negative for an exothermic mixing, driving $T$ upward. The
+alternative — a *solution* reference state, in which the mixture at a stated composition
+is defined as zero — is not usable here, because the composition changes across the
+system (pure inlets, mixture outlet).
+
+Remember that $\Delta H_{solution}$ is intensive: it must be multiplied by the amount
+actually mixed before it can enter an extensive balance.
+
+:::
+:::

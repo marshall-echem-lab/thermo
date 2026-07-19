@@ -12,8 +12,21 @@ website:
         href: 01-storing-energy.qmd
       - text: "Summary 2: Transferring Energy, Heat and Work"
         href: 02-transferring-energy.qmd
+      - text: "Summary 3: Enthalpy and the Energy Balance"
+        href: 03-enthalpy-energy-balance.qmd
+      - text: "Summary 4: Sensible Heat"
+        href: 04-sensible-heat.qmd
+      - text: "Summary 5: Absolute Enthalpy, Changes and Reference States"
+        href: 05-absolute-changes-reference-states.qmd
+      - text: "Summary 6: Latent Heat and Phase Changes"
+        href: 06-latent-heat.qmd
+      - text: "Summary 7: Heat of Solution"
+        href: 07-solution-heat.qmd
+      - text: "Summary 8: Reactions"
+        href: 08-reactions.qmd
       - text: "Nomenclature and Units"
-        href: 00-nomenclature-units.qmd.qmd
+        href: 00-nomenclature-units.qmd
+
 
 format:
   revealjs:

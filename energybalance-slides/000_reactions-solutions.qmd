@@ -1,0 +1,89 @@
+## Beyond temperature: pure species or solution?
+So far the reference state has been "the substance itself at $T_{ref}$".
+
+. . .
+
+But when species are **mixed**, energy is released or absorbed on mixing — the enthalpy of a solution is *not* the sum of its parts:
+
+$$H_{solution} \neq \sum_i m_i H_i$$
+
+::: {.callout-note icon=false}
+## Key Term
+**Enthalpy of solution** ($\Delta H_{solution}$) — the enthalpy change when a solute is dissolved in a solvent to form a solution of a specified concentration, at a specified temperature.
+:::
+
+## Two ways to reference a solution
+Both are valid — pick one and stay with it.
+
+::: {.incremental}
+- **Pure species reference:** each species is zero as a *pure* substance at $T_{ref}$. The mixing enthalpy must then appear explicitly as a $\Delta H_{solution}$ term in the balance.
+- **Solution reference:** the *solution at a stated concentration* and $T_{ref}$ is zero. Mixing is already baked in — but this only works if the composition does not change.
+:::
+
+. . .
+
+::: {.callout-important}
+## Important
+$\Delta H_{solution}$ is **intensive** — per mole of solute, or per kg of solution. Multiply by the amount actually dissolved before adding it to an extensive balance.
+:::
+
+## Beyond temperature: reactions
+A reaction changes **chemical identity** — reactants and products are different substances.
+
+. . .
+
+You cannot set both $H_{reactants} = 0$ and $H_{products} = 0$: they are linked by the reaction, so one zero fixes the other.
+
+. . .
+
+The reaction enthalpy is that link:
+
+$$\Delta H^\circ_{rxn} = \sum_{products} \nu_i \Delta H^\circ_{f,i} - \sum_{reactants} \nu_j \Delta H^\circ_{f,j}$$
+
+## The elements as a reference state
+The standard convention solves this at a stroke:
+
+::: {.callout-note icon=false}
+## Key Term
+**Standard enthalpy of formation** ($\Delta H^\circ_f$) — the enthalpy change when one mole of a compound is formed from its constituent elements in their standard states at 298.15 K and 1 bar. By definition, $\Delta H^\circ_f = 0$ for an element in its standard state.
+:::
+
+. . .
+
+The reference state is the **elements at 298.15 K** — a state common to *every* species in *every* reaction, so reactants and products are automatically on the same scale.
+
+## Building an enthalpy, term by term
+With a reference state chosen, any stream or system enthalpy is a sum of the changes needed to get there from the reference:
+
+$$H = \underbrace{\int_{T_{ref}}^{T} C_P\,dT}_{\text{sensible}} + \underbrace{\Delta H_{phase}}_{\text{latent}} + \underbrace{\Delta H_{solution}}_{\text{mixing}} + \underbrace{\xi\,\Delta H^\circ_{rxn}}_{\text{reaction}}$$
+
+::: {.incremental}
+- Include only the terms that actually apply.
+- Evaluate composition changes at $T_{ref}$, then carry everything present up to $T$ with sensible heat.
+- $\xi$ is the extent of reaction — the intensive-to-extensive multiplier.
+:::
+
+## The recipe
+For any enthalpy term in an energy balance:
+
+::: {.incremental}
+1. Choose a reference state — species, phase, $T_{ref}$, $P_{ref}$ — and write it down.
+2. For each stream and for the system, construct a path from the reference to its actual state.
+3. Add up the enthalpy change along that path (sensible + latent + mixing + reaction).
+4. Substitute the resulting $H$ values into the balance.
+5. Check every term used the *same* reference state.
+:::
+
+. . .
+
+The reference will cancel from the final answer — but only if it was consistent throughout.
+
+## Summary
+
+::: {.incremental}
+- Absolute enthalpy cannot be measured; only changes can.
+- Defining $H_{ref} \equiv 0$ turns a change into a usable "absolute" value.
+- The choice of reference is arbitrary and cancels — consistency is what matters.
+- The reference state must specify **species, phase, temperature and pressure**.
+- Pure species vs solution, and the elements for reactions, are the same idea applied to composition instead of temperature.
+:::

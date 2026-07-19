@@ -1,0 +1,134 @@
+## Problem 7.1: Adiabatic mixing revisited — including the enthalpy of solution
+
+Problem 5.1 treated a well-insulated, steady-state mixing vessel and **neglected the
+enthalpy of mixing**. Revisit it now with that assumption removed. The streams are
+unchanged:
+
+::: {style="font-size: 0.85em"}
+| Stream | Fluid | $\dot{m}$ (kg s$^{-1}$) | $T$ ($^\circ$C) | $C_P$ (kJ kg$^{-1}$ K$^{-1}$) | $M$ (g mol$^{-1}$) |
+|---|---|:---:|:---:|:---:|:---:|
+| A | Ethanol | 1.50 | 20 | 2.44 | 46.07 |
+| B | Water   | 0.80 | 75 | 4.18 | 18.02 |
+:::
+
+There is no heat loss and no shaft work. The enthalpy of mixing for ethanol–water at
+25 $^\circ$C, per mole of *mixture*, is:
+
+::: {style="font-size: 0.85em"}
+| $x_{ethanol}$ | 0.10 | 0.20 | 0.30 | 0.40 | 0.50 | 0.60 | 0.80 |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| $\Delta H_{mix}$ (J mol$^{-1}$) | $-460$ | $-680$ | $-775$ | $-770$ | $-710$ | $-615$ | $-370$ |
+:::
+
+::: {.incremental}
+(a) Find the composition of the outlet stream, as a mole fraction of ethanol.
+(b) Determine the rate at which enthalpy is released by mixing, in kW.
+(c) Using a reference state of the **pure liquids at 20 $^\circ$C**, find the outlet
+    temperature.
+(d) Compare with the answer obtained in Problem 5.1 and comment on whether neglecting
+    the enthalpy of mixing was a reasonable assumption.
+:::
+
+::: {.content-visible when-meta="show-solutions"}
+::: {.callout-note icon=false collapse="true" title="Solution"}
+
+**System and assumptions**
+
+The system is the mixing vessel. Steady state ($d(m_{sys}H_{sys})/dt = 0$), adiabatic
+($\dot{Q}=0$), no shaft work ($\dot{W}=0$). The general balance
+
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum \dot{m}_{in}H_{in} - \sum \dot{m}_{out}H_{out} + \dot{Q} + \dot{W}$$
+
+reduces to
+
+$$\sum \dot{m}_{in}H_{in} = \sum \dot{m}_{out}H_{out}$$
+
+**Choice of reference state.** The composition changes across the system — pure liquids
+enter, a mixture leaves — so a *solution* reference state cannot be used. Take the
+**pure liquids at 20 $^\circ$C**. Every inlet species is then at its reference state, and
+the mixing enthalpy must appear explicitly in the outlet term.
+
+**(a) Outlet composition**
+
+$$\dot{n}_{ethanol} = \frac{1500}{46.07} = 32.56\ \text{mol s}^{-1}
+\qquad
+\dot{n}_{water} = \frac{800}{18.02} = 44.40\ \text{mol s}^{-1}$$
+
+$$\dot{n}_{total} = 76.96\ \text{mol s}^{-1}$$
+
+$$x_{ethanol} = \frac{32.56}{76.96} = 0.423$$
+
+The outlet is a single liquid stream of 2.30 kg s$^{-1}$ at $x_{ethanol} = 0.423$
+(a mass fraction of $1.50/2.30 = 0.652$ — the two are not interchangeable, and the table
+is given on a mole basis).
+
+**(b) Rate of enthalpy release on mixing**
+
+Interpolate the table linearly between $x = 0.40$ and $x = 0.50$:
+
+$$\Delta H_{mix} = -770 + \frac{0.423 - 0.40}{0.50 - 0.40}\left(-710 - (-770)\right)
+= -770 + 0.23(60) = -756\ \text{J mol}^{-1}$$
+
+$\Delta H_{mix}$ is **intensive** — per mole of mixture. Multiply by the amount actually
+mixed to get an extensive rate:
+
+$$\dot{H}_{mix} = \dot{n}_{total}\,\Delta H_{mix} = 76.96 \times (-756) = -58.2\ \text{kW}$$
+
+The negative sign means the mixture at the reference temperature sits *below* the pure
+components at the reference temperature: mixing is exothermic.
+
+**(c) Outlet temperature**
+
+Relative to the pure liquids at 20 $^\circ$C, the inlet enthalpy rate is
+
+$$\sum \dot{m}_{in}H_{in} = \underbrace{1.50(2.44)(20-20)}_{\text{ethanol, }=\,0}
++ \underbrace{0.80(4.18)(75-20)}_{\text{water}} = 183.9\ \text{kW}$$
+
+The outlet stream is reached from the reference by a two-step path: mix the pure liquids
+at $T_{ref}$, then heat the resulting solution from $T_{ref}$ to $T$.
+
+$$\sum \dot{m}_{out}H_{out} = \dot{n}_{total}\Delta H_{mix} + \sum_k \dot{m}_k C_{P,k}\left(T - T_{ref}\right)$$
+
+$$\sum_k \dot{m}_k C_{P,k} = 1.50(2.44) + 0.80(4.18) = 7.004\ \text{kW K}^{-1}$$
+
+Setting inlet equal to outlet and solving symbolically first:
+
+$$T = T_{ref} + \frac{\dot{m}_B C_{P,B}\left(T_B - T_{ref}\right) - \dot{n}_{total}\Delta H_{mix}}{\sum_k \dot{m}_k C_{P,k}}$$
+
+$$T = 20 + \frac{183.9 - (-58.2)}{7.004} = 20 + \frac{242.1}{7.004} = 20 + 34.6$$
+
+$$\boxed{T = 54.6\ ^\circ\text{C}}$$
+
+**Check.** The mixing term entered with a *positive* sign after rearrangement, raising
+$T$ — correct. The vessel is insulated, so the energy released on mixing has nowhere to
+go except into the sensible heat of the stream leaving. Had the mixing been endothermic,
+$\Delta H_{mix}$ would be positive and the outlet would be *cooler* than the
+no-mixing case.
+
+**(d) Comparison with Problem 5.1**
+
+| | $T_{out}$ ($^\circ$C) |
+|---|:---:|
+| Neglecting $\Delta H_{mix}$ (Problem 5.1) | 46.3 |
+| Including $\Delta H_{mix}$ | 54.6 |
+
+Neglecting the enthalpy of mixing under-predicts the outlet temperature by 8.3 K, an
+error of roughly 25 % on the temperature *rise* of the ethanol stream. That is not a
+minor correction:
+
+- For a **process design** — sizing a downstream cooler, or checking against a solvent
+  flash point or a materials temperature limit — an 8 K error is easily enough to matter.
+- Ethanol–water is a strongly non-ideal mixture. For a nearly ideal mixture (say two
+  similar hydrocarbons), $\Delta H_{mix}$ is small and the assumption in Problem 5.1
+  would have been perfectly defensible.
+
+The lesson is not "never neglect mixing" but that the assumption must be *justified
+against the system*, not adopted by default because it makes the arithmetic easier.
+
+**A remaining approximation.** The sensible-heat term still used mass-weighted *pure*
+component heat capacities. The heat capacity of a real ethanol–water solution is not the
+weighted average of the pure values, for exactly the same reason its enthalpy is not.
+Using a measured solution $C_P$ would refine the answer further.
+
+:::
+:::

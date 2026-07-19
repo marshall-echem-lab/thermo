@@ -1,0 +1,67 @@
+## Example 5.2: The reference state is arbitrary
+
+Repeat the heat calculation of Example 5.1 ($\dot{m} = 0.50$ kg s$^{-1}$ air,
+25 $^\circ$C $\rightarrow$ 150 $^\circ$C, $C_P = 1.01$ kJ kg$^{-1}$ K$^{-1}$) using two
+further reference temperatures:
+
+
+1. $T_{ref} = 25\ ^\circ$C — the inlet temperature.
+2. $T_{ref} = 200\ ^\circ$C — deliberately above both stream temperatures.
+
+What happens to the individual stream enthalpies, and what happens to $\dot{Q}$?
+
+::: {.content-visible unless-format="revealjs"}
+::: {.callout-note icon=false collapse="true" title="Solution"}
+
+The balance is unchanged from Example 5.1:
+
+$$\dot{Q} = \dot{m}\left(H_{out} - H_{in}\right), \qquad H = C_P\left(T - T_{ref}\right)$$
+
+Only the reference temperature changes.
+
+**Part 1 — $T_{ref} = 25\ ^\circ$C**
+
+| Stream | $T$ ($^\circ$C) | $H$ (kJ kg$^{-1}$) |
+|---|:---:|:---:|
+| Inlet  | 25  | $1.01(25 - 25) = 0$ |
+| Outlet | 150 | $1.01(150 - 25) = 126.3$ |
+
+$$\dot{Q} = 0.50\left(126.3 - 0\right) = 63.1\ \text{kW}$$
+
+Choosing the reference at the inlet temperature makes the inlet enthalpy **zero**, and it
+drops straight out of the balance. This is the practical reason to choose a reference at
+one of the stream temperatures.
+
+**Part 2 — $T_{ref} = 200\ ^\circ$C**
+
+| Stream | $T$ ($^\circ$C) | $H$ (kJ kg$^{-1}$) |
+|---|:---:|:---:|
+| Inlet  | 25  | $1.01(25 - 200) = -176.8$ |
+| Outlet | 150 | $1.01(150 - 200) = -50.5$ |
+
+$$\dot{Q} = 0.50\left(-50.5 - (-176.8)\right) = 0.50 \times 126.3 = 63.1\ \text{kW}$$
+
+**Comparison**
+
+| $T_{ref}$ ($^\circ$C) | $H_{in}$ | $H_{out}$ | $H_{out} - H_{in}$ | $\dot{Q}$ (kW) |
+|:---:|:---:|:---:|:---:|:---:|
+| 0   | 25.3   | 151.5 | 126.3 | 63.1 |
+| 25  | 0      | 126.3 | 126.3 | 63.1 |
+| 200 | -176.8 | -50.5 | 126.3 | 63.1 |
+
+**What this shows**
+
+- The individual enthalpies are completely different — and with $T_{ref} = 200\ ^\circ$C
+  they are *negative*. A negative absolute enthalpy is not a physical impossibility; it
+  simply means the state sits below the arbitrary zero we chose. It is the reference line
+  in the figure moving up past both states, not the curve changing.
+- The **difference** $H_{out} - H_{in}$ is identical in all three cases, so $\dot{Q}$ is
+  identical. The reference state cancels algebraically:
+  $C_P(T_{out} - T_{ref}) - C_P(T_{in} - T_{ref}) = C_P(T_{out} - T_{in})$.
+- The choice is therefore free — but it must be applied **consistently**. Using
+  $T_{ref} = 0\ ^\circ$C for the inlet and $25\ ^\circ$C for the outlet would give
+  $0.50(126.3 - 25.3) = 50.5$ kW: a wrong answer, from a balance that looks perfectly
+  well behaved.
+
+:::
+:::

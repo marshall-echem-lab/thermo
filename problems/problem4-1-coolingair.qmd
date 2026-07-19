@@ -9,11 +9,24 @@ cooling duty in kW.
 
 ::: {.callout-note icon=false collapse="true" title="Solution"}
 
-Sensible heat only:
+The general energy balance is:
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum \dot{m}_{in}H_{in} - \sum \dot{m}_{out}H_{out} + \dot{Q} + \dot{W}$$
+Assume steady-state, no work and a single mass flow in and out:
+$$0 = \dot{m}_{in}H_{in} - \dot{m}_{out}H_{out} + \dot{Q} + 0$$
+$$-\dot{Q} = \dot{m}(H_{in}-H_{out})$$
 
+Sensible heat only:
 $$
 \begin{aligned}
-\dot{Q} & = \dot{m} C_P \Delta T \\
+(H_{in}-H_{out}) & = \int^{in}_{out} C_P dT \\
+                & = C_P \int^{in}_{out} dT \\
+                & = C_P (T_{in}-T_{out})
+\end{aligned}
+$$
+add this to the energy balance (note the sign on $\dot{Q}$):
+$$
+\begin{aligned}
+\dot{Q} & = \dot{m} C_P (T_{out}-T_{in}) \\
 & = (200)(1.005)(40 - 150) \\
 & = -22{,}110\ \text{kJ/h}
 \end{aligned}

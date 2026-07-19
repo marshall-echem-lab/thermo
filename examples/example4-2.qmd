@@ -1,0 +1,124 @@
+## Example 4.2: Heat recovery from a flue gas {.unnumbered .scrollable}
+
+Hot flue gas leaving a furnace is passed through a counter-current heat exchanger to recover heat into a thermal oil loop.
+
+The flue gas enters at 320 $^\circ$C with a mass flow rate of 2.5 kg s$^{-1}$. The thermal oil enters at 60 $^\circ$C and must leave at 180 $^\circ$C. To avoid acid condensation on the exchanger tubes, the flue gas must not be cooled below 150 $^\circ$C, and the exchanger is designed to cool it to exactly this temperature.
+
+Determine the heat transferred in the heat exchanger and the required thermal oil circulation rate. Solve the problem twice: once by treating each side as its own system, and once by treating the whole exchanger as a single system.
+
+Data: $C_{P,gas} = 1.15$ kJ kg$^{-1}$ K$^{-1}$, $C_{P,oil} = 2.30$ kJ kg$^{-1}$ K$^{-1}$ (both constant).
+
+::: {.content-visible unless-format="revealjs"}
+
+::: {.callout-note icon=false collapse="true" title="Solution"}
+
+### Before starting: how many unknowns?
+
+It is worth counting knowns, unknowns and equations before writing anything down — this tells you whether the problem can be solved at all, and whether you have been given redundant information.
+
+| | |
+|---|---|
+| **Known** | $\dot{m}_{gas}$, $T_{gas,in}$, $T_{oil,in}$, $T_{oil,out}$, $C_{P,gas}$, $C_{P,oil}$ |
+| **Unknown** | $\dot{Q}$, $\dot{m}_{oil}$, $T_{gas,out}$ |
+
+Treating each side as its own system gives **two** independent energy balances (one per side). With **three** unknowns and two equations, the problem is under-specified by one — we cannot solve it.
+
+This is why the flue gas exit temperature is specified as 150 $^\circ$C. That removes one unknown:
+
+- Unknowns: $\dot{Q}$, $\dot{m}_{oil}$ $\rightarrow$ **2**
+- Independent equations: **2**
+- Degrees of freedom: $2 - 2 = 0$ $\quad\checkmark$ solvable
+
+Always a good idea to do this check!
+
+---
+
+### Method 1 — two sub-systems, with heat transferred between them
+
+**1. Define the systems**
+
+Draw **two** system boundaries: one around the flue gas side of the exchanger, one around the oil side. Heat crosses both boundaries. The two systems are coupled by the fact that the heat leaving the gas is the heat entering the oil.
+
+**2. Assumptions**
+
+- Steady state on both sides.
+- No work ($\dot{W} = 0$).
+- No heat lost from the exchanger to the surroundings.
+- Sensible heat effects only — no phase change or reaction on either side.
+- Constant $C_P$ for both fluids.
+
+**3. Balance on the flue gas side**
+
+Starting from the general balance and deleting the accumulation and work terms as in Example 4.1:
+
+$$0 = \dot{m}_{gas}H_{gas,in} - \dot{m}_{gas}H_{gas,out} + \dot{Q}_{gas}$$
+
+$$\dot{Q}_{gas} = \dot{m}_{gas}\,C_{P,gas}\left(T_{gas,out} - T_{gas,in}\right)$$
+
+$$\dot{Q}_{gas} = 2.5 \times 1.15 \times \left(150 - 320\right) = -488.8\ \text{kW}$$
+
+The sign is **negative**, meaning heat is transferred *out of* the flue gas — which is exactly what a heat recovery unit should do.
+
+**4. Balance on the oil side**
+
+$$\dot{Q}_{oil} = \dot{m}_{oil}\,C_{P,oil}\left(T_{oil,out} - T_{oil,in}\right)$$
+
+**5. Couple the two systems**
+
+The heat leaving the gas is the heat entering the oil. This means:
+
+$$\dot{Q}_{oil} = -\dot{Q}_{gas} = +488.8\ \text{kW}$$
+
+**6. Solve for the oil flow rate**
+
+Rearrange symbolically first:
+
+$$\dot{m}_{oil} = \frac{\dot{Q}_{oil}}{C_{P,oil}\left(T_{oil,out} - T_{oil,in}\right)}$$
+
+$$\dot{m}_{oil} = \frac{488.8}{2.30 \times \left(180 - 60\right)} = \frac{488.8}{276} = 1.77\ \text{kg s}^{-1}$$
+
+---
+
+### Method 2 — the whole exchanger as one system
+
+**1. Define the system**
+
+Now draw a single boundary around the **entire** exchanger. Four streams cross it: flue gas in and out, oil in and out. Crucially, the internal heat transfer no longer crosses the boundary, so $\dot{Q}$ does not appear at all.
+
+**2. Assumptions**
+
+Identical to Method 1, with one addition made explicit: because no heat is lost to the surroundings and the internal heat transfer is now internal to the system, the whole exchanger is **adiabatic**, $\dot{Q} = 0$.
+
+**3. The balance**
+
+$$0 = \left(\dot{m}_{gas}H_{gas,in} + \dot{m}_{oil}H_{oil,in}\right) - \left(\dot{m}_{gas}H_{gas,out} + \dot{m}_{oil}H_{oil,out}\right)$$
+
+Grouping each fluid with itself:
+
+$$\dot{m}_{gas}\left(H_{gas,out} - H_{gas,in}\right) + \dot{m}_{oil}\left(H_{oil,out} - H_{oil,in}\right) = 0$$
+
+Writing both enthalpy changes as sensible heat terms:
+
+$$\dot{m}_{gas}\,C_{P,gas}\left(T_{gas,out} - T_{gas,in}\right) + \dot{m}_{oil}\,C_{P,oil}\left(T_{oil,out} - T_{oil,in}\right) = 0$$
+
+**4. Solve**
+
+$$\dot{m}_{oil} = \frac{-\dot{m}_{gas}\,C_{P,gas}\left(T_{gas,out} - T_{gas,in}\right)}{C_{P,oil}\left(T_{oil,out} - T_{oil,in}\right)}$$
+
+$$\dot{m}_{oil} = \frac{-2.5 \times 1.15 \times \left(150 - 320\right)}{2.30 \times \left(180 - 60\right)} = \frac{488.8}{276} = 1.77\ \text{kg s}^{-1}$$
+
+Same answer, as it must be.
+
+---
+
+### Comparing the two approaches
+
+Both are correct — they differ only in where the boundary was drawn.
+
+- **Two sub-systems:** $\dot{Q}$ appears explicitly, so this is the approach you must use if the duty itself is what you want (for sizing the exchanger, or checking it against a rated duty). It also handles heat loss to the surroundings naturally — you simply add a loss term to one or both balances.
+- **Whole exchanger:** $\dot{Q}$ is internal and cancels, giving a single equation directly in the stream temperatures. Faster if you only want a temperature or a flow rate, but it tells you nothing about the duty, and it *hides* any heat loss rather than letting you account for it.
+
+Choosing the system boundary well is often the difference between a one-line solution and a difficult one. Choosing it badly can mean you answer a different question to the one you were asked.
+
+:::
+:::

@@ -1,0 +1,59 @@
+## Example 5.1: Building enthalpies from a reference state
+
+Air is heated in a steady-state duct heater from 25 $^\circ$C to 150 $^\circ$C at a
+mass flow rate of 0.50 kg s$^{-1}$. Take $C_P = 1.01$ kJ kg$^{-1}$ K$^{-1}$, constant.
+
+Using a reference state of **air, gas, 0 $^\circ$C, 1 atm**:
+
+
+1. Tabulate the absolute enthalpy of the inlet and outlet streams.
+2. Calculate the required heat $\dot{Q}$.
+
+::: {.content-visible unless-format="revealjs"}
+::: {.callout-note icon=false collapse="true" title="Solution"}
+
+**System and assumptions**
+
+The system is the duct heater. Steady state, one stream in and one out, no work
+($\dot{W}=0$), no phase change, no reaction. The general balance
+
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum \dot{m}_{in}H_{in} - \sum \dot{m}_{out}H_{out} + \dot{Q} + \dot{W}$$
+
+collapses to
+
+$$0 = \dot{m}H_{in} - \dot{m}H_{out} + \dot{Q}
+\quad\Rightarrow\quad
+\dot{Q} = \dot{m}\left(H_{out} - H_{in}\right)$$
+
+**Part 1 — enthalpy relative to the reference state**
+
+With $H_{ref} \equiv 0$ at $T_{ref} = 0\ ^\circ$C, each stream enthalpy is the sensible
+heat needed to bring air from the reference temperature to its actual temperature:
+
+$$H = \int_{T_{ref}}^{T} C_P\,dT = C_P\left(T - T_{ref}\right)$$
+
+| Stream | $T$ ($^\circ$C) | $H = C_P(T - T_{ref})$ (kJ kg$^{-1}$) |
+|---|:---:|:---:|
+| Inlet  | 25  | $1.01(25 - 0) = 25.3$ |
+| Outlet | 150 | $1.01(150 - 0) = 151.5$ |
+
+These are *not* absolute enthalpies of air in any physical sense — they are enthalpies
+measured from the zero we chose.
+
+**Part 2 — heat requirement**
+
+$$\dot{Q} = \dot{m}\left(H_{out} - H_{in}\right) = 0.50\left(151.5 - 25.3\right)$$
+
+$$\dot{Q} = 63.1\ \text{kW}$$
+
+**Check**
+
+The sign is positive, meaning heat is transferred *into* the system — correct for a
+heater. The magnitude is plausible: a domestic fan heater is a few kW, an industrial
+duct heater tens of kW.
+
+Note also that $151.5 - 25.3 = 126.2$ kJ kg$^{-1}$, which is exactly
+$C_P(T_{out} - T_{in}) = 1.01 \times 125$. The reference state cancelled — as it must.
+
+:::
+:::

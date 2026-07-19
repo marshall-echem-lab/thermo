@@ -3,16 +3,23 @@ title: "Nomenclature & Units"
 format: revealjs
 ---
 
-## Energy & Balance Quantities
+## Energy terms
 
-::: {style="font-size: 0.62em"}
-| Symbol | Quantity | Typical unit | Notes |
+::: {style="font-size: 0.7em"}
+| Symbol | Quantity | Typical unit |
 |---|---|---|---|
 | $E$ | Total energy | kJ |
 | $U$ | Internal energy | kJ, kJ/kg, or kJ/mol |
 | $E_k$ | Kinetic energy | kJ |
 | $E_p$ | Potential energy | kJ | 
 | $H$ | Enthalpy | kJ, kJ/kg, or kJ/mol | 
+:::
+
+## Input / output terms
+
+::: {style="font-size: 0.7em"}
+| Symbol | Quantity | Typical unit |
+|---|---|---|---|
 | $Q$ | Heat | kJ | 
 | $\dot{Q}$ | Rate of heat transfer | kW |
 | $W$ | Work | kJ |
@@ -21,10 +28,7 @@ format: revealjs
 | $\dot{m}$ | Mass flow rate | kg/s |
 | $n$ | Moles | mol |
 | $\dot{n}$ | Molar flow rate | mol/s |
-: {tbl-colwidths="[10,25,15]"}
 :::
-
-
 
 ## Process Variables & State Properties
 
@@ -44,7 +48,7 @@ format: revealjs
 :::
 
 
-## Reaction, Mixing & Phase-Change Terms — and Conventions
+## Reaction, Mixing & Phase-Change Terms
 
 ::: {style="font-size: 0.62em"}
 | Symbol | Quantity | Typical unit |
@@ -65,10 +69,8 @@ format: revealjs
 - $\Delta$ — change, "final − initial"
 
 
-::: {.fragment}
 ::: {.callout-important}
 ## Sign convention
 $Q$ and $W$ are always defined as energy transferred **into** the system.
 Energy leaving (heat rejected, work done *by* the system) is negative.
-:::
 :::

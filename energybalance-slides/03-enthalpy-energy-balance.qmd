@@ -91,14 +91,16 @@ $$
 :::
 
 ## The General Energy Balance Equation
-The general energy balance equation can describe every process:
+The general energy balance equation can describe any process:
 $$\frac{d(m_{sys}H_{sys})}{dt} = \sum_i \dot{m}_{i,i} H_{in,i} - \sum_j \dot{m}_{out,j} H_{out,j} + \sum_k \dot{Q}_k + \sum_l \dot{W}_l$$
 
-The general balance allows for an arbitary number of flow terms via the sum terms.
+The summation terms allow for multiple:
+- flow streams  into the system
+- flow streams out of the system 
+- heat and work transfer terms over the system-surrounding boundary
 
-. . .
-
-if the system is described in moles rather than mass:
+## The General Energy Balance Equation (molar basis)
+If the system is described in moles rather than mass:
 
 $$\frac{d(n_{sys}H_{sys})}{dt} = \sum_i \dot{n}_{i,i} H_{in,i} - \sum_j \dot{n}_{out,j} H_{out,j} + \sum_k \dot{Q}_k + \sum_l \dot{W}_l$$
 
@@ -107,60 +109,14 @@ where:
 - $n_{sys}$ is the moles of system
 - $\dot{n}$ is the molar flow rate in or out of the system
 
-## What affects Enthalpy ?
-To solve the energy balance, must calculate the enthalpy of the flow streams and system.
-
 . . .
 
-Enthalpy is affected by:
+Sometimes mixed units are used. Be careful ! 
 
-::: {.incremental}
-- Temperature changes
-- Pressure changes
-- Phase changes
-- Formation and separation of solutions
-- Reactions
-:::
+{{< include examples/example3-1.qmd >}}
 
-## Enthalpy changes
 
-It is not possible to calculate absolute enthalpy values
 
-. . .
 
-Enthalpy changes between two states can be calculated:
-
-$$\Delta H_{state\:1\rightarrow\:state\:2} = H_{state\:2} - H_{state\:1} \quad \checkmark $$
-
-. . .
-
-An "absolute" Enthalpy can be calculated *relative* to a reference state
-
-$$H_{state\:1} = H_{ref\:state} + \Delta H_{ref\:state\rightarrow\:state\:1} \quad \checkmark $$
-
-## Reference states
-
-In many cases, calculating "absolute" enthalpy *relative* to a reference state simplifies process calculations
-
-. . .
-
-Reference states can be freely defined. But must use the same reference state entire process calculation
-
-. . .
-
-Common reference states include:
-
-- Triple point of water
-- Pure species at 298.15 K
-- Dry Air at 101.325 kPa and 0 $^\circ$C 
-
-## example
-steady state single flow 
-
-## example 
-steady state two flows mix continuously
-
-## example
-unsteady state heat
 
 

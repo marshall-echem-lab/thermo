@@ -1,0 +1,84 @@
+## Example 4.1: Heating milk for pasteurisation {.unnumbered .scrollable}
+
+Raw milk is pumped continuously through a heater on its way to a pasteuriser. The milk enters at 4 $^\circ$C and must leave at 72 $^\circ$C. The volumetric flow rate is 5000 L hr$^{-1}$.
+
+Calculate the rate of heat transfer required.
+
+Data: $\rho_{milk} = 1030$ kg m$^{-3}$, $C_{P,milk} = 3.85$ kJ kg$^{-1}$ K$^{-1}$ (constant over this range).
+
+::: {.content-visible unless-format="revealjs"}
+
+::: {.callout-note icon=false collapse="true" title="Solution"}
+
+**1. Define the system**
+
+The system boundary is drawn around the milk inside the heater. Milk crosses the boundary in one stream and out in one stream, and heat crosses the boundary from the heating medium.
+
+**2. Assumptions**
+
+- Steady state — the heater has been running long enough that nothing accumulates.
+- No work is done on the milk ($\dot{W} = 0$).
+- No heat is lost to the surroundings — all heat transferred goes into the milk.
+- Only a temperature change occurs (no phase change, no reaction), so this is a pure sensible heat effect.
+- $C_P$ is constant over 4–72 $^\circ$C.
+
+**3. Write the general energy balance**
+
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum \dot{m}_{in}H_{in} - \sum \dot{m}_{out}H_{out} + \dot{Q} + \dot{W}$$
+
+Now delete the terms that vanish:
+
+- Steady state $\Rightarrow \dfrac{d(m_{sys}H_{sys})}{dt} = 0$
+- No work $\Rightarrow \dot{W} = 0$
+- One stream in, one stream out, and no accumulation of mass, so $\dot{m}_{in} = \dot{m}_{out} = \dot{m}$
+
+$$0 = \dot{m}H_{in} - \dot{m}H_{out} + \dot{Q}$$
+
+$$\dot{Q} = \dot{m}\left(H_{out} - H_{in}\right) = \dot{m}\,\Delta H$$
+
+**4. What changes the enthalpy?**
+
+Only temperature, so $\Delta H$ is a sensible heat term:
+
+$$\Delta H = \int_{T_{in}}^{T_{out}} C_PdT$$
+
+and with $C_P$ constant:
+
+$$\Delta H = C_P\left(T_{out} - T_{in}\right)$$
+
+Substituting back into the balance gives the working equation:
+
+$$\dot{Q} = \dot{m}\,C_P\left(T_{out} - T_{in}\right)$$
+
+Note **always** symbolically **before** putting any numbers in.
+
+**5. Collect the data**
+
+The mass flow rate is not given directly, so convert the volumetric flow:
+
+$$\dot{m} = \rho\,\dot{V} = 1030\ \text{kg m}^{-3} \times 5000\ \text{L hr}^{-1} \times \frac{1\ \text{m}^{3}}{1000\ \text{L}} \times \frac{1\ \text{hr}}{3600\ \text{s}}$$
+
+$$\dot{m} = \frac{1030 \times 5}{3600} = 1.431\ \text{kg s}^{-1}$$
+
+**6. Calculate**
+Because a temperature difference is calculated, the units can be kelvin or celsius
+$$
+\begin{aligned}
+\dot{Q} & = 1.431 \times 3.85 \times (72 - 4)\\
+       & = 375\ \text{kJ s}^{-1} \\
+       & = 375\ \text{kW}
+\end{aligned}
+$$
+
+A units check:
+
+$$\left[\frac{\text{kg}}{\text{s}}\right]\left[\frac{\text{kJ}}{\text{kg K}}\right]\left[\text{K}\right] = \left[\frac{\text{kJ}}{\text{s}}\right] = \left[\text{kW}\right] \quad \checkmark$$
+
+**7. Sanity check**
+
+The sign is positive, which under by convention means heat is transferred **into** the system. That is exactly what should be expected — heat is added to the milk.
+
+Note also that because only a temperature *difference* appears, converting to kelvin made no difference here ($\Delta T = 68$ K $= 68\ ^\circ$C). Convert anyway — it costs nothing and it will matter the first time an absolute temperature appears in an equation.
+
+:::
+:::
