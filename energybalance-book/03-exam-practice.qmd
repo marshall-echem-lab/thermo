@@ -1,6 +1,23 @@
 ---
 title: "Tutorial problems"
 show-solutions: true
+number-sections: false
 ---
 
 {{< include problems/problem-E1-electrowinning.qmd >}}
+
+{{< include problems/problem-E2-steamturbine.qmd >}}
+
+{{< include problems/problem-E3-mixing-NaOH.qmd >}}
+
+{{< include problems/problem-E4-sugar-calorimeter.qmd >}}
+
+{{< include problems/problem-E5-boiler-combustion.qmd >}}
+
+{{< include problems/problem-E6-jacketed-cooling.qmd >}}
+
+{{< include problems/problem-E7-ice-in-water.qmd >}}
+
+{{< include problems/problem-E8-water-gas-shift.qmd >}}
+
+{{< include problems/problem-E9-battery-discharge.qmd >}}

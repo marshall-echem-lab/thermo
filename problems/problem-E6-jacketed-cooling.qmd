@@ -1,0 +1,151 @@
+## Problem E6: Batch Cooling in a Jacketed Vessel {.unnumbered}
+
+A batch of process liquid is held in a well-stirred, jacketed vessel. At the end of a reaction step the batch is at 90 °C and must be cooled to 30 °C before it can be transferred to storage.
+
+Cooling water is circulated through the jacket at a high enough flow rate that the jacket temperature stays essentially constant at 15 °C throughout. The rate of heat transfer from the batch to the jacket is *not* constant — it depends on the temperature difference between the batch and the jacket:
+
+$$\dot{Q} = UA\,(T_{jacket} - T)$$
+
+where $T$ is the (uniform) batch temperature and $UA$ is the overall heat transfer coefficient multiplied by the heat transfer area.
+
+The vessel is agitated by a mechanical stirrer which draws a constant 5.0 kW, all of which is dissipated into the liquid.
+
+The following data are provided:
+
+| Property | Value |
+|---|---|
+| Mass of batch | 500 kg |
+| Batch heat capacity ($C_P$) | 3.2 kJ kg$^{-1}$ K$^{-1}$ |
+| Initial batch temperature | 90 °C |
+| Target batch temperature | 30 °C |
+| Jacket temperature | 15 °C |
+| $UA$ | 1200 W K$^{-1}$ |
+| Stirrer power | 5.0 kW |
+
+**(a)** Starting from the general energy balance, derive the differential equation describing the batch temperature as a function of time. State and justify every assumption you use. For this part only, assume the stirrer is switched off.
+
+**(b)** Separate the variables and integrate to obtain an expression for $T(t)$. Identify the time constant of the process and state its physical meaning.
+
+**(c)** Calculate the time required to cool the batch from 90 °C to 30 °C with the stirrer off.
+
+**(d)** Repeat the derivation with the stirrer running. Show that the batch now approaches a steady-state temperature $T_\infty$ rather than the jacket temperature, and calculate $T_\infty$.
+
+**(e)** Calculate the time required to reach 30 °C with the stirrer running, and comment on the difference from part (c).
+
+**(f)** A colleague proposes reaching 20 °C by simply leaving the vessel cooling for longer with the stirrer running. Explain why this will not work, and suggest two changes that would.
+
+{{< pagebreak >}}
+
+::: {.content-visible when-meta="show-solutions"}
+
+::: {.callout-note icon=false collapse="true" title="Solution"}
+
+**(a) Differential equation (stirrer off)**
+
+Assumptions:
+
+- Batch (closed) system — nothing enters or leaves $\Rightarrow \dot{m}_{in} = \dot{m}_{out} = 0$.
+- Well-mixed vessel $\Rightarrow$ a single uniform temperature $T$ describes the whole batch at any instant. Without this we could not write a single $T$ at all.
+- No shaft work with the stirrer off $\Rightarrow \dot{W} = 0$.
+- The mass of the batch $m$ and its heat capacity $C_P$ are constant.
+- The jacket temperature $T_{jacket}$ and $UA$ are constant.
+
+Starting from the general energy balance:
+
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum \dot{m}_{in}H_{in} - \sum \dot{m}_{out}H_{out} + \dot{Q} + \dot{W}$$
+
+With no flow and no work:
+
+$$\frac{d(m_{sys}H_{sys})}{dt} = \dot{Q}$$
+
+Since the batch mass is constant it comes outside the derivative, and for a liquid with constant $C_P$ and no phase change or reaction, $dH_{sys} = C_P\,dT$:
+
+$$m\,C_P\,\frac{dT}{dt} = \dot{Q} = UA\,(T_{jacket} - T)$$
+
+This is the key difference from a constant-duty problem: the driving force shrinks as the batch cools, so $\dot{Q}$ is a function of the very variable we are solving for.
+
+**(b) Integration**
+
+Separate the variables:
+
+$$\frac{dT}{T - T_{jacket}} = -\frac{UA}{m\,C_P}\,dt$$
+
+Integrate from $T_0$ at $t=0$ to $T$ at time $t$:
+
+$$\int_{T_0}^{T}\frac{dT}{T - T_{jacket}} = -\frac{UA}{m\,C_P}\int_0^t dt$$
+
+$$\ln\!\left(\frac{T - T_{jacket}}{T_0 - T_{jacket}}\right) = -\frac{UA}{m\,C_P}\,t$$
+
+$$T(t) = T_{jacket} + (T_0 - T_{jacket})\,\exp\!\left(-\frac{t}{\tau}\right), \qquad \tau = \frac{m\,C_P}{UA}$$
+
+The temperature approaches the jacket temperature exponentially rather than linearly. The time constant $\tau$ is the time taken for the *remaining* temperature difference to fall to $1/e$ (about 37%) of its starting value; equivalently, it is the thermal capacity of the batch divided by its rate of heat loss per kelvin of driving force.
+
+$$\tau = \frac{500 \times 3200}{1200} = 1333\ \text{s} = 22.2\ \text{min}$$
+
+**(c) Cooling time, stirrer off**
+
+Rearranging for $t$:
+
+$$t = \tau\,\ln\!\left(\frac{T_0 - T_{jacket}}{T - T_{jacket}}\right)$$
+
+$$
+\begin{aligned}
+t & = 1333 \times \ln\!\left(\frac{90 - 15}{30 - 15}\right) \\
+  & = 1333 \times \ln(5.00) \\
+  & = 1333 \times 1.609 \\
+  & = 2146\ \text{s} = 35.8\ \text{min}
+\end{aligned}
+$$
+
+**(d) With the stirrer running**
+
+The stirrer adds work to the system, so $\dot{W} = +5.0$ kW (energy transferred *into* the system, consistent with the sign convention):
+
+$$m\,C_P\,\frac{dT}{dt} = UA\,(T_{jacket} - T) + \dot{W}$$
+
+At steady state the left-hand side is zero, so the batch stops cooling when the heat removed equals the work added:
+
+$$0 = UA\,(T_{jacket} - T_\infty) + \dot{W} \quad\Rightarrow\quad T_\infty = T_{jacket} + \frac{\dot{W}}{UA}$$
+
+$$T_\infty = 15 + \frac{5000}{1200} = 15 + 4.17 = 19.2\ ^\circ\text{C}$$
+
+The batch can never reach the jacket temperature while the stirrer runs — the stirrer is a continuous heat source of 5 kW.
+
+Rewriting the differential equation in terms of $T_\infty$ shows the mathematics is unchanged:
+
+$$m\,C_P\,\frac{dT}{dt} = UA\,(T_\infty - T)$$
+
+$$T(t) = T_\infty + (T_0 - T_\infty)\,\exp\!\left(-\frac{t}{\tau}\right)$$
+
+with the same time constant $\tau = mC_P/UA = 1333$ s. Only the asymptote has moved.
+
+**(e) Cooling time with the stirrer running**
+
+$$
+\begin{aligned}
+t & = \tau\,\ln\!\left(\frac{T_0 - T_\infty}{T - T_\infty}\right) \\
+  & = 1333 \times \ln\!\left(\frac{90 - 19.2}{30 - 19.2}\right) \\
+  & = 1333 \times \ln(6.56) \\
+  & = 1333 \times 1.881 \\
+  & = 2507\ \text{s} = 41.8\ \text{min}
+\end{aligned}
+$$
+
+The stirrer adds about 6 minutes (17%) to the cooling time. The 5 kW of stirrer power is small compared with the initial cooling duty ($UA \times 75 = 90$ kW), so it barely matters at the start — but it becomes an ever-larger fraction of the duty as the driving force shrinks, which is why it disproportionately affects the tail of the curve.
+
+**(f) Why 20 °C is not reachable**
+
+The batch asymptotes to $T_\infty = 19.2$ °C, so 20 °C is only just attainable and would take:
+
+$$t = 1333 \times \ln\!\left(\frac{90 - 19.2}{20 - 19.2}\right) = 1333 \times \ln(88.5) = 5970\ \text{s} = 1.7\ \text{h}$$
+
+Anything below 19.2 °C is impossible no matter how long the vessel is left — the exponential approaches the asymptote but never crosses it. "Leave it longer" fails because the limit is set by an energy balance, not by time.
+
+Two changes that would work:
+
+1. **Lower the jacket temperature** — use chilled water instead of cooling water. Dropping $T_{jacket}$ to 5 °C moves $T_\infty$ to $5 + 4.17 = 9.2$ °C, putting 20 °C comfortably in range and reaching it far faster.
+2. **Increase $UA$**, or reduce the stirrer power once the batch is homogeneous. Doubling $UA$ to 2400 W/K halves both the time constant and the stirrer's temperature penalty ($T_\infty = 15 + 2.1 = 17.1$ °C). Reducing the agitation to 1 kW gives $T_\infty = 15.8$ °C, though it risks losing the well-mixed assumption the whole analysis depends on.
+
+:::
+
+:::

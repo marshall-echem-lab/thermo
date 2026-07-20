@@ -1,0 +1,187 @@
+## Problem E9: Discharging a Battery Pack Before Recycling {.unnumbered}
+
+End-of-life lithium-ion battery packs must be fully discharged before they are shredded for material recovery. A pack that still holds charge can short internally during shredding and go into thermal runaway, so recyclers discharge each pack down to a safe residual state of charge first.
+
+One common method is to connect the pack across a resistive heating element immersed in a tank of water. The stored electrical energy is dissipated as heat in the water, which is a cheap, safe and easily monitored sink.
+
+A batch of packs is to be processed. Each pack is discharged individually into a well-stirred, insulated tank containing 200 kg of water initially at 15 °C. The pack is discharged at a constant current of 20 A until it is flat, and the pack voltage may be taken as constant at 48 V throughout the discharge.
+
+The following data are provided:
+
+| Property | Value |
+|---|---|
+| Pack nominal voltage | 48 V |
+| Pack capacity | 60 A h |
+| Discharge current | 20 A |
+| Mass of water in tank | 200 kg |
+| Initial water temperature | 15 °C |
+| Water heat capacity ($C_P$) | 4.18 kJ kg$^{-1}$ K$^{-1}$ |
+| Ambient temperature | 15 °C |
+| Tank heat loss coefficient ($UA$), part (e) onward | 25 W K$^{-1}$ |
+
+The heat capacity of the tank, heating element and pack may be neglected.
+
+**(a)** Calculate the total electrical energy stored in the pack, in kW h and in MJ. Calculate the electrical power delivered to the heating element and the time required to fully discharge the pack.
+
+**(b)** Starting from the general energy balance, write down and simplify the energy balance for the contents of the tank, treating the tank as perfectly insulated. Explain why the energy from the battery enters the balance as a $\dot{W}$ term rather than a $\dot{Q}$ term.
+
+**(c)** Calculate the temperature of the water at the end of the discharge.
+
+**(d)** A technician suggests halving the discharge time by doubling the current to 40 A. State what effect this has on the final water temperature, and justify your answer from the energy balance rather than by repeating the calculation.
+
+**(e)** The tank is not in fact perfectly insulated and loses heat to the surroundings at a rate $\dot{Q} = UA\,(T_{amb} - T)$. Derive an expression for the water temperature as a function of time, and calculate the temperature at the end of the 3 hour discharge. Compare with your answer to (c).
+
+**(f)** Site rules require the tank never to exceed 40 °C. Calculate the minimum mass of water needed to satisfy this rule, using the conservative (insulated) assumption from part (c). Comment on whether using the insulated assumption is the right choice for a safety calculation.
+
+{{< pagebreak >}}
+
+::: {.content-visible when-meta="show-solutions"}
+
+::: {.callout-note icon=false collapse="true" title="Solution"}
+
+**(a) Stored energy, power and discharge time**
+
+Energy stored is the product of capacity and voltage:
+
+$$
+\begin{aligned}
+E & = V \times \text{capacity} \\
+  & = 48\ \text{V} \times 60\ \text{A h} \\
+  & = 2880\ \text{W h} = 2.88\ \text{kW h}
+\end{aligned}
+$$
+
+$$E = 2.88\ \text{kW h} \times 3600\ \text{s/h} = 10{,}368\ \text{kJ} = 10.37\ \text{MJ}$$
+
+Power delivered to the element:
+
+$$\dot{W} = V I = 48 \times 20 = 960\ \text{W}$$
+
+Discharge time:
+
+$$t = \frac{60\ \text{A h}}{20\ \text{A}} = 3.0\ \text{h} = 10{,}800\ \text{s}$$
+
+Check: $0.960\ \text{kW} \times 10{,}800\ \text{s} = 10{,}368$ kJ, consistent.
+
+**(b) Energy balance for the tank**
+
+Assumptions:
+
+- Closed system — no water enters or leaves the tank $\Rightarrow \dot{m}_{in} = \dot{m}_{out} = 0$.
+- Perfectly insulated (this part only) $\Rightarrow \dot{Q} = 0$.
+- Well-stirred, so a single uniform temperature $T$ describes the water at any instant.
+- Constant water mass and heat capacity; no evaporation.
+- All the electrical energy delivered is dissipated in the element and none escapes as light, sound or radiation.
+
+Starting from the general energy balance:
+
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum \dot{m}_{in}H_{in} - \sum \dot{m}_{out}H_{out} + \dot{Q} + \dot{W}$$
+
+$$m\,C_P\,\frac{dT}{dt} = \dot{W}$$
+
+**Why $\dot{W}$ and not $\dot{Q}$:** heat is energy transferred across the system boundary because of a *temperature difference*. Nothing here is hotter than the water driving energy in — the energy arrives as electrical work done on the resistive element, which the element then degrades into internal energy of the water. The distinction matters conceptually (this is exactly Joule's paddle-wheel experiment in electrical form), even though the numerical effect on the water is identical to adding the same number of joules as heat. It also matters practically: the battery is a work source whose output is set by $VI$, independent of how hot the water gets, whereas a heat input would fall away as the water warmed.
+
+**(c) Final water temperature**
+
+With $\dot{W}$ constant, separate and integrate from $T_0$ at $t=0$ to $T_f$ at $t$:
+
+$$m\,C_P\int_{T_0}^{T_f} dT = \dot{W}\int_0^{t} dt$$
+
+$$m\,C_P\,(T_f - T_0) = \dot{W}\,t = E$$
+
+Note that the right-hand side is just the total energy delivered, so the discharge *profile* has already dropped out of the problem:
+
+$$
+\begin{aligned}
+\Delta T & = \frac{E}{m\,C_P} \\
+         & = \frac{10{,}368}{200 \times 4.18} \\
+         & = \frac{10{,}368}{836} \\
+         & = 12.4\ \text{K}
+\end{aligned}
+$$
+
+$$T_f = 15 + 12.4 = 27.4\ ^\circ\text{C}$$
+
+**(d) Effect of doubling the current**
+
+The final temperature is **unchanged** at 27.4 °C.
+
+From part (c), $m C_P \Delta T = \dot{W}t$, and the product $\dot{W}t$ is fixed by the energy stored in the pack — doubling the current doubles $\dot{W}$ to 1920 W but halves $t$ to 1.5 h. The pack contains 10,368 kJ whatever rate it is released at, and all of it ends up in the same 200 kg of water.
+
+What *does* change is the rate of temperature rise (8.3 K/h instead of 4.1 K/h) and, more importantly, the heat flux at the surface of the heating element. At double the power the element must reject twice the energy through the same area, so its surface runs much hotter and may reach local boiling, which would violate the well-stirred single-temperature assumption and could damage the element. The energy balance sets the destination; it says nothing about whether the journey is safe.
+
+**(e) Including heat loss to the surroundings**
+
+The balance becomes:
+
+$$m\,C_P\,\frac{dT}{dt} = \dot{W} + UA\,(T_{amb} - T)$$
+
+Since the water starts at ambient temperature, it is convenient to work with the excess temperature $\theta = T - T_{amb}$, so $d\theta = dT$:
+
+$$m\,C_P\,\frac{d\theta}{dt} = \dot{W} - UA\,\theta$$
+
+Separating variables:
+
+$$\frac{d\theta}{\dot{W} - UA\,\theta} = \frac{dt}{m\,C_P}$$
+
+Integrating from $\theta = 0$ at $t = 0$:
+
+$$-\frac{1}{UA}\ln\!\left(\frac{\dot{W} - UA\,\theta}{\dot{W}}\right) = \frac{t}{m\,C_P}$$
+
+Rearranging for $\theta$:
+
+$$T(t) = T_{amb} + \frac{\dot{W}}{UA}\left[1 - \exp\!\left(-\frac{t}{\tau}\right)\right], \qquad \tau = \frac{m\,C_P}{UA}$$
+
+The water now approaches a steady-state temperature at which the heat lost equals the power supplied:
+
+$$T_\infty = T_{amb} + \frac{\dot{W}}{UA} = 15 + \frac{960}{25} = 15 + 38.4 = 53.4\ ^\circ\text{C}$$
+
+Time constant:
+
+$$\tau = \frac{200 \times 4180}{25} = 33{,}440\ \text{s} = 9.29\ \text{h}$$
+
+At the end of the discharge, $t = 10{,}800$ s:
+
+$$
+\begin{aligned}
+T & = 15 + 38.4\left[1 - e^{-10800/33440}\right] \\
+  & = 15 + 38.4\left[1 - e^{-0.3230}\right] \\
+  & = 15 + 38.4\,(1 - 0.7240) \\
+  & = 15 + 38.4 \times 0.2760 \\
+  & = 25.6\ ^\circ\text{C}
+\end{aligned}
+$$
+
+Compared with 27.4 °C for the insulated case, heat loss costs 1.8 K. In energy terms:
+
+$$E_{lost} = 10{,}368 - (836 \times 10.6) = 10{,}368 - 8862 = 1506\ \text{kJ}$$
+
+about 15% of the pack's energy leaks to the workshop.
+
+The discharge is short relative to the time constant ($t/\tau = 0.32$), so the tank never gets close to $T_\infty$ — the insulated answer is a reasonable first estimate, erring high. Note also that the losses grow as the water warms, so a longer or repeated discharge would diverge much further from the insulated result.
+
+**(f) Minimum water mass**
+
+Using the insulated case, the allowable rise is $40 - 15 = 25$ K:
+
+$$
+\begin{aligned}
+m_{min} & = \frac{E}{C_P\,\Delta T_{max}} \\
+        & = \frac{10{,}368}{4.18 \times 25} \\
+        & = \frac{10{,}368}{104.5} \\
+        & = 99.2\ \text{kg}
+\end{aligned}
+$$
+
+So roughly 100 kg of water is the minimum; the 200 kg actually used gives a comfortable factor of two.
+
+**Is the insulated assumption right for a safety calculation?** Yes. Neglecting heat loss over-predicts the final temperature, so the resulting water requirement is conservative — the real tank will always end up cooler than calculated, and the 40 °C limit will not be breached. Building in the heat loss would let the calculation specify less water, but the answer would then depend on $UA$, which varies with the lagging condition, the ambient temperature and the weather. A safety limit should not rest on a parameter that degrades over the life of the plant.
+
+Two caveats worth noting even so:
+
+- The calculation assumes one pack. Processing packs back-to-back means the tank starts each discharge warmer than 15 °C, and the accumulated energy — not the single-pack energy — sets the peak. The tank needs either time to cool between packs, a water changeover, or sizing on the daily throughput.
+- The pack is assumed to deliver exactly its rated capacity at 48 V. A pack whose actual state of charge or voltage is higher than rated would deliver more energy; the factor of two in the tank size covers this.
+
+:::
+
+:::

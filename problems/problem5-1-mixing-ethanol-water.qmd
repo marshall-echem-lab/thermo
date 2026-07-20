@@ -3,11 +3,12 @@
 Two liquid streams are combined continuously in a well-insulated mixing vessel operating
 at steady state:
 
-::: {style="font-size: 0.85em"}
+::: {style="font-size: 0.8em"}
 | Stream | Fluid | $\dot{m}$ (kg s$^{-1}$) | $T$ ($^\circ$C) | $C_P$ (kJ kg$^{-1}$ K$^{-1}$) |
 |---|---|:---:|:---:|:---:|
 | A | Ethanol | 1.50 | 20 | 2.44 |
 | B | Water   | 0.80 | 75 | 4.18 |
+
 :::
 
 There is no work. Assume the heat capacities are constant, and **neglect the

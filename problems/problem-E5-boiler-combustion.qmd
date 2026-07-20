@@ -1,0 +1,157 @@
+## Problem E5: Natural Gas Boiler Raising Steam {.unnumbered}
+
+A packaged water-tube boiler raises saturated steam for a food processing plant. Natural gas (assume pure methane, $\mathrm{CH_4}$) is burned continuously in a furnace, and the hot combustion gases pass over the boiler tubes before leaving through the stack. Boiler feedwater is pumped into the tubes and leaves as saturated steam.
+
+The furnace and boiler are treated as a single, well-insulated unit: all the energy released by combustion either leaves with the flue gas or is transferred to the water. Combustion is complete, and all water in the flue gas remains as vapour.
+
+Methane is fed at 50 mol s$^{-1}$ together with air supplied at 20\% above the stoichiometric requirement. Both the fuel and the air enter at 25 °C. The flue gas leaves the stack at 200 °C. Air may be taken as 21 mol% $\mathrm{O_2}$ and 79 mol% $\mathrm{N_2}$.
+
+The following data are provided:
+
+| Species | Enthalpy of formation, $\hb{\Delta H^\circ_f}$ / kJ mol$\hb{^{-1}}$ | Heat capacity, $\hb{C_P}$ / J mol$\hb{^{-1}}$ K$\hb{^{-1}}$ |
+|---|---|---|
+| $\mathrm{CH_4}$ (g) | −74.85 | 35.7 |
+| $\mathrm{O_2}$ (g) | 0 | 29.4 |
+| $\mathrm{N_2}$ (g) | 0 | 29.1 |
+| $\mathrm{CO_2}$ (g) | −393.5 | 37.1 |
+| $\mathrm{H_2O}$ (g) | −241.8 | 34.0 |
+
+| Water/steam stream | Condition | Specific enthalpy / kJ kg$\hb{^{-1}}$ |
+|---|---|---|
+| Boiler feedwater | 10 bar, 40 °C | 168 |
+| Saturated steam | 10 bar | 2778 |
+
+**(a)** Write the balanced combustion reaction for methane, with $\mathrm{H_2O}$(g) as the product, and calculate the enthalpy of reaction ($\Delta H^\circ_{rxn}$) at 298.15 K.
+
+**(b)** Calculate the molar flow rate of every species entering and leaving the furnace.
+
+**(c)** Starting from the general energy balance, write down and simplify the steady-state energy balance for the gas side of the boiler (combustion gases only), and hence obtain an expression for the rate of heat transfer to the water side, $\dot{Q}$, in terms of $\Delta H$ terms only.
+
+**(d)** Calculate $\dot{Q}$.
+
+**(e)** Write the steady-state energy balance for the water side and calculate the mass flow rate of saturated steam produced.
+
+**(f)** Calculate the thermal efficiency of the boiler, defined as the fraction of the energy released by combustion that ends up in the steam. A fouled heat transfer surface would raise the stack temperature from 200 °C to 400 °C. Without repeating the whole calculation from scratch, determine the new efficiency and steam production rate, and comment on the result.
+
+{{< pagebreak >}}
+
+::: {.content-visible when-meta="show-solutions"}
+
+::: {.callout-note icon=false collapse="true" title="Solution"}
+
+**(a) Reaction and enthalpy of reaction**
+
+$$\mathrm{CH_4} + 2\,\mathrm{O_2} \rightarrow \mathrm{CO_2} + 2\,\mathrm{H_2O(g)}$$
+
+$$
+\begin{aligned}
+\Delta H^\circ_{rxn} & = \sum \nu_j\,\Delta H^\circ_{f,j} \\
+                     & = (-393.5) + 2(-241.8) - (-74.85) - 2(0) \\
+                     & = -802.25\ \text{kJ/mol}
+\end{aligned}
+$$
+
+Strongly exothermic, per mole of methane burned.
+
+**(b) Molar flow rates**
+
+Stoichiometric oxygen: $2 \times 50 = 100$ mol/s.
+With 20% excess air, oxygen supplied is $1.2 \times 100 = 120$ mol/s, and the nitrogen accompanying it is:
+
+$$\dot{n}_{\mathrm{N_2}} = 120 \times \frac{79}{21} = 451.4\ \text{mol/s}$$
+
+| Species | In / mol s$^{-1}$ | Out / mol s$^{-1}$ |
+|---|---|---|
+| $\mathrm{CH_4}$ | 50 | 0 |
+| $\mathrm{O_2}$ | 120 | 20 |
+| $\mathrm{N_2}$ | 451.4 | 451.4 |
+| $\mathrm{CO_2}$ | 0 | 50 |
+| $\mathrm{H_2O}$ (g) | 0 | 100 |
+
+Nitrogen is inert and passes straight through; 100 mol/s of the oxygen is consumed, leaving 20 mol/s in the flue gas.
+
+**(c) Gas-side energy balance**
+
+Assumptions:
+
+- Steady state $\Rightarrow \dfrac{d(m_{sys}H_{sys})}{dt} = 0$.
+- No shaft work on the gas side $\Rightarrow \dot{W} = 0$.
+- The furnace shell is insulated, so the only heat transfer is to the water side, $\dot{Q}$.
+- Complete combustion; heat capacities constant over the temperature range.
+
+Starting from the general energy balance:
+
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum \dot{n}_{in}H_{in} - \sum \dot{n}_{out}H_{out} + \dot{Q} + \dot{W}$$
+
+$$0 = \sum \dot{n}_{in}H_{in} - \sum \dot{n}_{out}H_{out} + \dot{Q}$$
+
+$$\dot{Q} = \sum \dot{n}_{out}H_{out} - \sum \dot{n}_{in}H_{in} = \Delta \dot{H}_{gas}$$
+
+Rather than assigning absolute enthalpies, take a convenient path from the inlet state to the outlet state. Because the fuel and air both enter at 298.15 K — the same temperature at which $\Delta H^\circ_{rxn}$ is defined — the path is simply *react at 298.15 K, then heat the products to the stack temperature*:
+
+$$\dot{Q} = \underbrace{\dot{\xi}\,\Delta H^\circ_{rxn}}_{\text{reaction at }298.15\ \text{K}} + \underbrace{\sum_j \dot{n}_{out,j}\,C_{P,j}\,(T_{stack} - 298.15)}_{\text{sensible heat of flue gas}}$$
+
+where $\dot{\xi} = 50$ mol/s is the extent of reaction (moles of methane burned per second). No reference state is needed — every term is already a $\Delta H$.
+
+**(d) Rate of heat transfer**
+
+Reaction term:
+
+$$\dot{\xi}\,\Delta H^\circ_{rxn} = 50 \times (-802.25) = -40{,}112.5\ \text{kJ/s}$$
+
+Sensible heat carried out by the flue gas ($T_{stack} - T_{in} = 200 - 25 = 175$ K):
+
+| Species | $\hb{\dot{n}}$ / mol s$\hb{^{-1}}$ | $\hb{C_P}$ / J mol$\hb{^{-1}}$ K$\hb{^{-1}}$ | $\hb{\dot{n}C_P}$ / kW K$\hb{^{-1}}$ |
+|---|---|---|---|
+| $\mathrm{CO_2}$ | 50 | 37.1 | 1.855 |
+| $\mathrm{H_2O}$ (g) | 100 | 34.0 | 3.400 |
+| $\mathrm{O_2}$ | 20 | 29.4 | 0.588 |
+| $\mathrm{N_2}$ | 451.4 | 29.1 | 13.137 |
+| **Total** | | | **18.98** |
+
+$$\sum \dot{n}_{out,j} C_{P,j}\,(T_{stack} - 298.15) = 18.98 \times 175 = 3321\ \text{kJ/s}$$
+
+$$
+\begin{aligned}
+\dot{Q} & = -40{,}112.5 + 3321 \\
+        & = -36{,}791\ \text{kW}
+\end{aligned}
+$$
+
+The negative sign shows energy leaves the gas side; 36.8 MW is transferred to the water.
+
+Note how dominant the nitrogen is — it makes up nearly 70% of the flue gas heat capacity and does nothing but carry energy up the stack.
+
+**(e) Steam production rate**
+
+Water side, steady state, no work, with $\dot{Q} = +36{,}791$ kW into the water:
+
+$$0 = \dot{m}(H_{feed} - H_{steam}) + \dot{Q}$$
+
+$$
+\begin{aligned}
+\dot{m} & = \frac{\dot{Q}}{H_{steam} - H_{feed}} \\
+        & = \frac{36{,}791}{2778 - 168} \\
+        & = \frac{36{,}791}{2610} = 14.1\ \text{kg/s}
+\end{aligned}
+$$
+
+**(f) Efficiency and the effect of fouling**
+
+$$\eta = \frac{36{,}791}{40{,}112.5} = 0.917 \quad (91.7\%)$$
+
+At a stack temperature of 400 °C the only term that changes is the flue gas sensible heat, since the flue gas composition and flow are unaltered:
+
+$$\sum \dot{n}_{out,j} C_{P,j}\,(673.15 - 298.15) = 18.98 \times 375 = 7118\ \text{kW}$$
+
+$$\dot{Q} = -40{,}112.5 + 7118 = -32{,}995\ \text{kW}$$
+
+$$\eta = \frac{32{,}995}{40{,}112.5} = 0.823 \quad (82.3\%)$$
+
+$$\dot{m} = \frac{32{,}995}{2610} = 12.6\ \text{kg/s}$$
+
+**Comment:** a 200 K rise in stack temperature costs roughly 9 percentage points of efficiency and about 1.5 kg/s of steam — a 10% loss of boiler capacity — while the fuel bill is unchanged. Stack temperature is therefore a direct and cheap indicator of boiler health, which is why it is monitored continuously in practice. It also shows why economisers (which recover flue gas heat to preheat feedwater) are worth installing: every kelvin removed from the stack goes straight into the steam.
+
+:::
+
+:::
