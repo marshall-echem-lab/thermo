@@ -1,0 +1,6 @@
+---
+title: "Tutorial problems"
+show-solutions: true
+---
+
+{{< include problems/problem-E1-electrowinning.qmd >}}

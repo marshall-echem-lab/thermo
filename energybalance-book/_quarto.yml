@@ -10,6 +10,7 @@ book:
     - index.qmd
     - 01-ebal-intro.qmd
     - 02-ebal-states-phaserule.qmd
+    - 03-exam-practice.qmd
     - useful-info.qmd
     - key-terms.qmd
     - problems-solutions.qmd
