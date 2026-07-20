@@ -1,12 +1,90 @@
-## Example 3.1: Identifying terms for the energy balance {.unnumbered .scrollable}
+## Example 3.1: Identifying the terms in the energy balance {.unnumbered .scrollable}
 
-Question
+For each system below, start from the general energy balance and simplify. State the assumption that lets you remove each term — don't delete terms from memory.
+
+::: {style="font-size: 0.7em"}
+$$\frac{d(m_{sys}H_{sys})}{dt} = \sum_i \dot{m}_{in,i} H_{in,i} - \sum_j \dot{m}_{out,j} H_{out,j} + \sum_k \dot{Q}_k + \sum_l \dot{W}_l$$
+:::
+
+::: {style="font-size: 0.7em"}
+**(a) A heat exchanger (steady state).** A hot stream and a cold stream pass through a heat exchanger and swap heat. Write the balance for *two different* choices of boundary:
+
+- (i) the boundary drawn around the **entire** exchanger (both streams inside), and
+- (ii) the boundary drawn around the **hot side** and the **cold side** separately.
+
+**(b) An insulated tank (closed).** Ice and liquid water are sealed in a well-insulated tank and left to reach equilibrium as the ice melts. Nothing flows in or out.
+
+**(c) A pump feeding a steam-injection point (steady state).** Liquid is pumped up to pressure, then steam is injected into the pumped stream to heat it. Take the system as the pump **plus** the injection point.
+:::
 
 ::: {.content-visible unless-format="revealjs"}
 
 ::: {.callout-note icon=false collapse="true" title="Solution"}
 
-Solution
+The whole exercise is deciding, term by term, whether each term in the general balance stays or goes. The four things to check every time are: is it **steady** (accumulation), is there **flow** ($\dot{m}H$), does **heat** cross the boundary ($\dot{Q}$), and is there **shaft work** ($\dot{W}$).
+
+### (a)(i) Whole heat exchanger as one system
+
+Assumptions and the terms they act on:
+
+- **Steady state** $\Rightarrow \dfrac{d(m_{sys}H_{sys})}{dt} = 0$ — accumulation goes.
+- **Two inlets, two outlets** (hot in, cold in, hot out, cold out) — all four $\dot{m}H$ terms stay.
+- **Shell insulated from the surroundings, and the heat swapped between the two streams is *internal* to this boundary** — it never crosses the system boundary, so there is **no $\dot{Q}$ term**. This is the key point: the heat transfer is invisible with this boundary.
+- **No moving parts** $\Rightarrow \dot{W} = 0$.
+
+$$0 = \dot{m}_{h}H_{h,in} + \dot{m}_{c}H_{c,in} - \dot{m}_{h}H_{h,out} - \dot{m}_{c}H_{c,out}$$
+
+### (a)(ii) Hot side and cold side as separate systems
+
+Now the boundary cuts *between* the two streams, so the heat they exchange **does** cross it. Same device, but a $\dot{Q}$ term appears on each side.
+
+Hot side — one inlet, one outlet, steady, no work, heat *leaves* into the cold side ($\dot{Q}_h < 0$):
+
+$$0 = \dot{m}_{h}H_{h,in} - \dot{m}_{h}H_{h,out} + \dot{Q}_{h}$$
+
+Cold side — heat *enters* from the hot side ($\dot{Q}_c > 0$):
+
+$$0 = \dot{m}_{c}H_{c,in} - \dot{m}_{c}H_{c,out} + \dot{Q}_{c}$$
+
+With no losses to the surroundings, $\dot{Q}_{h} = -\dot{Q}_{c}$. Nothing about the physics changed between (i) and (ii) — only where the boundary was drawn — yet $\dot{Q}$ switches from absent to present.
+
+### (b) Insulated tank of ice and water (closed)
+
+- **Closed** — nothing crosses the boundary $\Rightarrow \dot{m}_{in} = \dot{m}_{out} = 0$, all flow terms go.
+- **Insulated / adiabatic** $\Rightarrow \dot{Q} = 0$.
+- **No shaft work** (no stirrer, or its work is negligible) $\Rightarrow \dot{W} = 0$.
+- **Unsteady** — the ice is melting and the temperature is equilibrating, so the accumulation term is the *only* one that survives.
+
+$$\frac{d(m_{sys}H_{sys})}{dt} = 0$$
+
+The total mass is constant, so integrating between the initial state (ice + water) and the final state (all liquid at equilibrium):
+
+$$m_{sys}\,\Delta H_{sys} = 0 \quad\Rightarrow\quad \Delta H_{sys} = 0$$
+
+The enthalpy released as the liquid water cools is exactly the enthalpy absorbed by the melting ice — it all stays inside the boundary.
+
+### (c) Pump plus steam injection (steady state)
+
+- **Steady state** $\Rightarrow \dfrac{d(m_{sys}H_{sys})}{dt} = 0$.
+- **Two inlets** (liquid in, steam in), **one outlet** (combined stream) — these three $\dot{m}H$ terms stay.
+- **Pump does shaft work on the fluid** $\Rightarrow \dot{W}_{pump}$ survives (positive — work *into* the system).
+- **Adiabatic** (assume no heat loss over the pump and injection point) $\Rightarrow \dot{Q} = 0$.
+
+$$0 = \dot{m}_{liq}H_{liq,in} + \dot{m}_{steam}H_{steam,in} - \dot{m}_{out}H_{out} + \dot{W}_{pump}$$
+
+together with the mass balance $\dot{m}_{out} = \dot{m}_{liq} + \dot{m}_{steam}$.
+
+### Summary — which terms survive
+
+| System | Accumulation | $\dot{m}H$ (in / out) | $\dot{Q}$ | $\dot{W}$ |
+|---|:---:|:---:|:---:|:---:|
+| (a)(i) whole exchanger | 0 | 2 in / 2 out | — | — |
+| (a)(ii) each side alone | 0 | 1 in / 1 out | ✓ | — |
+| (b) ice + water tank | ✓ (= 0) | — | — | — |
+| (c) pump + steam injection | 0 | 2 in / 1 out | — | ✓ |
+
+The takeaway: the surviving terms are decided entirely by the **process** (steady vs unsteady, flow vs closed) and by **where you draw the boundary** — as (a)(i) vs (a)(ii) shows, the very same heat exchanger gains or loses its $\dot{Q}$ term depending only on the boundary choice.
 
 :::
+
 :::
