@@ -16,7 +16,7 @@ Synthesis gas enters the reactor at 350 °C at the following rates:
 
 80% of the carbon monoxide fed is converted. The following data are provided:
 
-| Species | Enthalpy of formation / kJ mol$\hb{^{-1}}$ | Heat capacity / J mol$\hb{^{-1}}$ K$\hb{^{-1}}$ |
+| Species | $\hb{\Delta H_{form}^{\circ}}$/ kJ mol$\hb{^{-1}}$ | Heat capacity / J mol$\hb{^{-1}}$ K$\hb{^{-1}}$ |
 |---|---|---|
 | $\mathrm{CO}$ (g) | −110.5 | 29.1 |
 | $\mathrm{H_2O}$ (g) | −241.8 | 34.0 |

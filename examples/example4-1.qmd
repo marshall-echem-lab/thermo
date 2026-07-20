@@ -1,6 +1,6 @@
 ## Example 4.1: Heating milk for pasteurisation {.unnumbered .scrollable}
 
-Raw milk is pumped continuously through a heater on its way to a pasteuriser. The milk enters at 4 $^\circ$C and must leave at 72 $^\circ$C. The volumetric flow rate is 5000 L hr$^{-1}$.
+Raw milk is pumped continuously through a heater on its way to a pasteuriser. The milk enters at 4 $^\circ$C and leaves at 72 $^\circ$C. The volumetric flow rate is 5000 L hr$^{-1}$.
 
 Calculate the rate of heat transfer required.
 

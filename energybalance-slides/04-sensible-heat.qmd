@@ -116,7 +116,7 @@ Values at 25 $^\circ$C:
 
 . . .
 
-Rule of thumb: almost any solid has a $C_P \approx 25$ J mol$^{-1}$ K$^{-1}$.
+Rule of thumb: almost any solid has a $C_P \approx 25$ J mol$^{-1}$ K$^{-1}$
 
 ## $C_P$ is not constant with temperature
 In reality, $C_P$ changes as the temperature changes.
@@ -150,8 +150,6 @@ $$\Delta H = \int_{T_1}^{T_2}\left(a + bT + cT^2\right)dT$$
 
 $$\Delta H = a(T_2 - T_1) + \frac{b}{2}\left(T_2^2 - T_1^2\right) + \frac{c}{3}\left(T_2^3 - T_1^3\right)$$
 
-. . .
-
 This is exact, but a hassle.
 
 ## The integral-weighted mean heat capacity
@@ -169,7 +167,7 @@ $$\Delta H = \langle C_P \rangle (T_2 - T_1)$$
 
 
 ## Sensible heat and reference states
-To calculate an enthalpy relative to reference temperature $T_{ref}$:
+To calculate an enthalpy relative to a reference temperature:
 $$H = H_{ref} + \int_{T_{ref}}^{T} C_P dT$$
 
 . . .
@@ -179,17 +177,17 @@ $$H = \int_{T_{ref}}^{T} C_P\,dT = \langle C_P \rangle\,(T - T_{ref})$$
 
 . . .
 
-Use the **same** reference state for every term in the balance, and it cancels out of the final answer.
+Use the **same** reference state for every term in the balance
 
 ## Solving a sensible-heat balance
 
 ::: {.incremental}
-1. Define the system and list assumptions.
-2. Write the general balance; delete the terms that vanish.
-3. Write each enthalpy as a sensible-heat term, $\int^{T}_{ref} C_P dT$.
+1. Define the system and list assumptions
+2. Write the general balance; delete the terms that vanish
+3. Write each enthalpy as a sensible-heat term, $\int^{T}_{ref} C_P dT$
 4. Decide: constant or temperature-dependent $C_P$ ?
-5. Choose the reference state. This should cancel out eventually.
-6. Solve symbolically first, then substitute numbers.
+5. Choose the reference state. This should cancel out eventually
+6. Solve symbolically first, then substitute numbers
 :::
 
 

@@ -1,11 +1,11 @@
 ## Problem 1.2: Cooling an air stream {.unnumbered}
 
 A stream of 200 kg/h of air is cooled from 150 $^\circ$C to 40 $^\circ$C at constant
-pressure with no phase change. Determine the cooling requirement in kW.
+pressure with no phase change.
 
-Data:
+Determine the cooling requirement in kW.
 
-- $C_P = 1.005\ \text{kJ}\,\text{kg}^{-1}\,\text{K}^{-1}$
+$C_P = 1.005\ \text{kJ}\,\text{kg}^{-1}\,\text{K}^{-1}$
 
 ::: {.content-visible when-meta="show-solutions"}
 

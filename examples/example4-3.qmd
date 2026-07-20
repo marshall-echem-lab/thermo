@@ -7,7 +7,7 @@ Canola oil (12,000 kg) at 15 $^\circ$C is heated to 60 $^\circ$C before a biodie
 **(b)** Calculate the heating time when using a steam coil heater at 120 $^\circ$C where:
 $$\dot{Q} = UA\left(T_{steam} - T\right)$$
 
-with $UA = 4.0$ kW K$^{-1}$
+$UA = 4.0$ kW K$^{-1}$
 
 $C_{P,oil} = 1.95$ kJ kg$^{-1}$ K$^{-1}$.
 
