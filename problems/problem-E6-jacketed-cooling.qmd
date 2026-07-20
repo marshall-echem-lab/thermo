@@ -24,7 +24,7 @@ The following data are provided:
 
 **(a)** Starting from the general energy balance, derive the differential equation describing the batch temperature as a function of time. State and justify every assumption you use. For this part only, assume the stirrer is switched off.
 
-**(b)** Separate the variables and integrate to obtain an expression for $T(t)$. Identify the time constant of the process and state its physical meaning.
+**(b)** Separate the variables and integrate to obtain an expression for $T(t)$. 
 
 **(c)** Calculate the time required to cool the batch from 90 °C to 30 °C with the stirrer off.
 
@@ -76,17 +76,15 @@ $$\int_{T_0}^{T}\frac{dT}{T - T_{jacket}} = -\frac{UA}{m\,C_P}\int_0^t dt$$
 
 $$\ln\!\left(\frac{T - T_{jacket}}{T_0 - T_{jacket}}\right) = -\frac{UA}{m\,C_P}\,t$$
 
-$$T(t) = T_{jacket} + (T_0 - T_{jacket})\,\exp\!\left(-\frac{t}{\tau}\right), \qquad \tau = \frac{m\,C_P}{UA}$$
+$$T(t) = T_{jacket} + (T_0 - T_{jacket})\,\exp\!\left(-\frac{UA}{m\,C_P}\,t\right)$$
 
-The temperature approaches the jacket temperature exponentially rather than linearly. The time constant $\tau$ is the time taken for the *remaining* temperature difference to fall to $1/e$ (about 37%) of its starting value; equivalently, it is the thermal capacity of the batch divided by its rate of heat loss per kelvin of driving force.
-
-$$\tau = \frac{500 \times 3200}{1200} = 1333\ \text{s} = 22.2\ \text{min}$$
+The temperature approaches the jacket temperature exponentially rather than linearly. 
 
 **(c) Cooling time, stirrer off**
 
 Rearranging for $t$:
 
-$$t = \tau\,\ln\!\left(\frac{T_0 - T_{jacket}}{T - T_{jacket}}\right)$$
+$$t = \left(\frac{mC_P}{UA}\right) \ln\!\left(\frac{T_0 - T_{jacket}}{T - T_{jacket}}\right)$$
 
 $$
 \begin{aligned}
@@ -115,15 +113,13 @@ Rewriting the differential equation in terms of $T_\infty$ shows the mathematics
 
 $$m\,C_P\,\frac{dT}{dt} = UA\,(T_\infty - T)$$
 
-$$T(t) = T_\infty + (T_0 - T_\infty)\,\exp\!\left(-\frac{t}{\tau}\right)$$
-
-with the same time constant $\tau = mC_P/UA = 1333$ s. Only the asymptote has moved.
+$$T(t) = T_\infty + (T_0 - T_\infty)\,\exp\!\left(-\frac{UA}{m\,C_P}\,t\right)$$
 
 **(e) Cooling time with the stirrer running**
 
 $$
 \begin{aligned}
-t & = \tau\,\ln\!\left(\frac{T_0 - T_\infty}{T - T_\infty}\right) \\
+t & = \frac{mC_P}{UA}\,\ln\!\left(\frac{T_0 - T_\infty}{T - T_\infty}\right) \\
   & = 1333 \times \ln\!\left(\frac{90 - 19.2}{30 - 19.2}\right) \\
   & = 1333 \times \ln(6.56) \\
   & = 1333 \times 1.881 \\

@@ -1,6 +1,6 @@
 ## Problem E5: Natural Gas Boiler Raising Steam {.unnumbered}
 
-A packaged water-tube boiler raises saturated steam for a food processing plant. Natural gas (assume pure methane, $\mathrm{CH_4}$) is burned continuously in a furnace, and the hot combustion gases pass over the boiler tubes before leaving through the stack. Boiler feedwater is pumped into the tubes and leaves as saturated steam.
+A boiler raises saturated steam for a food processing plant. Natural gas (assume pure methane, $\mathrm{CH_4}$) is burned continuously in a furnace, and the hot combustion gases pass over the boiler tubes before leaving through the stack. Boiler feedwater is pumped into the tubes and leaves as saturated steam.
 
 The furnace and boiler are treated as a single, well-insulated unit: all the energy released by combustion either leaves with the flue gas or is transferred to the water. Combustion is complete, and all water in the flue gas remains as vapour.
 
@@ -75,7 +75,7 @@ Nitrogen is inert and passes straight through; 100 mol/s of the oxygen is consum
 Assumptions:
 
 - Steady state $\Rightarrow \dfrac{d(m_{sys}H_{sys})}{dt} = 0$.
-- No shaft work on the gas side $\Rightarrow \dot{W} = 0$.
+- No work on the gas side $\Rightarrow \dot{W} = 0$.
 - The furnace shell is insulated, so the only heat transfer is to the water side, $\dot{Q}$.
 - Complete combustion; heat capacities constant over the temperature range.
 
@@ -97,7 +97,7 @@ where $\dot{\xi} = 50$ mol/s is the extent of reaction (moles of methane burned 
 
 Reaction term:
 
-$$\dot{\xi}\,\Delta H^\circ_{rxn} = 50 \times (-802.25) = -40{,}112.5\ \text{kJ/s}$$
+$$\dot{n}_{methane} \Delta H^\circ_{rxn} = 50 \times (-802.25) = -40{,}112.5\ \text{kJ/s}$$
 
 Sensible heat carried out by the flue gas ($T_{stack} - T_{in} = 200 - 25 = 175$ K):
 
