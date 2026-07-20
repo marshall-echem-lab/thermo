@@ -1,6 +1,6 @@
 ## Example 4.3: Preheating a canola oil tank {.unnumbered .scrollable}
 
-A batch of canola oil must be preheated to 60 $^\circ$C before it is fed to a biodiesel transesterification reactor. The storage tank holds 12 000 kg of oil, initially at 15 $^\circ$C. The tank is well insulated and is fitted with an agitator that keeps the oil at a uniform temperature (the agitator work is negligible). Nothing enters or leaves the tank during the preheat.
+Canola oil (12,000 kg) at 15 $^\circ$C must be preheated to 60 $^\circ$C before it is fed to a biodiesel transesterification reactor. The tank is well insulated. Nothing enters or leaves the tank during the preheat.
 
 **(a)** The tank is heated by an electric immersion heater rated at 150 kW. How long does the preheat take?
 
@@ -10,7 +10,7 @@ $$\dot{Q} = UA\left(T_{steam} - T\right)$$
 
 with $UA = 4.0$ kW K$^{-1}$. How long does the preheat take now?
 
-Data: $C_{P,oil} = 1.95$ kJ kg$^{-1}$ K$^{-1}$ (constant over this range).
+Data: $C_{P,oil} = 1.95$ kJ kg$^{-1}$ K$^{-1}$.
 
 ::: {.content-visible unless-format="revealjs"}
 

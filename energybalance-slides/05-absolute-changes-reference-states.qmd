@@ -71,6 +71,7 @@ $$H_1 = \displaystyle\int_{T_{ref}}^{T_1} C_P dT + H_{ref}$$
 $$H_2 = \displaystyle\int_{T_{ref}}^{T_2} C_P dT + H_{ref}$$
 
 . . .
+
 $$\Delta H = H_2 - H_1 = \displaystyle\int_{T_1}^{T_2} C_P\,dT$$
 
 . . .

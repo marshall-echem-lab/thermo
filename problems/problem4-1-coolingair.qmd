@@ -1,9 +1,11 @@
 ## Problem 1.2: Cooling an air stream {.unnumbered}
 
-A stream of 200 kg/h of air is cooled from 150 °C to 40 °C at constant
-pressure with no phase change. Taking the specific heat capacity of air as
-$C_P = 1.005\ \text{kJ}\,\text{kg}^{-1}\,\text{K}^{-1}$, determine the
-cooling duty in kW.
+A stream of 200 kg/h of air is cooled from 150 $^\circ$C to 40 $^\circ$C at constant
+pressure with no phase change. Determine the cooling requirement in kW.
+
+Data:
+
+- $C_P = 1.005\ \text{kJ}\,\text{kg}^{-1}\,\text{K}^{-1}$
 
 ::: {.content-visible when-meta="show-solutions"}
 
@@ -28,13 +30,11 @@ $$
 \begin{aligned}
 \dot{Q} & = \dot{m} C_P (T_{out}-T_{in}) \\
 & = (200)(1.005)(40 - 150) \\
-& = -22{,}110\ \text{kJ/h}
+& = -22{,}110\ \text{kJ/h}\\
+& = - 6.14\ \text{kW}
 \end{aligned}
 $$
 
-The negative sign indicates heat removed. As a cooling duty:
-
-$$|\dot{Q}| = \frac{22{,}110\ \text{kJ/h}}{3600\ \text{s/h}} \approx 6.14\ \text{kW}.$$
 :::
 
 :::

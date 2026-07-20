@@ -66,6 +66,9 @@ For ideal gases, $H^{ig}$ **only** depends on $T$, therefore $C_P^{ig}$ also onl
 
 ## Calculating a sensible enthalpy change
 $$\frac{dH}{dT}=C_P$$
+
+. . .
+
 $$dH = C_P dT$$
 
 . . .
@@ -79,7 +82,7 @@ $$\Delta H = \int_{T_1}^{T_2} C_P\,dT$$
 
 ## The simplest case: constant $C_P$
 Assuming $C_P$ is constant over the temperature range:
-$$\Delta H = C_P\int_{T_1}^{T_2} dT = C_P(T_2 - T_1)$$
+$$\Delta H = \int_{T_1}^{T_2} C_P dT = C_P\int_{T_1}^{T_2} dT = C_P(T_2 - T_1)$$
 
 . . .
 
@@ -93,7 +96,7 @@ $C_P$ can have mass or molar basis — make sure it matches the units in the bal
 
 ::: {.incremental}
 - **Mass basis:** $C_P$ in J kg$^{-1}$ K$^{-1}$, used with $m \int C_P dT$
-- **Molar basis:** $C_P$ in J mol$^{-1}$ K$^{-1}$, used with $n\inr C_P dT$
+- **Molar basis:** $C_P$ in J mol$^{-1}$ K$^{-1}$, used with $n\int C_P dT$
 :::
 
 ## Some common heat capacities
@@ -166,7 +169,7 @@ $$\Delta H = \langle C_P \rangle (T_2 - T_1)$$
 
 
 ## Sensible heat and reference states
-To build a stream or system enthalpy, measure it from a chosen reference temperature $T_{ref}$:
+To calculate an enthalpy relative to reference temperature $T_{ref}$:
 $$H = H_{ref} + \int_{T_{ref}}^{T} C_P dT$$
 
 . . .
@@ -179,15 +182,14 @@ $$H = \int_{T_{ref}}^{T} C_P\,dT = \langle C_P \rangle\,(T - T_{ref})$$
 Use the **same** reference state for every term in the balance, and it cancels out of the final answer.
 
 ## Solving a sensible-heat balance
-The recipe (straight from the general balance):
 
 ::: {.incremental}
 1. Define the system and list assumptions.
 2. Write the general balance; delete the terms that vanish.
 3. Write each enthalpy as a sensible-heat term, $\int^{T}_{ref} C_P dT$.
-4. Decide: constant $C_P$, or temperature-dependent (mean $C_P$)?
+4. Decide: constant or temperature-dependent $C_P$ ?
 5. Choose the reference state. This should cancel out eventually.
-6. Solve symbolically first, then substitute numbers — and check the sign and magnitude.
+6. Solve symbolically first, then substitute numbers.
 :::
 
 

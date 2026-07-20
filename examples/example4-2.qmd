@@ -1,12 +1,16 @@
 ## Example 4.2: Heat recovery from a flue gas {.unnumbered .scrollable}
 
-Hot flue gas leaving a furnace is passed through a counter-current heat exchanger to recover heat into a thermal oil loop.
 
-The flue gas enters at 320 $^\circ$C with a mass flow rate of 2.5 kg s$^{-1}$. The thermal oil enters at 60 $^\circ$C and must leave at 180 $^\circ$C. To avoid acid condensation on the exchanger tubes, the flue gas must not be cooled below 150 $^\circ$C, and the exchanger is designed to cool it to exactly this temperature.
+Hot flue gas leaving a furnace is passed through a heat exchanger to recover heat into a thermal oil loop.
 
-Determine the heat transferred in the heat exchanger and the required thermal oil circulation rate. Solve the problem twice: once by treating each side as its own system, and once by treating the whole exchanger as a single system.
+The flue gas enters at 320 $^\circ$C at 2.5 kg s$^{-1}$. The thermal oil enters at 60 $^\circ$C and must leave at 180 $^\circ$C. 
 
-Data: $C_{P,gas} = 1.15$ kJ kg$^{-1}$ K$^{-1}$, $C_{P,oil} = 2.30$ kJ kg$^{-1}$ K$^{-1}$ (both constant).
+Determine the heat transferred and the required thermal oil circulation rate. Solve the problem twice: once by treating each side as its own system, and once by treating the whole exchanger as a single system.
+
+Data:
+
+- $C_{P,gas} = 1.15$ kJ kg$^{-1}$ K$^{-1}$
+- $C_{P,oil} = 2.30$ kJ kg$^{-1}$ K$^{-1}$
 
 ::: {.content-visible unless-format="revealjs"}
 
@@ -23,7 +27,7 @@ It is worth counting knowns, unknowns and equations before writing anything down
 
 Treating each side as its own system gives **two** independent energy balances (one per side). With **three** unknowns and two equations, the problem is under-specified by one — we cannot solve it.
 
-This is why the flue gas exit temperature is specified as 150 $^\circ$C. That removes one unknown:
+Lets assume the flue gas exit temperature is 150 $^\circ$C. That removes one unknown:
 
 - Unknowns: $\dot{Q}$, $\dot{m}_{oil}$ $\rightarrow$ **2**
 - Independent equations: **2**
