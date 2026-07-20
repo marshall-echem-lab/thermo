@@ -21,7 +21,7 @@ $$\frac{d(m_{sys}H_{sys})}{dt} = \sum_i \dot{m}_{in,i} H_{in,i} - \sum_j \dot{m}
 
 ::: {.callout-note icon=false collapse="true" title="Solution"}
 
-The whole exercise is deciding, term by term, whether each term in the general balance stays or goes. The four things to check every time are: is it **steady** (accumulation), is there **flow** ($\dot{m}H$), does **heat** cross the boundary ($\dot{Q}$), and is there **shaft work** ($\dot{W}$).
+The whole exercise is deciding, term by term, whether each term in the general balance stays or goes. The four things to check every time are: is it **steady** (accumulation), is there **flow** ($\dot{m}H$), does **heat** cross the boundary ($\dot{Q}$), and is there **work** ($\dot{W}$).
 
 ### (a)(i) Whole heat exchanger as one system
 
@@ -52,29 +52,39 @@ With no losses to the surroundings, $\dot{Q}_{h} = -\dot{Q}_{c}$. Nothing about 
 
 - **Closed** — nothing crosses the boundary $\Rightarrow \dot{m}_{in} = \dot{m}_{out} = 0$, all flow terms go.
 - **Insulated / adiabatic** $\Rightarrow \dot{Q} = 0$.
-- **No shaft work** (no stirrer, or its work is negligible) $\Rightarrow \dot{W} = 0$.
-- **Unsteady** — the ice is melting and the temperature is equilibrating, so the accumulation term is the *only* one that survives.
+- **No work** (no stirrer, or its work is negligible) $\Rightarrow \dot{W} = 0$.
+- **Unsteady** — the ice is melting and the temperature is equilibrating, so the accumulation term is the *only* one that remains.
 
 $$\frac{d(m_{sys}H_{sys})}{dt} = 0$$
 
 The total mass is constant, so integrating between the initial state (ice + water) and the final state (all liquid at equilibrium):
 
-$$m_{sys}\,\Delta H_{sys} = 0 \quad\Rightarrow\quad \Delta H_{sys} = 0$$
+$$
+\begin{aligned}
+\frac{d(m_{sys}H_{sys})}{dt} & = 0\\
+                d(m_{sys}H_{sys}) & = 0\,dt\\
+                m_{sys}\,dH_{sys} & = 0\\
+                m_{sys}\int^{final}_{initial} dH_{sys} & = 0\\
+                m_{sys} (H_{final}-H_{initial}) & = 0
+\end{aligned}
+$$  
 
-The enthalpy released as the liquid water cools is exactly the enthalpy absorbed by the melting ice — it all stays inside the boundary.
+where $H_{final}$ is the enthalpy of the mixed ice and water (probably water and melted ice) and $H_{initial}$ is the enthalpy of the ice and water as separate components.
+
+As the enthalpy at the end is the same as the start, any energy used to melt the the ice must have come from the water. So we would expect the temperature will be somewhere between the initial temperatures of the ice and water.
 
 ### (c) Pump plus steam injection (steady state)
 
 - **Steady state** $\Rightarrow \dfrac{d(m_{sys}H_{sys})}{dt} = 0$.
 - **Two inlets** (liquid in, steam in), **one outlet** (combined stream) — these three $\dot{m}H$ terms stay.
-- **Pump does shaft work on the fluid** $\Rightarrow \dot{W}_{pump}$ survives (positive — work *into* the system).
+- **Pump does work on the fluid** $\Rightarrow \dot{W}_{pump}$ remains (positive — work *into* the system).
 - **Adiabatic** (assume no heat loss over the pump and injection point) $\Rightarrow \dot{Q} = 0$.
 
 $$0 = \dot{m}_{liq}H_{liq,in} + \dot{m}_{steam}H_{steam,in} - \dot{m}_{out}H_{out} + \dot{W}_{pump}$$
 
 together with the mass balance $\dot{m}_{out} = \dot{m}_{liq} + \dot{m}_{steam}$.
 
-### Summary — which terms survive
+### Summary — which terms remain
 
 | System | Accumulation | $\dot{m}H$ (in / out) | $\dot{Q}$ | $\dot{W}$ |
 |---|:---:|:---:|:---:|:---:|
@@ -83,7 +93,7 @@ together with the mass balance $\dot{m}_{out} = \dot{m}_{liq} + \dot{m}_{steam}$
 | (b) ice + water tank | ✓ (= 0) | — | — | — |
 | (c) pump + steam injection | 0 | 2 in / 1 out | — | ✓ |
 
-The takeaway: the surviving terms are decided entirely by the **process** (steady vs unsteady, flow vs closed) and by **where you draw the boundary** — as (a)(i) vs (a)(ii) shows, the very same heat exchanger gains or loses its $\dot{Q}$ term depending only on the boundary choice.
+The remaining terms are decided entirely by the **process** (steady vs unsteady, flow vs closed) and by **where you draw the boundary** — as (a)(i) vs (a)(ii) shows, the very same heat exchanger gains or loses its $\dot{Q}$ term depending only on the boundary choice.
 
 :::
 
