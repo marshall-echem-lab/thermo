@@ -41,8 +41,8 @@ For a sensible heat effect, this is just the integral from Summary 4:
 
 $$\Delta H_{1\rightarrow 2} = \int_{T_1}^{T_2} C_P\,dT = \langle C_P \rangle\,(T_2 - T_1)$$
 
-## The reference state: invent a zero
-Pick a state, call it the **reference state**, and *declare* its enthalpy to be zero.
+## The reference state: choose a zero
+Pick a **reference state** and set its enthalpy as zero
 
 $$H_{ref} \equiv 0$$
 
@@ -64,11 +64,14 @@ An "absolute" enthalpy is really just a change — measured from a reference poi
 
 ## Reference state calculations
 
-::: {.incremental}
-- $H_1 = \displaystyle\int_{T_{ref}}^{T_1} C_P dT + H_{ref}$ 
-- $H_2 = \displaystyle\int_{T_{ref}}^{T_2} C_P dT + H_{ref}$
-- $\Delta H = H_2 - H_1 = \displaystyle\int_{T_1}^{T_2} C_P\,dT$
-:::
+$$H_1 = \displaystyle\int_{T_{ref}}^{T_1} C_P dT + H_{ref}$$ 
+
+. . .
+
+$$H_2 = \displaystyle\int_{T_{ref}}^{T_2} C_P dT + H_{ref}$$
+
+. . .
+$$\Delta H = H_2 - H_1 = \displaystyle\int_{T_1}^{T_2} C_P\,dT$$
 
 . . .
 

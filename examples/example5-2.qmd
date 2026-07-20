@@ -1,10 +1,9 @@
 ## Example 5.2: The reference state is arbitrary
 
-Repeat the heat calculation of Example 5.1 using two
-further reference temperatures:
+Repeat the heat calculation of Example 5.1 using two further reference temperatures:
 
-1. $T_{ref} = 25\ ^\circ$C — the inlet temperature.
-2. $T_{ref} = 200\ ^\circ$C — deliberately above both stream temperatures.
+1. $T_{ref} = 25\ ^\circ$C
+2. $T_{ref} = 200\ ^\circ$C
 
 What happens to the individual stream enthalpies, and what happens to $\dot{Q}$?
 
