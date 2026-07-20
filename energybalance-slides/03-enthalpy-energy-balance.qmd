@@ -92,17 +92,23 @@ $$
 
 ## The General Energy Balance Equation
 The general energy balance equation can describe any process:
+
+::: {style="font-size: 0.8em"}
 $$\frac{d(m_{sys}H_{sys})}{dt} = \sum_i \dot{m}_{i,i} H_{in,i} - \sum_j \dot{m}_{out,j} H_{out,j} + \sum_k \dot{Q}_k + \sum_l \dot{W}_l$$
+:::
 
 The summation terms allow for multiple:
-- flow streams  into the system
+
+- flow streams into the system
 - flow streams out of the system 
 - heat and work transfer terms over the system-surrounding boundary
 
-## The General Energy Balance Equation (molar basis)
+## The General Energy Balance Equation
 If the system is described in moles rather than mass:
 
+::: {style="font-size: 0.8em"}
 $$\frac{d(n_{sys}H_{sys})}{dt} = \sum_i \dot{n}_{i,i} H_{in,i} - \sum_j \dot{n}_{out,j} H_{out,j} + \sum_k \dot{Q}_k + \sum_l \dot{W}_l$$
+:::
 
 where:
 
