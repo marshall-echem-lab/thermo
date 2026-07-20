@@ -4,7 +4,7 @@ End-of-life lithium-ion battery packs must be fully discharged before they are s
 
 One common method is to connect the pack across a resistive heating element immersed in a tank of water. The stored electrical energy is dissipated as heat in the water, which is a cheap, safe and easily monitored sink.
 
-A batch of packs is to be processed. Each pack is discharged individually into a well-stirred, insulated tank containing 200 kg of water initially at 15 °C. The pack is discharged at a constant current of 20 A until it is flat, and the pack voltage may be taken as constant at 48 V throughout the discharge.
+A batch of packs is to be processed. Each pack is discharged individually into a well-stirred, insulated tank containing 200 kg of water initially at 15 $^\circ$C. The pack is discharged at a constant current of 20 A until it is flat, and the pack voltage may be taken as constant at 48 V throughout the discharge.
 
 The following data are provided:
 
@@ -14,9 +14,9 @@ The following data are provided:
 | Pack capacity | 60 A h |
 | Discharge current | 20 A |
 | Mass of water in tank | 200 kg |
-| Initial water temperature | 15 °C |
+| Initial water temperature | 15 $^\circ$C |
 | Water heat capacity ($C_P$) | 4.18 kJ kg$^{-1}$ K$^{-1}$ |
-| Ambient temperature | 15 °C |
+| Ambient temperature | 15 $^\circ$C |
 | Tank heat loss coefficient ($UA$), part (e) onward | 25 W K$^{-1}$ |
 
 The heat capacity of the tank, heating element and pack may be neglected.
@@ -31,7 +31,7 @@ The heat capacity of the tank, heating element and pack may be neglected.
 
 **(e)** The tank is not in fact perfectly insulated and loses heat to the surroundings at a rate $\dot{Q} = UA\,(T_{amb} - T)$. Derive an expression for the water temperature as a function of time, and calculate the temperature at the end of the 3 hour discharge. Compare with your answer to (c).
 
-**(f)** Site rules require the tank never to exceed 40 °C. Calculate the minimum mass of water needed to satisfy this rule, using the conservative (insulated) assumption from part (c). Comment on whether using the insulated assumption is the right choice for a safety calculation.
+**(f)** Site rules require the tank never to exceed 40 $^\circ$C. Calculate the minimum mass of water needed to satisfy this rule, using the conservative (insulated) assumption from part (c). Comment on whether using the insulated assumption is the right choice for a safety calculation.
 
 {{< pagebreak >}}
 
@@ -79,7 +79,7 @@ $$\frac{d(m_{sys}H_{sys})}{dt} = \sum \dot{m}_{in}H_{in} - \sum \dot{m}_{out}H_{
 
 $$m\,C_P\,\frac{dT}{dt} = \dot{W}$$
 
-**Why $\dot{W}$ and not $\dot{Q}$:** heat is energy transferred across the system boundary because of a *temperature difference*. Nothing here is hotter than the water driving energy in — the energy arrives as electrical work done on the resistive element, which the element then degrades into internal energy of the water. The distinction matters conceptually (this is exactly Joule's paddle-wheel experiment in electrical form), even though the numerical effect on the water is identical to adding the same number of joules as heat. It also matters practically: the battery is a work source whose output is set by $VI$, independent of how hot the water gets, whereas a heat input would fall away as the water warmed.
+Here $\dot{W}$ and not $\dot{Q}$ was used as the energy transferred across the system boundary. It doesn't actually matter to the numerical answer. If you had drawn the system-surrounding boundary to not include the heating element, then the problem would have used $\dot{Q}$ not $\dot{W}$.
 
 **(c) Final water temperature**
 
@@ -104,11 +104,9 @@ $$T_f = 15 + 12.4 = 27.4\ ^\circ\text{C}$$
 
 **(d) Effect of doubling the current**
 
-The final temperature is **unchanged** at 27.4 °C.
+The final temperature is **unchanged** at 27.4 $^\circ$C.
 
 From part (c), $m C_P \Delta T = \dot{W}t$, and the product $\dot{W}t$ is fixed by the energy stored in the pack — doubling the current doubles $\dot{W}$ to 1920 W but halves $t$ to 1.5 h. The pack contains 10,368 kJ whatever rate it is released at, and all of it ends up in the same 200 kg of water.
-
-What *does* change is the rate of temperature rise (8.3 K/h instead of 4.1 K/h) and, more importantly, the heat flux at the surface of the heating element. At double the power the element must reject twice the energy through the same area, so its surface runs much hotter and may reach local boiling, which would violate the well-stirred single-temperature assumption and could damage the element. The energy balance sets the destination; it says nothing about whether the journey is safe.
 
 **(e) Including heat loss to the surroundings**
 
@@ -130,17 +128,13 @@ $$-\frac{1}{UA}\ln\!\left(\frac{\dot{W} - UA\,\theta}{\dot{W}}\right) = \frac{t}
 
 Rearranging for $\theta$:
 
-$$T(t) = T_{amb} + \frac{\dot{W}}{UA}\left[1 - \exp\!\left(-\frac{t}{\tau}\right)\right], \qquad \tau = \frac{m\,C_P}{UA}$$
+$$T(t) = T_{amb} + \frac{\dot{W}}{UA}\left[1 - \exp\!\left(-\frac{UAt}{m\,C_P}\right)\right]$$
 
 The water now approaches a steady-state temperature at which the heat lost equals the power supplied:
 
 $$T_\infty = T_{amb} + \frac{\dot{W}}{UA} = 15 + \frac{960}{25} = 15 + 38.4 = 53.4\ ^\circ\text{C}$$
 
-Time constant:
-
-$$\tau = \frac{200 \times 4180}{25} = 33{,}440\ \text{s} = 9.29\ \text{h}$$
-
-At the end of the discharge, $t = 10{,}800$ s:
+At the end of the 3 hour discharge, $t = 10{,}800$ s:
 
 $$
 \begin{aligned}
@@ -152,7 +146,7 @@ T & = 15 + 38.4\left[1 - e^{-10800/33440}\right] \\
 \end{aligned}
 $$
 
-Compared with 27.4 °C for the insulated case, heat loss costs 1.8 K. In energy terms:
+Compared with 27.4 $^\circ$C for the insulated case, heat loss costs 1.8 K. In energy terms:
 
 $$E_{lost} = 10{,}368 - (836 \times 10.6) = 10{,}368 - 8862 = 1506\ \text{kJ}$$
 
@@ -175,12 +169,7 @@ $$
 
 So roughly 100 kg of water is the minimum; the 200 kg actually used gives a comfortable factor of two.
 
-**Is the insulated assumption right for a safety calculation?** Yes. Neglecting heat loss over-predicts the final temperature, so the resulting water requirement is conservative — the real tank will always end up cooler than calculated, and the 40 °C limit will not be breached. Building in the heat loss would let the calculation specify less water, but the answer would then depend on $UA$, which varies with the lagging condition, the ambient temperature and the weather. A safety limit should not rest on a parameter that degrades over the life of the plant.
-
-Two caveats worth noting even so:
-
-- The calculation assumes one pack. Processing packs back-to-back means the tank starts each discharge warmer than 15 °C, and the accumulated energy — not the single-pack energy — sets the peak. The tank needs either time to cool between packs, a water changeover, or sizing on the daily throughput.
-- The pack is assumed to deliver exactly its rated capacity at 48 V. A pack whose actual state of charge or voltage is higher than rated would deliver more energy; the factor of two in the tank size covers this.
+**Is the insulated assumption right for a safety calculation?** Yes. Neglecting heat loss over-predicts the final temperature, so the resulting water requirement is conservative — the real tank will always end up cooler than calculated, and the 40 $^\circ$C limit will not be breached. Building in the heat loss would let the calculation specify less water, but the answer would then depend on $UA$, which varies with the insulation quality, the ambient temperature and the weather. A safety limit should not rest on a parameter that degrades over the life of the plant.
 
 :::
 

@@ -16,7 +16,7 @@ Synthesis gas enters the reactor at 350 °C at the following rates:
 
 80% of the carbon monoxide fed is converted. The following data are provided:
 
-| Species | Enthalpy of formation, $\hb{\Delta H^\circ_f}$ / kJ mol$\hb{^{-1}}$ | Heat capacity, $\hb{C_P}$ / J mol$\hb{^{-1}}$ K$\hb{^{-1}}$ |
+| Species | Enthalpy of formation / kJ mol$\hb{^{-1}}$ | Heat capacity / J mol$\hb{^{-1}}$ K$\hb{^{-1}}$ |
 |---|---|---|
 | $\mathrm{CO}$ (g) | −110.5 | 29.1 |
 | $\mathrm{H_2O}$ (g) | −241.8 | 34.0 |
@@ -33,8 +33,6 @@ Synthesis gas enters the reactor at 350 °C at the following rates:
 **(d)** Calculate the reactor outlet temperature.
 
 **(e)** The steam-to-CO ratio in the feed is 3:1, well above the 1:1 required by stoichiometry. Recalculate the outlet temperature for a 1:1 feed (20 mol s$^{-1}$ of steam) at the same 80% conversion, and explain the role the excess steam is playing.
-
-**(f)** The equilibrium constant for this reaction *decreases* with increasing temperature. Explain the design conflict this creates for an adiabatic reactor, and describe how an industrial shift section is arranged to work around it.
 
 {{< pagebreak >}}
 
@@ -97,9 +95,7 @@ So the total enthalpy change from inlet state to outlet state is zero. Enthalpy 
 
 $$\Delta \dot{H} = \underbrace{\sum_i \dot{n}_{in,i}C_{P,i}(298.15 - T_{in})}_{\Delta \dot{H}_1} + \underbrace{\dot{\xi}\,\Delta H^\circ_{rxn}}_{\Delta \dot{H}_2} + \underbrace{\sum_j \dot{n}_{out,j}C_{P,j}(T_{out} - 298.15)}_{\Delta \dot{H}_3} = 0$$
 
-Every term is an enthalpy *difference*, so no reference state is needed — only the 298.15 K waypoint, which is a step on the path, not a datum.
-
-Note that step 1 does not appear in a problem where the feed already enters at 298.15 K (compare E5); here it is essential, because the feed carries 325 K worth of sensible heat that also ends up in the product gas.
+Every term is an enthalpy *difference*, so no reference state is needed.
 
 **(d) Outlet temperature**
 
@@ -144,7 +140,7 @@ $$
 
 The adiabatic temperature rise across the bed is therefore $537.3 - 350 = 187\ ^\circ\text{C}$.
 
-**Sanity check:** the reaction is exothermic and the reactor is adiabatic, so the outlet must be hotter than the inlet — it is. A useful shortcut on the magnitude: dividing the reaction term alone by the product heat capacity gives $659.2/3.319 = 199$ K, close to the 187 K obtained. The difference arises only because the product gas has a slightly higher heat capacity than the feed (the $\mathrm{CO_2}$ formed has a much larger $C_P$ than the $\mathrm{CO}$ consumed), so the same sensible heat carried in by the feed corresponds to a slightly smaller temperature rise on the way out.
+**Sanity check:** the reaction is exothermic and the reactor is adiabatic, so the outlet must be hotter than the inlet.
 
 **(e) The effect of the steam-to-CO ratio**
 
@@ -165,28 +161,9 @@ T_{out} & = 298.15 + \frac{599.3 + 659.2}{1.959} \\
 \end{aligned}
 $$
 
-The adiabatic rise jumps from 187 °C to 317 °C.
+The adiabatic rise jumps from 187 $^\circ$C to 317 $^\circ$C.
 
-The excess steam is acting as **thermal ballast**. It takes no part in the energy release (the same 659 kJ/s is liberated in both cases) but it nearly doubles the heat capacity of the gas that this energy must heat, so the same enthalpy release produces a much smaller temperature rise. Excess steam also pushes the equilibrium toward products by Le Chatelier's principle, so it serves two purposes at once — but it is not free, since the steam must be raised and later condensed out.
-
-Controlling the outlet temperature matters practically: iron-chromium shift catalyst sinters and loses activity above roughly 550 °C, so the 667 °C outlet of the 1:1 case would destroy the bed.
-
-**(f) The design conflict and its industrial resolution**
-
-The conflict is that the two things the designer wants pull in opposite directions:
-
-- **Kinetics** favour high temperature — the reaction rate rises steeply with $T$, so a hot bed can be small.
-- **Equilibrium** favours low temperature — $K$ falls as $T$ rises (as expected for an exothermic reaction), so a hot bed cannot reach a high conversion no matter how large it is.
-
-In an adiabatic reactor these are coupled by the energy balance: the more CO you convert, the hotter the gas gets, and the hotter it gets the less CO it is *possible* to convert. The reaction extinguishes itself as the outlet approaches the equilibrium composition at the risen temperature. A single adiabatic bed therefore cannot achieve both a fast reaction and a high conversion.
-
-The industrial arrangement is **two adiabatic beds in series with interstage cooling**:
-
-1. A **high-temperature shift** (HTS) bed, inlet around 350 °C on iron-chromium catalyst, which does the bulk of the conversion quickly and exits hot — the reactor analysed above.
-2. An **interstage heat exchanger** (usually a waste heat boiler or feedwater preheater, so the energy is recovered as steam rather than thrown away) which cools the gas back to about 200 °C.
-3. A **low-temperature shift** (LTS) bed on a more active copper-zinc catalyst, which mops up the remaining CO under the far more favourable equilibrium available at 200 °C, typically taking the outlet CO down to a fraction of a percent.
-
-Each bed is individually adiabatic and analysed exactly as above; the cooling is placed *between* them rather than inside them, which keeps the reactors as simple packed beds.
+The excess steam is acting as **thermal resistance**. It takes no part in the energy release (the same 659 kJ/s is liberated in both cases) but it nearly doubles the heat capacity of the gas that this energy must heat, so the same enthalpy release produces a much smaller temperature rise.
 
 :::
 

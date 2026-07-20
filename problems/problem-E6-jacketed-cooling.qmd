@@ -1,8 +1,8 @@
 ## Problem E6: Batch Cooling in a Jacketed Vessel {.unnumbered}
 
-A batch of process liquid is held in a well-stirred, jacketed vessel. At the end of a reaction step the batch is at 90 °C and must be cooled to 30 °C before it can be transferred to storage.
+A batch of process liquid is held in a well-stirred, jacketed vessel. At the end of a reaction step the batch is at 90 $^\circ$C and must be cooled to 30 $^\circ$C before it can be transferred to storage.
 
-Cooling water is circulated through the jacket at a high enough flow rate that the jacket temperature stays essentially constant at 15 °C throughout. The rate of heat transfer from the batch to the jacket is *not* constant — it depends on the temperature difference between the batch and the jacket:
+Cooling water is circulated through the jacket at a high enough flow rate that the jacket temperature stays essentially constant at 15 $^\circ$C throughout. The rate of heat transfer from the batch to the jacket is *not* constant — it depends on the temperature difference between the batch and the jacket:
 
 $$\dot{Q} = UA\,(T_{jacket} - T)$$
 
@@ -16,9 +16,9 @@ The following data are provided:
 |---|---|
 | Mass of batch | 500 kg |
 | Batch heat capacity ($C_P$) | 3.2 kJ kg$^{-1}$ K$^{-1}$ |
-| Initial batch temperature | 90 °C |
-| Target batch temperature | 30 °C |
-| Jacket temperature | 15 °C |
+| Initial batch temperature | 90 $^\circ$C |
+| Target batch temperature | 30 $^\circ$C |
+| Jacket temperature | 15 $^\circ$C |
 | $UA$ | 1200 W K$^{-1}$ |
 | Stirrer power | 5.0 kW |
 
@@ -26,13 +26,13 @@ The following data are provided:
 
 **(b)** Separate the variables and integrate to obtain an expression for $T(t)$. 
 
-**(c)** Calculate the time required to cool the batch from 90 °C to 30 °C with the stirrer off.
+**(c)** Calculate the time required to cool the batch from 90 $^\circ$C to 30 $^\circ$C with the stirrer off.
 
 **(d)** Repeat the derivation with the stirrer running. Show that the batch now approaches a steady-state temperature $T_\infty$ rather than the jacket temperature, and calculate $T_\infty$.
 
-**(e)** Calculate the time required to reach 30 °C with the stirrer running, and comment on the difference from part (c).
+**(e)** Calculate the time required to reach 30 $^\circ$C with the stirrer running, and comment on the difference from part (c).
 
-**(f)** A colleague proposes reaching 20 °C by simply leaving the vessel cooling for longer with the stirrer running. Explain why this will not work, and suggest two changes that would.
+**(f)** A colleague proposes reaching 18 $^\circ$C by simply leaving the vessel cooling for longer with the stirrer running. Explain why this will not work, and suggest two changes that would.
 
 {{< pagebreak >}}
 
@@ -129,18 +129,14 @@ $$
 
 The stirrer adds about 6 minutes (17%) to the cooling time. The 5 kW of stirrer power is small compared with the initial cooling duty ($UA \times 75 = 90$ kW), so it barely matters at the start — but it becomes an ever-larger fraction of the duty as the driving force shrinks, which is why it disproportionately affects the tail of the curve.
 
-**(f) Why 20 °C is not reachable**
+**(f) Why 18 $^\circ$C is not reachable**
 
-The batch asymptotes to $T_\infty = 19.2$ °C, so 20 °C is only just attainable and would take:
-
-$$t = 1333 \times \ln\!\left(\frac{90 - 19.2}{20 - 19.2}\right) = 1333 \times \ln(88.5) = 5970\ \text{s} = 1.7\ \text{h}$$
-
-Anything below 19.2 °C is impossible no matter how long the vessel is left — the exponential approaches the asymptote but never crosses it. "Leave it longer" fails because the limit is set by an energy balance, not by time.
+The batch asymptotes to $T_\infty = 19.2$ $^\circ$C, so 18 $^\circ$C is impossible no matter how long the vessel is left — the exponential approaches the asymptote but never crosses it. "Leave it longer" fails because the limit is set by an energy balance, not by time.
 
 Two changes that would work:
 
-1. **Lower the jacket temperature** — use chilled water instead of cooling water. Dropping $T_{jacket}$ to 5 °C moves $T_\infty$ to $5 + 4.17 = 9.2$ °C, putting 20 °C comfortably in range and reaching it far faster.
-2. **Increase $UA$**, or reduce the stirrer power once the batch is homogeneous. Doubling $UA$ to 2400 W/K halves both the time constant and the stirrer's temperature penalty ($T_\infty = 15 + 2.1 = 17.1$ °C). Reducing the agitation to 1 kW gives $T_\infty = 15.8$ °C, though it risks losing the well-mixed assumption the whole analysis depends on.
+1. **Lower the jacket temperature** — use chilled water instead of cooling water. Dropping $T_{jacket}$ to 5 $^\circ$C moves $T_\infty$ to $5 + 4.17 = 9.2$ $^\circ$C, putting 18 $^\circ$C comfortably in range and reaching it far faster.
+2. **Increase $UA$**, or reduce the stirrer power once the batch is homogeneous. Doubling $UA$ to 2400 W/K halves both the time constant and the stirrer's temperature penalty ($T_\infty = 15 + 2.1 = 17.1$ $^\circ$C). Reducing the agitation to 1 kW gives $T_\infty = 15.8$ $^\circ$C, though it risks losing the well-mixed assumption the whole analysis depends on.
 
 :::
 

@@ -1,6 +1,6 @@
 ## Problem E7: Quenching a Hot Water Bath with Ice {.unnumbered}
 
-A laboratory sample bath contains 1.50 kg of water at 80 °C in a vacuum flask, which may be treated as perfectly insulated. To cool the bath quickly, 0.40 kg of ice at −10 °C is tipped in and the contents are stirred until the system reaches a single uniform final temperature.
+A laboratory sample bath contains 1.50 kg of water at 80 $^\circ$C in a vacuum flask, which may be treated as perfectly insulated. To cool the bath quickly, 0.40 kg of ice at −10 $^\circ$C is tipped in and the contents are stirred until the system reaches a single uniform final temperature.
 
 The mass and heat capacity of the flask itself are negligible, and no water evaporates or is spilled.
 
@@ -9,24 +9,24 @@ The following data are provided:
 | Property | Value |
 |---|---|
 | Mass of hot water | 1.50 kg |
-| Initial hot water temperature | 80 °C |
+| Initial hot water temperature | 80 $^\circ$C |
 | Mass of ice | 0.40 kg |
-| Initial ice temperature | −10 °C |
+| Initial ice temperature | −10 $^\circ$C |
 | Heat capacity of ice ($C_{P,ice}$) | 2.09 kJ kg$^{-1}$ K$^{-1}$ |
 | Heat capacity of liquid water ($C_{P,water}$) | 4.18 kJ kg$^{-1}$ K$^{-1}$ |
 | Enthalpy of fusion at 0 °C ($\Delta H_{fus}$) | 334 kJ kg$^{-1}$ |
 
 **(a)** Starting from the general energy balance, show that for this process $\Delta H_{sys} = 0$. State and justify every assumption.
 
-**(b)** The ice cannot go from −10 °C to the final temperature in a single step, because a phase change happens on the way. Sketch the path you will follow for the ice, and write down an expression for $\Delta H_{sys}$ as a sum of $\Delta H$ terms. Do not use a reference state.
+**(b)** The ice cannot go from −10 $^\circ$C to the final temperature in a single step, because a phase change happens on the way. Sketch the path you will follow for the ice, and write down an expression for $\Delta H_{sys}$ as a sum of $\Delta H$ terms. Do not use a reference state.
 
 **(c)** Calculate the final temperature of the contents of the flask.
 
 **(d)** Your answer to (c) assumed all the ice melts. Verify that this assumption is valid.
 
-**(e)** Calculate the mass of ice at −10 °C that would be needed to bring the bath to exactly 0 °C with all the ice just melted.
+**(e)** Calculate the mass of ice at −10 $^\circ$C that would be needed to bring the bath to exactly 0 $^\circ$C with all the ice just melted.
 
-**(f)** A student adds 2.0 kg of ice at −10 °C instead. Without solving a new equation, explain what the final state of the system would be and what is wrong with blindly applying the expression from part (b).
+**(f)** A student adds 2.0 kg of ice at −10 $^\circ$C instead. Without solving a new equation, explain what the final state of the system would be and what is wrong with blindly applying the expression from part (b).
 
 {{< pagebreak >}}
 
@@ -64,14 +64,14 @@ Note this is an *initial state to final state* calculation. Nothing in the probl
 
 **(b) Path and expression**
 
-Enthalpy is a state function, so we may take any convenient path from the initial state (ice at −10 °C plus water at 80 °C) to the final state (all liquid water at $T_f$). The convenient path splits the ice into three steps and the hot water into one:
+Enthalpy is a state function, so we may take any convenient path from the initial state (ice at −10 $^\circ$C plus water at 80 $^\circ$C) to the final state (all liquid water at $T_f$). The convenient path splits the ice into three steps and the hot water into one:
 
 | Stream | Step | $\Delta H$ term |
 |---|---|---|
-| Ice | 1. Warm solid from −10 °C to 0 °C | $m_{ice}\,C_{P,ice}\,(0 - (-10))$ |
-| Ice | 2. Melt at 0 °C | $m_{ice}\,\Delta H_{fus}$ |
-| Ice | 3. Warm the melt from 0 °C to $T_f$ | $m_{ice}\,C_{P,water}\,(T_f - 0)$ |
-| Hot water | 4. Cool from 80 °C to $T_f$ | $m_{water}\,C_{P,water}\,(T_f - 80)$ |
+| Ice | 1. Warm solid from −10 $^\circ$C to 0 $^\circ$C | $m_{ice}\,C_{P,ice}\,(0 - (-10))$ |
+| Ice | 2. Melt at 0 $^\circ$C | $m_{ice}\,\Delta H_{fus}$ |
+| Ice | 3. Warm the melt from $^\circ$C to $T_f$ | $m_{ice}\,C_{P,water}\,(T_f - 0)$ |
+| Hot water | 4. Cool from 80 $^\circ$C to $T_f$ | $m_{water}\,C_{P,water}\,(T_f - 80)$ |
 
 The phase change must be a separate step because it happens at constant temperature — a $C_P\,\Delta T$ term cannot account for it. Setting the total to zero:
 
@@ -105,13 +105,13 @@ T_f & = \frac{359.64}{7.942} \\
 \end{aligned}
 $$
 
-**Sanity check:** the answer lies between −10 °C and 80 °C, and it is well below the 61.6 °C that simple mixing of 0.40 kg of *liquid* water at 0 °C with 1.50 kg at 80 °C would give. The extra 16 °C of cooling comes almost entirely from the latent heat: at 133.6 kJ, melting the ice costs more than 16 times as much energy as warming it from −10 °C to 0 °C. This is why ice is so much more effective than cold water as a coolant.
+**Sanity check:** the answer lies between −10 $^\circ$C and 80 $^\circ$C, and it is well below the 61.6 $^\circ$C that simple mixing of 0.40 kg of *liquid* water at 0 $^\circ$C with 1.50 kg at 80 $^\circ$C would give. The extra 16 °C of cooling comes almost entirely from the latent heat: at 133.6 kJ, melting the ice costs more than 16 times as much energy as warming it from −10 $^\circ$C to 0 $^\circ$C. This is why ice is so much more effective than cold water as a coolant.
 
 **(d) Validity of the "all ice melts" assumption**
 
-The assumption is valid if the hot water can supply more energy in cooling to 0 °C than the ice requires to warm and melt completely.
+The assumption is valid if the hot water can supply more energy in cooling to 0 $^\circ$C than the ice requires to warm and melt completely.
 
-Energy available from the hot water down to 0 °C:
+Energy available from the hot water down to 0 $^\circ$C:
 
 $$m_{water}C_{P,water}(80 - 0) = 6.27 \times 80 = 501.6\ \text{kJ}$$
 
@@ -119,13 +119,13 @@ Energy required to warm and fully melt the ice:
 
 $$8.36 + 133.6 = 141.96\ \text{kJ}$$
 
-Since $501.6 > 141.96$, all the ice melts and there is energy left over to raise the mixture above 0 °C — consistent with the answer $T_f = 45.3$ °C > 0 °C. The assumption is valid.
+Since $501.6 > 141.96$, all the ice melts and there is energy left over to raise the mixture above 0 $^\circ$C — consistent with the answer $T_f = 45.3$ $^\circ$C > 0 $^\circ$C. The assumption is valid.
 
-Note that the calculated $T_f$ being above 0 °C is itself the check: had the equation returned a negative $T_f$, that would have signalled the assumption failed, not that the bath had frozen.
+Note that the calculated $T_f$ being above 0 $^\circ$C is itself the check: had the equation returned a negative $T_f$, that would have signalled the assumption failed, not that the bath had frozen.
 
 **(e) Ice required to reach exactly 0 °C**
 
-At the limiting case, all the ice has just melted and the whole system sits at $T_f = 0$ °C. The step-3 term vanishes and the balance becomes:
+At the limiting case, all the ice has just melted and the whole system sits at $T_f = 0$ $^\circ$C. The step-3 term vanishes and the balance becomes:
 
 $$m_{ice}C_{P,ice}(0 - T_{ice,0}) + m_{ice}\Delta H_{fus} + m_{water}C_{P,water}(0 - 80) = 0$$
 
@@ -141,11 +141,11 @@ $$
 
 **(f) The 2.0 kg case**
 
-2.0 kg exceeds the 1.41 kg limiting mass from part (e), so there is not enough energy in the hot water to melt it all. The final state is a **two-phase equilibrium at 0 °C**: liquid water and unmelted ice coexisting, with the temperature pinned at the melting point.
+2.0 kg exceeds the 1.41 kg limiting mass from part (e), so there is not enough energy in the hot water to melt it all. The final state is a **two-phase equilibrium at 0 $^\circ$C**: liquid water and unmelted ice coexisting, with the temperature pinned at the melting point.
 
-Blindly applying the part (b) expression would return a final temperature below 0 °C, which is physically nonsense — it implicitly assumes the ice is fully liquid at $T_f$ and can keep absorbing sensible heat below the freezing point. The expression contains no mechanism to stop melting once the ice runs out of available energy.
+Blindly applying the part (b) expression would return a final temperature below 0 $^\circ$C, which is physically nonsense — it implicitly assumes the ice is fully liquid at $T_f$ and can keep absorbing sensible heat below the freezing point. The expression contains no mechanism to stop melting once the ice runs out of available energy.
 
-The correct approach is to recognise the final temperature is *known* (0 °C) and solve instead for the unknown mass of ice melted, $m_{melt}$:
+The correct approach is to recognise the final temperature is *known* (0 $^\circ$C) and solve instead for the unknown mass of ice melted, $m_{melt}$:
 
 $$m_{ice}C_{P,ice}(10) + m_{melt}\Delta H_{fus} + m_{water}C_{P,water}(0-80) = 0$$
 

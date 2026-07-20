@@ -42,9 +42,9 @@ $$\dot{m}_{electrolyte}(H_{out} - H_{in}) = \dot{W}$$
 
 where:
 
-- $\dot{m}_{electrolyte}$ is the mass flow rate of electrolyte through the cell (kg/s)
-- $H_{in}$, $H_{out}$ are the specific enthalpies of the electrolyte entering and leaving the cell (kJ/kg)
-- $\dot{W}$ is the excess electrical power delivered to the cell above the theoretical minimum, which appears entirely as heat in the electrolyte (kW)
+- $\dot{m}_{electrolyte}$ is the mass flow rate of electrolyte through the cell
+- $H_{in}$, $H_{out}$ are the specific enthalpies of the electrolyte entering and leaving the cell
+- $\dot{W}$ is the excess electrical power delivered to the cell above the theoretical minimum, which appears entirely as heat in the electrolyte
 
 Heat exchanger (System B, steady state):
 
