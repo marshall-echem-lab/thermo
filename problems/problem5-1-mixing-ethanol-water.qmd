@@ -1,22 +1,22 @@
 ## Problem 5.1: Adiabatic mixing of two streams
 
-Two liquid streams are combined continuously in a well-insulated mixing vessel operating
-at steady state:
+Two liquid streams are combined continuously at steady state:
 
 ::: {style="font-size: 0.8em"}
-| Stream | Fluid | $\dot{m}$ (kg s$^{-1}$) | $T$ ($^\circ$C) | $C_P$ (kJ kg$^{-1}$ K$^{-1}$) |
+| Stream | Fluid | $\dot{m}$  | $T$  | $C_P$  |
+| | |(kg s$^{-1}$)|($^\circ$C)|(kJ kg$^{-1}$ K$^{-1}$)|
 |---|---|:---:|:---:|:---:|
 | A | Ethanol | 1.50 | 20 | 2.44 |
 | B | Water   | 0.80 | 75 | 4.18 |
 
 :::
 
-There is no work. Assume the heat capacities are constant, and **neglect the
+There is no work or heat loss. Assume heat capacities are constant, and **neglect the
 enthalpy of mixing**.
 
 (a) Choosing a reference state of the pure liquids at 20 $^\circ$C, find the outlet
     temperature.
-(b) Repeat with a reference state of the pure liquids at 0 $^\circ$C. Comment.
+(b) Repeat with a reference state of the pure liquids at 0 $^\circ$C.
 
 ::: {.content-visible when-meta="show-solutions"}
 ::: {.callout-note icon=false collapse="true" title="Solution"}
