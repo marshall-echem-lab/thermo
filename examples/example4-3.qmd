@@ -9,7 +9,7 @@ $$\dot{Q} = UA\left(T_{steam} - T\right)$$
 
 with $UA = 4.0$ kW K$^{-1}$
 
-Data: $C_{P,oil} = 1.95$ kJ kg$^{-1}$ K$^{-1}$.
+$C_{P,oil} = 1.95$ kJ kg$^{-1}$ K$^{-1}$.
 
 ::: {.content-visible unless-format="revealjs"}
 

@@ -4,11 +4,7 @@ Raw milk is pumped continuously through a heater on its way to a pasteuriser. Th
 
 Calculate the rate of heat transfer required.
 
-Data:
-
-$\rho_{milk} = 1030$ kg m$^{-3}$
-
-$C_{P,milk} = 3.85$ kJ kg$^{-1}$ K$^{-1}$
+$\rho_{milk} = 1030$ kg m$^{-3}$, $C_{P,milk} = 3.85$ kJ kg$^{-1}$ K$^{-1}$
 
 ::: {.content-visible unless-format="revealjs"}
 
