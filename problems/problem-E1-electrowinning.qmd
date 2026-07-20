@@ -12,9 +12,9 @@ The following data are provided:
 | Cell voltage | 3.5 V |
 | Theoretical minimum voltage | 2.35 V |
 | Electrolyte mass in cell | 4,000 kg |
-| Electrolyte heat capacity ($C_P$) | 3.8 kJ kg⁻¹ K⁻¹ |
-| Maximum electrolyte circulation rate | 5 kg s⁻¹ |
-| Cooling water heat capacity ($C_P$) | 4.18 kJ kg⁻¹ K⁻¹ |
+| Electrolyte heat capacity ($C_P$) | 3.8 kJ kg$^{-1}$ K$^{-1}$ |
+| Maximum electrolyte circulation rate | 5 kg s$^{-1}$ |
+| Cooling water heat capacity ($C_P$) | 4.18 kJ kg$^{-1}$ K$^{-1}$ |
 
 ![Process schematic](figures/problem-E1-electrowinning.svg)
 
