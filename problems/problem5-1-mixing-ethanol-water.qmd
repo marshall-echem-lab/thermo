@@ -2,9 +2,8 @@
 
 Two liquid streams are combined continuously at steady state:
 
-::: {style="font-size: 0.8em"}
-| Stream | Fluid | $\dot{m}$  | $T$  | $C_P$  |
-| | |(kg s$^{-1}$)|($^\circ$C)|(kJ kg$^{-1}$ K$^{-1}$)|
+::: {style="font-size: 0.7em"}
+| Stream | Fluid | $\dot{m}$ (kg s$^{-1}$) | $T$ ($^\circ$C)  | $C_P$ (kJ kg$^{-1}$ K$^{-1}$)  |
 |---|---|:---:|:---:|:---:|
 | A | Ethanol | 1.50 | 20 | 2.44 |
 | B | Water   | 0.80 | 75 | 4.18 |
