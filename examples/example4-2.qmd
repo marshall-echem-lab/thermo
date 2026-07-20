@@ -1,16 +1,12 @@
 ## Example 4.2: Heat recovery from a flue gas {.unnumbered .scrollable}
 
-
 Hot flue gas leaving a furnace is passed through a heat exchanger to recover heat into a thermal oil loop.
 
 The flue gas enters at 320 $^\circ$C at 2.5 kg s$^{-1}$. The thermal oil enters at 60 $^\circ$C and must leave at 180 $^\circ$C. 
 
 Determine the heat transferred and the required thermal oil circulation rate. Solve the problem twice: once by treating each side as its own system, and once by treating the whole exchanger as a single system.
 
-Data:
-
-- $C_{P,gas} = 1.15$ kJ kg$^{-1}$ K$^{-1}$
-- $C_{P,oil} = 2.30$ kJ kg$^{-1}$ K$^{-1}$
+Data: $C_{P,gas} = 1.15$ kJ kg$^{-1}$ K$^{-1}$, $C_{P,oil} = 2.30$ kJ kg$^{-1}$ K$^{-1}$
 
 ::: {.content-visible unless-format="revealjs"}
 

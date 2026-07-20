@@ -1,14 +1,13 @@
 ## Example 4.3: Preheating a canola oil tank {.unnumbered .scrollable}
 
-Canola oil (12,000 kg) at 15 $^\circ$C must be preheated to 60 $^\circ$C before it is fed to a biodiesel transesterification reactor. The tank is well insulated. Nothing enters or leaves the tank during the preheat.
+Canola oil (12,000 kg) at 15 $^\circ$C is heated to 60 $^\circ$C before a biodiesel reaction. The tank is well insulated. 
 
-**(a)** The tank is heated by an electric immersion heater rated at 150 kW. How long does the preheat take?
+**(a)** Calculate the heating time when heated by a 150kW electric immersion heater.
 
-**(b)** The electric heater is replaced with a steam coil. Steam condenses inside the coil at a constant 120 $^\circ$C, and the rate of heat transfer to the oil is
-
+**(b)** Calculate the heating time when using a steam coil heater at 120 $^\circ$C where:
 $$\dot{Q} = UA\left(T_{steam} - T\right)$$
 
-with $UA = 4.0$ kW K$^{-1}$. How long does the preheat take now?
+with $UA = 4.0$ kW K$^{-1}$
 
 Data: $C_{P,oil} = 1.95$ kJ kg$^{-1}$ K$^{-1}$.
 
