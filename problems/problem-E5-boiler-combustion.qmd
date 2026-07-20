@@ -10,7 +10,7 @@ The following data are provided:
 
 
 
-| Species | Enthalpy of formation, kJ mol$\hb{^{-1}}$ | Heat capacity / J mol$\hb{^{-1}}$ K$\hb{^{-1}}$ |
+| Species | $\hb{\Delta H_{form}^{\circ}}$ / kJ mol$\hb{^{-1}}$ | Heat capacity / J mol$\hb{^{-1}}$ K$\hb{^{-1}}$ |
 |---|---|---|
 | $\mathrm{CH_4}$ (g) | −74.85 | 35.7 |
 | $\mathrm{O_2}$ (g) | 0 | 29.4 |
@@ -20,7 +20,7 @@ The following data are provided:
 
 | Water/steam stream | Condition | Specific enthalpy / kJ kg$\hb{^{-1}}$ |
 |---|---|---|
-| Boiler feedwater | 10 bar, 40 °C | 168 |
+| Boiler feedwater | 10 bar, 40 $^\circ$C | 168 |
 | Saturated steam | 10 bar | 2778 |
 
 **(a)** Write the balanced combustion reaction for methane, with $\mathrm{H_2O}$(g) as the product, and calculate the enthalpy of reaction ($\Delta H^\circ_{rxn}$) at 298.15 K.
@@ -165,3 +165,5 @@ $$\dot{m} = \frac{32{,}995}{2610} = 12.6\ \text{kg/s}$$
 :::
 
 :::
+
+{{< pagebreak >}}
