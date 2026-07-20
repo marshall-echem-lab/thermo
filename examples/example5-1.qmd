@@ -34,7 +34,7 @@ $$H = \int_{T_{ref}}^{T} C_P\,dT = C_P\left(T - T_{ref}\right)$$
 
 | Stream | $T$ ($^\circ$C) | $H = C_P(T - T_{ref})$ (kJ kg$^{-1}$) |
 |---|:---:|:---:|
-| Inlet  | 25  | $1.01(25 - 0) = 25.3$ |
+| Inlet  | 25  | $1.01(25 - 0) = 25.25$ |
 | Outlet | 150 | $1.01(150 - 0) = 151.5$ |
 
 These are *not* absolute enthalpies of air in any physical sense — they are enthalpies
@@ -42,9 +42,9 @@ measured from the zero we chose.
 
 **Part 2 — heat requirement**
 
-$$\dot{Q} = \dot{m}\left(H_{out} - H_{in}\right) = 0.50\left(151.5 - 25.3\right)$$
+$$\dot{Q} = \dot{m}\left(H_{out} - H_{in}\right) = 0.50\left(151.5 - 25.25\right)$$
 
-$$\dot{Q} = 63.1\ \text{kW}$$
+$$\dot{Q} = 63.125\ \text{kW}$$
 
 **Check**
 
@@ -52,8 +52,55 @@ The sign is positive, meaning heat is transferred *into* the system — correct 
 heater. The magnitude is plausible: a domestic fan heater is a few kW, an industrial
 duct heater tens of kW.
 
-Note also that $151.5 - 25.3 = 126.2$ kJ kg$^{-1}$, which is exactly
+Note also that $151.5 - 25.25 = 126.25$ kJ kg$^{-1}$, which is exactly
 $C_P(T_{out} - T_{in}) = 1.01 \times 125$. The reference state cancelled — as it must.
+
+**Using different reference states**
+
+We could have also used a reference state of 25 or 200 $^\circ$C
+
+*$T_{ref} = 25\ ^\circ$C*
+
+| Stream | $T$ ($^\circ$C) | $H$ (kJ kg$^{-1}$) |
+|---|:---:|:---:|
+| Inlet  | 25  | $1.01(25 - 25) = 0$ |
+| Outlet | 150 | $1.01(150 - 25) = 126.25$ |
+
+$$\dot{Q} = 0.50\left(126.25 - 0\right) = 63.125\ \text{kW}$$
+
+Choosing the reference at the inlet temperature makes the inlet enthalpy **zero**, and it
+drops straight out of the balance. This is the practical reason to choose a reference at
+one of the stream temperatures.
+
+*$T_{ref} = 200\ ^\circ$C*
+
+| Stream | $T$ ($^\circ$C) | $H$ (kJ kg$^{-1}$) |
+|---|:---:|:---:|
+| Inlet  | 25  | $1.01(25 - 200) = -176.75$ |
+| Outlet | 150 | $1.01(150 - 200) = -50.5$ |
+
+$$\dot{Q} = 0.50\left(-50.5 - (-176.75)\right) = 0.50 \times 126.25 = 63.125\ \text{kW}$$
+
+**Comparison**
+
+| $T_{ref}$ ($^\circ$C) | $H_{in}$ | $H_{out}$ | $H_{out} - H_{in}$ | $\dot{Q}$ (kW) |
+|:---:|:---:|:---:|:---:|:---:|
+| 0   | 25.25   | 151.5 | 126.25 | 63.125 |
+| 25  | 0      | 126.25 | 126.25 | 63.125 |
+| 200 | -176.75 | -50.5 | 126.25 | 63.125 |
+
+**What this shows**
+
+- The individual enthalpies are completely different — and with $T_{ref} = 200\ ^\circ$C
+  they are *negative*. A negative absolute enthalpy is not a physical impossibility; it
+  simply means the state sits below the arbitrary zero we chose. It is the reference line
+  in the figure moving up past both states, not the curve changing.
+- The **difference** $H_{out} - H_{in}$ is identical in all three cases, so $\dot{Q}$ is
+  identical. The reference state cancels algebraically:
+  $C_P(T_{out} - T_{ref}) - C_P(T_{in} - T_{ref}) = C_P(T_{out} - T_{in})$.
+- The choice is therefore free — but it must be applied **consistently**. Using
+  $T_{ref} = 0\ ^\circ$C for the inlet and $25\ ^\circ$C for the outlet would give
+  $0.50(126.25 - 25.25) = 50.5$ kW: a wrong answer.
 
 :::
 :::
