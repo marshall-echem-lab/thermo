@@ -106,7 +106,7 @@ $$\dot{Q} = \dot{m} C_P (T_{out} - T_{in})$$
 $T_{ref}$ has vanished. Any reference state gives the same answer.
 
 ## So why bother with reference states?
-If it cancels, why not always work with $\Delta T$ directly?
+If it cancels, why not always work with $\Delta H$ directly?
 
 ::: {.incremental}
 - With **many streams** at different temperatures, tabulating one $H$ per stream is tidier
@@ -153,91 +153,6 @@ Two rules of thumb:
 . . .
 
 Always state the reference explicitly in the write-up. 
-
-## When a reference state isn't needed
-A reference state is a **tool**, not a requirement.
-
-. . .
-
-The energy balance only ever contains enthalpy *differences*. If those differences can be written down directly, the reference state never has to be named.
-
-. . .
-
-::: {.callout-note icon=false}
-## Rule of thumb
-If every enthalpy term in the balance can be paired up as $H_{out} - H_{in}$ for the **same species in the same phase**, skip the reference state.
-:::
-
-## Case 1: Single stream, sensible heat only
-Steam-jacketed heater, water from 20 $^\circ$C to 80 $^\circ$C:
-
-$$\dot{Q} = \dot{m}\left(H_{out} - H_{in}\right) = \dot{m}\,\langle C_P\rangle\,(T_{out} - T_{in})$$
-
-. . .
-
-Nothing was set to zero, and no reference temperature appears.
-
-. . .
-
-Writing $H_{in} = C_P(20 - T_{ref})$ and $H_{out} = C_P(80 - T_{ref})$ gives the identical answer — with two extra lines of algebra.
-
-## Case 2: The data is already a change
-Much tabulated data is published as a $\Delta H$, not an $H$:
-
-::: {.incremental}
-- $\Delta H_{vap}$ — latent heat of vaporisation
-- $\Delta H^\circ_{rxn}$ — heat of reaction
-- $\Delta H_{soln}$ — heat of solution or mixing
-:::
-
-. . .
-
-These are used **directly**. Boiling 2 kg/s of water at 100 $^\circ$C:
-
-$$\dot{Q} = \dot{m}\,\Delta H_{vap} = 2 \times 2257 = 4514\ \text{kW}$$
-
-## Case 3: Build a path instead
-Enthalpy is a state function, so **any** convenient path works — a reference state is just one particular choice of path.
-
-. . .
-
-Adiabatic reactor: react at $T_{in}$, then heat the products to $T_{out}$
-
-$$\Delta H_{sys} = \underbrace{\xi\,\Delta H_{rxn}(T_{in})}_{\text{reaction}} + \underbrace{\sum_k n_k C_{P,k}(T_{out} - T_{in})}_{\text{sensible heat}} = 0$$
-
-. . .
-
-Every term is a difference between two real states of the process. No zero was ever declared.
-
-## Reference states vs. paths
-
-::: {style="font-size: 0.85em"}
-| | Reference state | Direct path |
-|---|---|---|
-| Idea | Route every stream through one common state | Route each term through whatever is convenient |
-| Best when | Many streams, species or phases | One or two streams, simple effects |
-| Bookkeeping | One table of $H$ values | Term-by-term |
-| Risk | Mixing two references in one balance | Losing track of the path taken |
-:::
-
-. . .
-
-Both are the same physics — path independence. The reference state is just the *disciplined* version.
-
-## So which do I use?
-
-::: {.incremental}
-- **Simple problem** — one or two streams, one species, no reaction? Work with differences. Faster, fewer terms, less to get wrong.
-- **Messy problem** — several streams, phase changes, reactions, recycles? Set a reference state and stay in it.
-- **Steam tables or $\Delta H^\circ_f$ data?** You have already inherited a reference state — say what it is.
-:::
-
-. . .
-
-::: {.callout-important}
-## Important
-Whichever route you take, state it explicitly. An unstated reference state and an unstated path are equally hard to mark.
-:::
 
 {{< include examples/example5-1.qmd >}}
 
