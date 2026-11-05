@@ -1,0 +1,181 @@
+---
+title: "Summary 4: Phase Diagrams and Steam"
+format: revealjs
+---
+
+## Why phase behaviour matters
+Enthalpy depends on the phase of a substance, not just its temperature and pressure.
+
+::: {.incremental}
+- Recall: temperature, pressure, **phase**, solutions and reactions all change enthalpy.
+- Water (and steam) is the workhorse fluid for energy balances.
+- To find $H$ we need to know *what phase* we are in — and when it changes.
+:::
+
+## What is steam?
+Steam is water in the **vapour** (gas) phase.
+
+. . .
+
+::: {.incremental}
+- Below the boiling point, water is a **liquid**.
+- Add enough energy and it **vaporises** into steam.
+- The energy needed to change phase is the focus of the next summary.
+:::
+
+## The phases of water
+A pure substance can exist as solid, liquid or vapour — and along certain lines, two or three phases coexist.
+
+. . .
+
+A **phase diagram** maps which phase is stable at each temperature and pressure.
+
+## The P–T phase diagram
+::: {style="text-align:center;"}
+![The pressure–temperature phase diagram for water](figures/water_pt_diagram.svg){width=65% #fig-water_pt}
+:::
+
+::: {style="font-size: 0.8em"}
+- Areas = a single phase (solid, liquid, vapour).
+- Lines = two phases coexist (fusion, vaporisation, sublimation).
+- The lines meet at the **triple point**; the vaporisation line ends at the **critical point**.
+:::
+
+## Vapour pressure
+At a given temperature, a liquid and its vapour reach equilibrium at a specific pressure — the **vapour pressure**.
+
+. . .
+
+::: {.incremental}
+- The vaporisation line on the P–T diagram *is* the vapour pressure curve.
+- Vapour pressure rises with temperature.
+- **Boiling** happens when the vapour pressure equals the surrounding pressure.
+:::
+
+::: {.fragment}
+::: {.callout-note icon=false}
+## Key Term
+**Vapour pressure** — the pressure at which a pure liquid and its vapour are in equilibrium at a given temperature.
+:::
+:::
+
+## Saturation
+Any point *on* the vaporisation curve is a **saturation** condition — liquid and vapour coexisting.
+
+. . .
+
+::: {style="font-size: 0.9em"}
+- At a given pressure, the temperature on the curve is the **saturation temperature**, $T^{sat}$.
+- At a given temperature, the pressure on the curve is the **saturation pressure**, $P^{sat}$.
+:::
+
+. . .
+
+$T^{sat}$ and $P^{sat}$ are just the boiling point expressed two ways.
+
+::: {.callout-note icon=false}
+## Key Terms
+**Saturation temperature** ($T^{sat}$) — the boiling temperature of a liquid at a given pressure.
+**Saturation pressure** ($P^{sat}$) — the vapour pressure at a given temperature; the pressure at which boiling occurs.
+:::
+
+## Saturated and superheated steam
+::: {.incremental}
+- **Saturated steam** — vapour sitting right at $T^{sat}$, on the edge of condensing.
+- **Superheated steam** — vapour heated *above* $T^{sat}$ at that pressure.
+- **Wet steam** — a mixture of saturated liquid and saturated vapour together.
+:::
+
+::: {.fragment}
+::: {.callout-note icon=false}
+## Key Terms
+**Saturated steam** — vapour at its saturation temperature.
+**Superheated steam** — vapour at a temperature above its saturation temperature.
+:::
+:::
+
+## Wet steam and quality
+Wet steam is part liquid, part vapour. Its **quality** $x$ is the mass fraction that is vapour.
+
+. . .
+
+$$x = \frac{\text{mass of vapour}}{\text{total mass}}$$
+
+::: {.incremental}
+- $x = 0$ → saturated liquid.
+- $x = 1$ → saturated (dry) vapour.
+- $0 < x < 1$ → wet steam.
+:::
+
+::: {.callout-note icon=false}
+## Key Term
+**Quality** ($x$) — the mass fraction of a saturated liquid–vapour mixture that is vapour.
+:::
+
+## The P–V diagram
+::: {style="text-align:center;"}
+![The pressure–volume diagram for water](figures/water_pv_diagram.svg){width=60% #fig-water_pv}
+:::
+
+::: {style="font-size: 0.8em"}
+- The **vapour dome** encloses the two-phase (wet steam) region.
+- Left edge = saturated liquid; right edge = saturated vapour; they meet at the **critical point**.
+- Inside the dome, temperature and pressure are fixed together — only the quality changes.
+:::
+
+## The P–V–T surface
+::: {style="text-align:center;"}
+![The three-dimensional P–V–T surface for water](figures/water_pvt_surface.svg){width=55% #fig-water_pvt}
+:::
+
+The P–T and P–V diagrams are just **projections** of one 3D surface onto two of its axes.
+
+## Triple point and the phase rule
+Recall the Gibbs phase rule:
+
+$$F = C - \pi + 2$$
+
+For water, a single component, $C = 1$:
+
+::: {.incremental}
+- One phase ($\pi = 1$): $F = 2$ → an **area** (choose $T$ and $P$ freely).
+- Two phases ($\pi = 2$): $F = 1$ → a **line** (fix $T$, and $P$ follows).
+- Three phases ($\pi = 3$): $F = 0$ → a **point** — the **triple point** is fixed.
+:::
+
+## The triple point is fixed
+With $F = 0$, the triple point of water occurs at exactly one temperature and pressure.
+
+. . .
+
+It is so reproducible that it was long used to *define* the temperature scale.
+
+::: {.callout-note icon=false}
+## Key Terms
+**Triple point** — the unique $T$ and $P$ at which solid, liquid and vapour coexist.
+**Critical point** — the end of the vaporisation curve, above which liquid and vapour become indistinguishable.
+:::
+
+## The H–T diagram
+::: {style="text-align:center;"}
+![Specific enthalpy versus temperature at constant pressure](figures/water_ht_diagram.svg){width=60% #fig-water_ht}
+:::
+
+::: {style="font-size: 0.8em"}
+- Heating liquid: enthalpy rises with temperature (**sensible heat**).
+- At $T^{sat}$: a **flat step** — enthalpy jumps at constant temperature (**latent heat**).
+- Heating vapour: enthalpy rises again (**sensible heat**).
+:::
+
+. . .
+
+That flat step is the subject of the next summary.
+
+## Summary
+::: {.incremental}
+- A phase diagram maps the stable phase at each $T$ and $P$.
+- The vaporisation curve is the **vapour pressure** curve; points on it are **saturation** conditions.
+- **Saturated**, **superheated** and **wet** steam are distinguished by where they sit relative to $T^{sat}$.
+- The Gibbs phase rule explains why single phases are areas, saturation is a line, and the triple point is a point.
+- The **H–T diagram** previews sensible + latent heat — the next summary.
+:::

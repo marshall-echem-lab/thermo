@@ -1,16 +1,14 @@
-## Example 3.1: Identifying the terms in the energy balance {.unnumbered .scrollable}
-
-For each system below, start from the general energy balance and simplify. State the assumption that lets you remove each term — don't delete terms from memory.
+## Example 3.1: Simplifying the energy balance {.unnumbered .scrollable}
 
 ::: {style="font-size: 0.7em"}
+For each system below, start from the general energy balance and simplify. State the assumptions.
+
 $$\frac{d(m_{sys}H_{sys})}{dt} = \sum_i \dot{m}_{in,i} H_{in,i} - \sum_j \dot{m}_{out,j} H_{out,j} + \sum_k \dot{Q}_k + \sum_l \dot{W}_l$$
-:::
 
-::: {style="font-size: 0.7em"}
 **(a) A heat exchanger (steady state).** A hot stream and a cold stream pass through a heat exchanger and swap heat. Write the balance for *two different* choices of boundary:
 
-- (i) the boundary drawn around the **entire** exchanger (both streams inside), and
-- (ii) the boundary drawn around the **hot side** and the **cold side** separately.
+(i) the boundary drawn around the **entire** exchanger (both streams inside), and
+(ii) the boundary drawn around the **hot side** and the **cold side** separately.
 
 **(b) An insulated tank (closed).** Ice and liquid water are sealed in a well-insulated tank and left to reach equilibrium as the ice melts. Nothing flows in or out.
 

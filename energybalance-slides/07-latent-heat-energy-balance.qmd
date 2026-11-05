@@ -1,0 +1,197 @@
+---
+title: "Summary 5: Latent Heat in the Energy Balance"
+format: revealjs
+---
+
+## Enthalpy is a state function
+The enthalpy change between two states depends only on the states, not the path.
+
+. . .
+
+::: {style="text-align:center;"}
+![The energy change associated with a state change is independent of the path](figures/statefunction_change_graph.svg){width=55%}
+:::
+
+So we can **choose a convenient path** to calculate $\Delta H$.
+
+## Sensible heat and latent heat
+Two ways enthalpy changes when we heat a fluid:
+
+::: {.incremental}
+- **Sensible heat** — temperature changes, phase does not. $\;\Delta H = C_P\,\Delta T$.
+- **Latent heat** — phase changes at constant temperature. $\;\Delta H = \Delta H_{vap}$.
+:::
+
+::: {.fragment}
+::: {.callout-note icon=false}
+## Key Terms
+**Sensible heat** — enthalpy change from a temperature change at constant phase.
+**Latent heat of vaporisation** ($\Delta H_{vap}$) — enthalpy change to convert saturated liquid to saturated vapour at constant temperature and pressure.
+:::
+:::
+
+## Working per unit mass
+Steam tables list **specific** enthalpy $H$ (per kg). We build $\Delta H$ per kg, then multiply by the mass flow in the balance.
+
+$$\dot{Q} + \dot{W} = \dot{m}\,(H_{out} - H_{in})$$
+
+. . .
+
+So the whole job is finding $H_{out} - H_{in}$ for the fluid.
+
+## Path 1: liquid water → superheated steam
+Go from liquid at $T_1$ to superheated steam at $T_2$, at constant pressure.
+
+::: {style="text-align:center;"}
+![](figures/water_ht_diagram.svg){width=45%}
+:::
+
+. . .
+
+Split into three legs: heat the liquid → vaporise it → heat the vapour.
+
+## Path 1: leg by leg
+**Leg 1 — sensible heat (liquid):** warm the liquid from $T_1$ up to $T^{sat}$.
+$$\Delta H_1 = C_{P,liq}\,(T^{sat} - T_1)$$
+
+. . .
+
+**Leg 2 — latent heat:** vaporise at $T^{sat}$.
+$$\Delta H_2 = \Delta H_{vap}$$
+
+. . .
+
+**Leg 3 — sensible heat (vapour):** superheat the vapour from $T^{sat}$ to $T_2$.
+$$\Delta H_3 = C_{P,vap}\,(T_2 - T^{sat})$$
+
+## Path 1: total enthalpy change
+Add the three legs:
+
+$$\Delta H = C_{P,liq}(T^{sat} - T_1) + \Delta H_{vap} + C_{P,vap}(T_2 - T^{sat})$$
+
+::: {.incremental}
+- One sensible term for the liquid, one for the vapour.
+- One latent term at the phase change.
+- Each leg uses the property ($C_{P,liq}$, $C_{P,vap}$, $\Delta H_{vap}$) for that part of the path.
+:::
+
+## Path 2: superheated steam → wet steam
+Now go from superheated steam at $T_1$ to **wet steam** of quality $x$ at $T^{sat}$.
+
+. . .
+
+Two legs:
+
+::: {.incremental}
+- **Leg 1 — sensible heat (vapour):** cool the vapour from $T_1$ to $T^{sat}$.
+- **Leg 2 — partial condensation:** condense the fraction $(1 - x)$ that turns to liquid.
+:::
+
+## Path 2: leg by leg
+**Leg 1 — sensible (vapour):**
+$$\Delta H_1 = C_{P,vap}\,(T^{sat} - T_1)$$
+
+. . .
+
+**Leg 2 — partial condensation:** only the fraction $(1-x)$ condenses, releasing latent heat.
+$$\Delta H_2 = -\,(1 - x)\,\Delta H_{vap}$$
+
+. . .
+
+$$\Delta H = C_{P,vap}(T^{sat} - T_1) - (1 - x)\,\Delta H_{vap}$$
+
+## Path 2 again — using a reference state
+Instead of tracing a path, reference every state to a common datum:
+
+$$H = H_{ref} + \Delta H_{ref \rightarrow state}$$
+
+. . .
+
+Pick the reference as **saturated liquid** at the datum — this is exactly what steam tables do.
+
+## Reference state: the two enthalpies
+**Wet steam**, quality $x$, is saturated liquid plus a fraction $x$ vaporised:
+$$H_{wet} = H^{sat}_{liq} + x\,\Delta H_{vap}$$
+
+. . .
+
+**Superheated steam** at $T_1$ is fully vaporised, then heated above $T^{sat}$:
+$$H_{sup} = H^{sat}_{liq} + \Delta H_{vap} + C_{P,vap}(T_1 - T^{sat})$$
+
+## Reference state: the difference
+Subtract — the common reference $H^{sat}_{liq}$ **cancels**:
+
+$$
+\begin{aligned}
+\Delta H = H_{wet} - H_{sup}
+ &= x\,\Delta H_{vap} - \Delta H_{vap} - C_{P,vap}(T_1 - T^{sat})\\
+ &= -(1 - x)\,\Delta H_{vap} + C_{P,vap}(T^{sat} - T_1)
+\end{aligned}
+$$
+
+. . .
+
+**Same answer as the path method** — because $H$ is a state function.
+
+## Steam tables
+Steam tables do this work for you: they list specific $H$ against $T$ and $P$, all relative to one reference state.
+
+::: {.incremental}
+- **Reference:** saturated liquid at the triple point, where $H \equiv 0$.
+- **Saturation tables:** give $H^{sat}_{liq}$ and $H^{sat}_{vap}$ (written $H_f$ and $H_g$) at each $T^{sat}$ or $P^{sat}$.
+- **Superheated tables:** give $H$ directly at a $(T, P)$ above saturation.
+:::
+
+## Steam tables in the energy balance
+Because every value shares one reference state, you can drop tabulated enthalpies straight into the balance.
+
+$$\dot{Q} + \dot{W} = \dot{m}\,(H_{out} - H_{in})$$
+
+::: {.incremental}
+- Look up $H_{in}$ and $H_{out}$ for each stream's phase and state.
+- The reference cancels in the difference — just as it did above.
+- **Path method and reference-state method are the same thing**; steam tables are the reference-state method, pre-computed.
+:::
+
+## Wet steam from the tables
+For wet steam of quality $x$, combine the saturated values:
+
+$$H = H_f + x\,(H_g - H_f) = H_f + x\,\Delta H_{vap}$$
+
+::: {style="font-size: 0.9em"}
+where $H_f = H^{sat}_{liq}$, $H_g = H^{sat}_{vap}$, and $\Delta H_{vap} = H_g - H_f$ (the table's $H_{fg}$).
+:::
+
+## Liquid at a T and P not in the tables
+A compressed (subcooled) liquid — below its saturation temperature at that pressure — often isn't tabulated.
+
+. . .
+
+For a liquid, enthalpy depends **strongly on temperature** and **weakly on pressure**:
+
+$$\left(\frac{\partial H}{\partial P}\right)_T \approx 0 \quad \text{(nearly incompressible)}$$
+
+## Approximating compressed-liquid enthalpy
+So read the **saturated liquid** value at the *same temperature*:
+
+$$H_{liq}(T, P) \approx H^{sat}_{liq}\big(T^{sat} = T\big)$$
+
+::: {.incremental}
+- Enthalpy is treated as a function of temperature alone for the liquid.
+- Good enough unless the pressure is very high.
+- Lets you use the saturation table when the compressed-liquid table is missing.
+:::
+
+::: {.callout-note icon=false}
+## Key Term
+**Compressed (subcooled) liquid** — a liquid below its saturation temperature at the given pressure.
+:::
+
+## Summary
+::: {.incremental}
+- Phase changes add a **latent heat** term to the enthalpy calculation.
+- Build $\Delta H$ along a convenient **path**: sensible + latent + sensible.
+- Or reference every state to a common datum — the reference **cancels** in $\Delta H$.
+- **Steam tables** are the reference-state method pre-computed; drop the values into the balance.
+- For a compressed liquid off the tables, use $H_{liq}(T,P) \approx H^{sat}_{liq}(T)$.
+:::
