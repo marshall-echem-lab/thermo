@@ -10,7 +10,7 @@ The energy balance:
 - is just like a mass balance.
 - is based on the 1st Law of Thermodynamics.
 - accounts for energy stored in a system.
-- accounts for energy transferred in/out of the system.
+- accounts for energy transferred in or out of the system.
 - is based on a single equation.
 :::
 
